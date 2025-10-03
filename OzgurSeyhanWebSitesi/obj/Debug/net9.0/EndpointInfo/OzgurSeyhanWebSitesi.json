@@ -1,0 +1,481 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "OzgurSeyhanWebSitesi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/Auth/register": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Auth/login": {
+      "post": {
+        "tags": [
+          "Auth"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/LoginRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/api/Ogretmen": {
+      "get": {
+        "tags": [
+          "Ogretmen"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ogretmen"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ogretmen"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Ogretmen"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/Ogretmen/{id}": {
+      "get": {
+        "tags": [
+          "Ogretmen"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ogretmen"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ogretmen"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Ogretmen"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Kurs": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kursAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "aciklama": {
+            "type": "string",
+            "nullable": true
+          },
+          "konular": {
+            "type": "string",
+            "nullable": true
+          },
+          "beklenenSeviye": {
+            "type": "string",
+            "nullable": true
+          },
+          "kursSeviyesi": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "olusturmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ogretmenId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ogretmen": {
+            "$ref": "#/components/schemas/Ogretmen"
+          },
+          "paketler": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Paket"
+            },
+            "nullable": true
+          },
+          "onceSonralar": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OnceSonra"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "LoginRequest": {
+        "type": "object",
+        "properties": {
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "Ogretmen": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "adSoyad": {
+            "type": "string",
+            "nullable": true
+          },
+          "ozgecmis": {
+            "type": "string",
+            "nullable": true
+          },
+          "egitim": {
+            "type": "string",
+            "nullable": true
+          },
+          "deneyimYili": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "profilFotoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "youTubeKanalUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "olusturmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "kurslar": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Kurs"
+            },
+            "nullable": true
+          },
+          "ornekVideolar": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/OrnekVideo"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "OnceSonra": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ogrenciAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "onceVideoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "sonraVideoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "onceAciklama": {
+            "type": "string",
+            "nullable": true
+          },
+          "sonraAciklama": {
+            "type": "string",
+            "nullable": true
+          },
+          "olusturmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "kursId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kurs": {
+            "$ref": "#/components/schemas/Kurs"
+          }
+        },
+        "additionalProperties": false
+      },
+      "OrnekVideo": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "baslik": {
+            "type": "string",
+            "nullable": true
+          },
+          "videoUrl": {
+            "type": "string",
+            "nullable": true
+          },
+          "aciklama": {
+            "type": "string",
+            "nullable": true
+          },
+          "dersYontemi": {
+            "type": "string",
+            "nullable": true
+          },
+          "siraNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "olusturmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "ogretmenId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "ogretmen": {
+            "$ref": "#/components/schemas/Ogretmen"
+          }
+        },
+        "additionalProperties": false
+      },
+      "Paket": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paketAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "sinifMevcudu": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "fiyat": {
+            "type": "number",
+            "format": "double"
+          },
+          "whatsAppGrupLinki": {
+            "type": "string",
+            "nullable": true
+          },
+          "aktif": {
+            "type": "boolean"
+          },
+          "olusturmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "kursId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "kurs": {
+            "$ref": "#/components/schemas/Kurs"
+          },
+          "satinAlmalar": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SatinAlma"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "RegisterRequest": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "password": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SatinAlma": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "musteriAdi": {
+            "type": "string",
+            "nullable": true
+          },
+          "musteriEmail": {
+            "type": "string",
+            "nullable": true
+          },
+          "musteriTelefon": {
+            "type": "string",
+            "nullable": true
+          },
+          "odenenTutar": {
+            "type": "number",
+            "format": "double"
+          },
+          "odemeBasarili": {
+            "type": "boolean"
+          },
+          "odemeIslemId": {
+            "type": "string",
+            "nullable": true
+          },
+          "satinAlmaTarihi": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "paketId": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "paket": {
+            "$ref": "#/components/schemas/Paket"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "description": "JWT Authorization header using the Bearer scheme. Enter 'Bearer' [space] and then your token.",
+        "scheme": "Bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": [ ]
+    }
+  ]
+}
