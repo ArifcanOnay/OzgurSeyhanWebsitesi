@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OzgurSeyhanWebSitesi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+da5253d304f8968e7da8805ecc15ffc11f2d2aaf")]
 [assembly: System.Reflection.AssemblyProductAttribute("OzgurSeyhanWebSitesi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OzgurSeyhanWebSitesi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

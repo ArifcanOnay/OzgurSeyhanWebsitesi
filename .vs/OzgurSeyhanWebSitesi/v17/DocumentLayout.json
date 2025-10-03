@@ -1,7 +1,64 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\models\\satinalma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\models\\satinalma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\models\\oncesonra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\models\\oncesonra.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\services\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\services\\ijwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\models\\jwtsettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\controllers\\ogretmencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\controllers\\ogretmencontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\services\\jwtservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\models\\kurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\models\\kurs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\models\\ogretmen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\models\\ogretmen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\models\\paketmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\models\\paketmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\models\\ornekvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.csproj|solutionrelative:ozgurseyhanwebsitesi\\models\\ornekvideo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +66,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 21,
           "Children": [
             {
               "$type": "Bookmark",
@@ -78,6 +135,181 @@
             {
               "$type": "Bookmark",
               "Name": "ST:133:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JwtSettings.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\JwtSettings.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Models\\JwtSettings.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\JwtSettings.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Models\\JwtSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-02T11:29:06.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\appsettings.json",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\appsettings.json",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\appsettings.json",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-25T06:47:39.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "JwtService.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Services\\JwtService.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Services\\JwtService.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Services\\JwtService.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Services\\JwtService.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAqwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T06:47:27.387Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "IJwtService.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Services\\IJwtService.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Services\\IJwtService.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Services\\IJwtService.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Services\\IJwtService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T06:47:22.907Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\User.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\User.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T12:25:34.966Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OgretmenController.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\OgretmenController.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Controllers\\OgretmenController.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\OgretmenController.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Controllers\\OgretmenController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-23T12:24:59.217Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAK8AAAAAAAAAAMBdwL0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-18T14:54:34.921Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OnceSonra.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\OnceSonra.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Models\\OnceSonra.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\OnceSonra.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Models\\OnceSonra.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T14:50:58.713Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SatinAlma.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\SatinAlma.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Models\\SatinAlma.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\SatinAlma.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Models\\SatinAlma.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T14:51:46.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-25T07:07:49.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "OrnekVideo.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\OrnekVideo.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Models\\OrnekVideo.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\OrnekVideo.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Models\\OrnekVideo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwA4AAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T14:50:10.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Ogretmen.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\Ogretmen.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Models\\Ogretmen.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\Ogretmen.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Models\\Ogretmen.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T14:47:33.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "PaketModel.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\PaketModel.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Models\\PaketModel.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\PaketModel.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Models\\PaketModel.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBAAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T14:49:28.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Kurs.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\Kurs.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Models\\Kurs.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Models\\Kurs.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Models\\Kurs.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAcwBYAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-17T14:48:51.255Z"
             }
           ]
         }
