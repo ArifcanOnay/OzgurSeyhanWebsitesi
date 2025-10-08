@@ -78,6 +78,9 @@ node_modules/
 # wwwroot/lib (if using LibMan)
 wwwroot/lib/
 
+# Large video files
+wwwroot/videos/
+
 # Temporary files
 *.tmp
 *.temp
