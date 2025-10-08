@@ -2,7 +2,7 @@
 {
     public class OrnekVideo
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Baslik { get; set; } = string.Empty;
         public string VideoUrl { get; set; } = string.Empty;
         public string Aciklama { get; set; } = string.Empty;
@@ -11,7 +11,7 @@
         public DateTime OlusturmaTarihi { get; set; } = DateTime.Now;
         
         // Foreign Keys
-        public int OgretmenId { get; set; }
+        public Guid OgretmenId { get; set; }
         public Ogretmen Ogretmen { get; set; } = null!;
     }
 }

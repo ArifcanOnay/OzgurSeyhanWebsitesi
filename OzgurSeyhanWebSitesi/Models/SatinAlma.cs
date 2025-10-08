@@ -2,7 +2,7 @@
 {
     public class SatinAlma
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string MusteriAdi { get; set; } = string.Empty;
         public string MusteriEmail { get; set; } = string.Empty;
         public string MusteriTelefon { get; set; } = string.Empty;
@@ -12,7 +12,7 @@
         public DateTime SatinAlmaTarihi { get; set; } = DateTime.Now;
 
         // Foreign Keys
-        public int PaketId { get; set; }
+        public Guid PaketId { get; set; }
         public Paket Paket { get; set; } = null!;
     }
 }

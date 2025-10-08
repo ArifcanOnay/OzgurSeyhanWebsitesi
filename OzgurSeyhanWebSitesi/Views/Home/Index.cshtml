@@ -1,0 +1,1192 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Özgür Seyhan - İngilizce Öğretmeni";
+}
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="hero-background">
+        <div class="floating-elements">
+            <div class="floating-element floating-element-1"></div>
+            <div class="floating-element floating-element-2"></div>
+            <div class="floating-element floating-element-3"></div>
+        </div>
+        
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <!-- Sol Taraf - Öğretmen Bilgileri -->
+                <div class="col-lg-7 col-md-6 order-2 order-lg-1">
+                    <div class="hero-content">
+                        <!-- Ana Başlık -->
+                        <h1 class="hero-title" data-aos="fade-right" data-aos-delay="200">
+                            Merhaba! Ben <span class="highlight-text">@Model?.Ogretmen?.AdSoyad</span>
+                        </h1>
+                        
+                        <!-- Alt Başlık -->
+                        <h2 class="hero-subtitle" data-aos="fade-right" data-aos-delay="300">
+                            İngilizce Öğretmeni & Dil Koçu
+                        </h2>
+                        
+                        <!-- Özgeçmiş -->
+                        <p class="hero-description" data-aos="fade-right" data-aos-delay="400">
+                            @Model?.Ogretmen?.Ozgecmis
+                        </p>
+                        
+                        <!-- Özellikler Listesi -->
+                        <div class="features-highlight" data-aos="fade-right" data-aos-delay="500">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="feature-highlight">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-certificate"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h5>Sertifikalı Eğitmen</h5>
+                                            <p>@Model?.Ogretmen?.Egitim</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-highlight">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-trophy"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h5>@Model?.Ogretmen?.DeneyimYili Yıl Deneyim</h5>
+                                            <p>Uzman seviyede İngilizce eğitimi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-highlight">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-video"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h5>Online Canlı Dersler</h5>
+                                            <p>İnteraktif ve etkili öğretim yöntemi</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="feature-highlight">
+                                        <div class="feature-icon">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div class="feature-content">
+                                            <h5>Kişisel Yaklaşım</h5>
+                                            <p>Her öğrenciye özel ilgi ve mentorluk</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- CTA Butonları -->
+                        <div class="hero-actions" data-aos="fade-right" data-aos-delay="600">
+                            <a href="#videos" class="btn btn-primary btn-lg">
+                                <i class="fas fa-play me-2"></i>Ders Örnekleri İzle
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sağ Taraf - Profil Kartı -->
+                <div class="col-lg-5 col-md-6 order-1 order-lg-2">
+                    <div class="profile-showcase" data-aos="fade-left" data-aos-delay="300">
+                        <!-- Profil Kartı -->
+                        <div class="profile-card">
+                            <!-- Arka Plan Dekorasyonu -->
+                            <div class="card-decoration">
+                                <div class="decoration-circle decoration-circle-1"></div>
+                                <div class="decoration-circle decoration-circle-2"></div>
+                                <div class="decoration-circle decoration-circle-3"></div>
+                            </div>
+                            
+                            <!-- Profil Fotoğrafı Container -->
+                            <div class="profile-image-container">
+                                <div class="profile-image-wrapper">
+                                    <img src="/images/ozgur-seyhan.jpg" 
+                                         alt="@Model?.Ogretmen?.AdSoyad" 
+                                         class="profile-image"
+                                         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                    
+                                    <!-- Fallback Avatar -->
+                                    <div class="fallback-avatar" style="display: none;">
+                                        <i class="fas fa-user fa-4x"></i>
+                                    </div>
+                                </div>
+                                
+                                <!-- Online Status -->
+                                <div class="online-status">
+                                    <div class="status-dot"></div>
+                                    <span>Aktif</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Profil Bilgileri -->
+                            <div class="profile-info">
+                                <h3 class="profile-name">@Model?.Ogretmen?.AdSoyad</h3>
+                                <p class="profile-title">İngilizce Öğretmeni</p>
+                                
+                                <!-- Eğitim Bilgisi -->
+                                <div class="education-badge">
+                                    <i class="fas fa-graduation-cap me-2"></i>
+                                    @Model?.Ogretmen?.Egitim
+                                </div>
+                                
+                                <!-- Özellikler -->
+                                <div class="features-list">
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        Sertifikalı Öğretmen
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        Online Ders Uzmanı
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        İnteraktif Öğretim
+                                    </div>
+                                    <div class="feature-item">
+                                        <i class="fas fa-check-circle text-success me-2"></i>
+                                        Kişisel Mentorluk
+                                    </div>
+                                </div>
+                                
+                                <!-- Sosyal Medya -->
+                                <div class="social-links">
+                                    <a href="@Model?.Ogretmen?.YouTubeKanalUrl" target="_blank" class="social-link youtube">
+                                        <i class="fab fa-youtube"></i>
+                                    </a>
+                                    <a href="mailto:ozgurseyhan@gmail.com" class="social-link gmail">
+                                        <i class="fas fa-envelope"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Video Bölümü -->
+@await Html.PartialAsync("_VideoCardPartial", Model?.Videos)
+
+<!-- Kurs Tanıtım Bölümü -->
+<section class="py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">
+    <!-- Floating Background Elements -->
+    <div class="floating-elements">
+        <div class="floating-element" style="top: 10%; left: 10%; animation-delay: 0s;">📚</div>
+        <div class="floating-element" style="top: 20%; right: 15%; animation-delay: 2s;">🎯</div>
+        <div class="floating-element" style="bottom: 20%; left: 20%; animation-delay: 4s;">⭐</div>
+        <div class="floating-element" style="bottom: 10%; right: 10%; animation-delay: 6s;">🚀</div>
+    </div>
+    
+    <div class="container position-relative">
+        <div class="row text-center text-white mb-5">
+            <div class="col-12">
+                <h2 class="display-4 fw-bold mb-3 animate__animated animate__fadeInUp">🎓 Kurslarımız</h2>
+                <p class="lead animate__animated animate__fadeInUp animate__delay-1s">Profesyonel İngilizce eğitimi için tasarlanmış kurslarımız</p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center g-4">
+            <!-- Birinci Kurs - Premium Design with Background Image -->
+            <div class="col-lg-6">
+                <div class="course-card shadow-xl border-0 h-100 position-relative overflow-hidden">
+                    
+                    <!-- Course Header with Background Image -->
+                    <div class="course-header-with-bg position-relative" style="height: 250px; background: linear-gradient(135deg, rgba(40, 167, 69, 0.8), rgba(32, 201, 151, 0.8)), url('/images/Begginer-English-Course.png'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                        <div class="course-header-content text-white text-center h-100 d-flex flex-column justify-content-center position-relative z-index-2">
+                            <div class="course-icon mb-3">
+                                <i class="fas fa-graduation-cap fa-3x animate__animated animate__bounce animate__infinite"></i>
+                            </div>
+                            <h4 class="mb-2 fw-bold fs-3">BEGINNER ENGLISH COURSE</h4>
+                            <h5 class="mb-0 fw-bold">Başlangıç İngilizce Kursu</h5>
+                            <small class="opacity-75 mt-2">A1-A2 Seviye • Sıfırdan Başlayanlara Özel</small>
+                        </div>
+                        
+                        <!-- Overlay for better text readability -->
+                        <div class="course-overlay"></div>
+                        
+                        <!-- Decorative elements -->
+                        <div class="decorative-circles">
+                            <div class="circle circle-1"></div>
+                            <div class="circle circle-2"></div>
+                            <div class="circle circle-3"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body p-4" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+                        <div class="course-description mb-4">
+                            <p class="card-text text-muted mb-3">🎯 İngilizce öğrenmeye sıfırdan başlayanlar için tasarlanmış kapsamlı temel kurs programı.</p>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span>Sıfırdan başlayanlara özel program</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span>İnteraktif ders materyalleri</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span>Canlı ders desteği</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Course Stats -->
+                        <div class="course-stats mb-4">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-calendar-alt text-success"></i>
+                                        <div class="fw-bold">12 Hafta</div>
+                                        <small class="text-muted">Süre</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock text-success"></i>
+                                        <div class="fw-bold">3 Gün</div>
+                                        <small class="text-muted">Haftalık</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <div class="fw-bold">A1-A2</div>
+                                        <small class="text-muted">Seviye</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <small class="text-muted d-flex align-items-center">
+                                <i class="fas fa-calendar-check me-2 text-success"></i>
+                                Ders Günleri:
+                            </small>
+                            <div class="fw-bold">Pazartesi, Cuma, Cumartesi</div>
+                        </div>
+                        
+                        <!-- Price Section -->
+                        <div class="price-section mb-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted text-decoration-line-through fs-6">1000 ₺</span>
+                                    <div class="price-main text-success fw-bold fs-2">800 ₺</div>
+                                    <small class="text-muted">Aylık • %20 İndirim</small>
+                                </div>
+                                <div class="discount-badge">
+                                    <span class="badge bg-danger">-200₺</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="/Kurs/Details/00000000-0000-0000-0000-000000000001" class="btn btn-success btn-lg px-4 py-2 shadow-sm">
+                                <i class="fas fa-info-circle me-2"></i>
+                                📖 Kurs Hakkında Bilgi Al
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover Glow Effect -->
+                    <div class="hover-glow"></div>
+                </div>
+            </div>
+            
+            <!-- İkinci Kurs - Premium Design with Background Image -->
+            <div class="col-lg-6">
+                <div class="course-card shadow-xl border-0 h-100 position-relative overflow-hidden">
+                    
+                    <!-- Course Header with Background Image -->
+                    <div class="course-header-with-bg position-relative" style="height: 250px; background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(102, 16, 242, 0.8)), url('/images/A2-B1 KURSU.png'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                        <div class="course-header-content text-white text-center h-100 d-flex flex-column justify-content-center position-relative z-index-2">
+                            <div class="course-icon mb-3">
+                                <i class="fas fa-rocket fa-3x animate__animated animate__bounce animate__infinite"></i>
+                            </div>
+                            <h4 class="mb-2 fw-bold fs-3">INTERMEDIATE ENGLISH COURSE</h4>
+                            <h5 class="mb-0 fw-bold">Orta Seviye İngilizce Kursu</h5>
+                            <small class="opacity-75 mt-2">A2-B1 Seviye • İleri Düzey Program</small>
+                        </div>
+                        
+                        <!-- Overlay for better text readability -->
+                        <div class="course-overlay-blue"></div>
+                        
+                        <!-- Decorative elements -->
+                        <div class="decorative-circles">
+                            <div class="circle circle-1"></div>
+                            <div class="circle circle-2"></div>
+                            <div class="circle circle-3"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body p-4" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+                        <div class="course-description-blue mb-4">
+                            <p class="card-text text-muted mb-3">🚀 Temel İngilizce bilgisi olan öğrenciler için orta seviye konuşma ve yazma becerileri geliştirme kursu.</p>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-primary me-2"></i>
+                                    <span>İleri düzey konuşma teknikleri</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-primary me-2"></i>
+                                    <span>Akademik yazma becerileri</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-primary me-2"></i>
+                                    <span>İş İngilizcesi temelleri</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Course Stats -->
+                        <div class="course-stats mb-4">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-calendar-alt text-primary"></i>
+                                        <div class="fw-bold">14 Hafta</div>
+                                        <small class="text-muted">Süre</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock text-primary"></i>
+                                        <div class="fw-bold">3 Gün</div>
+                                        <small class="text-muted">Haftalık</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <div class="fw-bold">A2-B1</div>
+                                        <small class="text-muted">Seviye</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <small class="text-muted d-flex align-items-center">
+                                <i class="fas fa-calendar-check me-2 text-primary"></i>
+                                Ders Günleri:
+                            </small>
+                            <div class="fw-bold">Pazartesi, Cuma, Cumartesi</div>
+                        </div>
+                        
+                        <!-- Price Section -->
+                        <div class="price-section mb-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted text-decoration-line-through fs-6">1200 ₺</span>
+                                    <div class="price-main text-primary fw-bold fs-2">1000 ₺</div>
+                                    <small class="text-muted">Aylık • %17 İndirim</small>
+                                </div>
+                                <div class="discount-badge">
+                                    <span class="badge bg-danger">-200₺</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="/Kurs/Details/00000000-0000-0000-0000-000000000002" class="btn btn-primary btn-lg px-4 py-2 shadow-sm">
+                                <i class="fas fa-info-circle me-2"></i>
+                                📖 Kurs Hakkında Bilgi Al
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover Glow Effect -->
+                    <div class="hover-glow"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tüm Kursları Göster Butonu -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <a href="/Kurs" class="btn btn-outline-light btn-lg px-5 py-3 shadow-lg">
+                    <i class="fas fa-list me-2"></i>
+                    ✨ Tüm Kursları Görüntüle
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Başarı Hikayeleri Bölümü -->
+<section class="py-5" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);">
+    <div class="container">
+        <div class="row text-center text-white mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">🌟 Başarı Hikayeleri</h2>
+                <p class="lead">Öğrencilerimizin inanılmaz gelişim hikayeleri</p>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card shadow-lg border-0">
+                    <div class="card-body p-5 text-center">
+                        <div class="row mb-4">
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <i class="fas fa-user-graduate fa-3x text-success"></i>
+                                </div>
+                                <h5>Ayşe Y.</h5>
+                                <p class="small text-muted">"Hiç konuşamıyordum"</p>
+                                <div class="text-center">
+                                    <span class="text-danger">❌</span>
+                                    <i class="fas fa-arrow-right mx-2"></i>
+                                    <span class="text-success">✅</span>
+                                </div>
+                                <p class="small text-success">"Şimdi akıcı konuşuyorum!"</p>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <i class="fas fa-user-tie fa-3x text-primary"></i>
+                                </div>
+                                <h5>Mehmet D.</h5>
+                                <p class="small text-muted">"Sadece basit cümleler"</p>
+                                <div class="text-center">
+                                    <span class="text-danger">❌</span>
+                                    <i class="fas fa-arrow-right mx-2"></i>
+                                    <span class="text-success">✅</span>
+                                </div>
+                                <p class="small text-success">"İş sunumları yapıyorum!"</p>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="mb-3">
+                                    <i class="fas fa-user-female fa-3x text-warning"></i>
+                                </div>
+                                <h5>Zeynep K.</h5>
+                                <p class="small text-muted">"Çok çekiniyordum"</p>
+                                <div class="text-center">
+                                    <span class="text-danger">❌</span>
+                                    <i class="fas fa-arrow-right mx-2"></i>
+                                    <span class="text-success">✅</span>
+                                </div>
+                                <p class="small text-success">"Yurt dışında çalışıyorum!"</p>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="mb-3">🎯 Siz de Bu Başarı Hikayelerinin Parçası Olun!</h4>
+                                <p class="mb-4">Sadece birkaç ay sonra siz de bu hikayeleri yaşıyor olacaksınız!</p>
+                                <a href="/OnceSonra" class="btn btn-warning btn-lg me-3">
+                                    🎥 Tüm Başarı Hikayelerini İzleyin
+                                </a>
+                                <a href="/Kurs" class="btn btn-outline-light btn-lg">
+                                    📚 Hemen Başlayın
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modern CSS ve JavaScript -->
+<style>
+/* Hero Section */
+.hero-section {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+.hero-background {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    padding: 2rem 0;
+}
+
+/* Floating Elements */
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.floating-element {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-element-1 {
+    width: 80px;
+    height: 80px;
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-element-2 {
+    width: 120px;
+    height: 120px;
+    top: 60%;
+    right: 15%;
+    animation-delay: 2s;
+}
+
+.floating-element-3 {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 20%;
+    animation-delay: 4s;
+}
+
+@@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(180deg); }
+}
+
+/* Course Cards Premium Styles */
+.course-card {
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    background: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+.course-header-with-bg {
+    border-radius: 20px 20px 0 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.course-header-content {
+    z-index: 2;
+    position: relative;
+}
+
+.course-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(32, 201, 151, 0.3) 100%);
+    z-index: 1;
+}
+
+/* Blue overlay for second course */
+.course-overlay-blue {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.85), rgba(102, 16, 242, 0.9));
+    z-index: 1;
+}
+
+.z-index-2 {
+    z-index: 2;
+}
+
+.feature-list {
+    margin-top: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.course-description {
+    border-left: 4px solid #28a745;
+    padding-left: 1rem;
+    background: rgba(40, 167, 69, 0.05);
+    border-radius: 0 10px 10px 0;
+    padding: 1rem;
+}
+
+.course-description-blue {
+    background: rgba(248, 249, 250, 0.8);
+    border-radius: 15px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.course-icon {
+    animation: bounce 2s infinite;
+}
+
+@@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.decorative-circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    animation: floatCircle 8s ease-in-out infinite;
+}
+
+.circle-1 {
+    width: 40px;
+    height: 40px;
+    top: 20%;
+    right: 10%;
+    animation-delay: 0s;
+}
+
+.circle-2 {
+    width: 60px;
+    height: 60px;
+    bottom: 20%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.circle-3 {
+    width: 30px;
+    height: 30px;
+    top: 60%;
+    right: 20%;
+    animation-delay: 4s;
+}
+
+@@keyframes floatCircle {
+    0%, 100% { transform: translateY(0px) scale(1); opacity: 0.3; }
+    50% { transform: translateY(-20px) scale(1.1); opacity: 0.6; }
+}
+
+.popular-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 10;
+    background: #ffc107;
+    border-radius: 15px;
+    padding: 5px 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: pulse 2s infinite;
+}
+
+@@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.course-stats .stat-item {
+    padding: 1rem;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.course-stats .stat-item:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.course-stats i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.price-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 2px solid #e9ecef;
+}
+
+.price-main {
+    font-size: 2.5rem !important;
+    line-height: 1;
+}
+
+.discount-badge {
+    position: relative;
+}
+
+.discount-badge .badge {
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 20px;
+    animation: shake 3s infinite;
+}
+
+@@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+.hover-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.course-card:hover .hover-glow {
+    opacity: 1;
+}
+
+.floating-elements {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.floating-elements .floating-element {
+    position: absolute;
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.3);
+    animation: floatEmoji 6s ease-in-out infinite;
+}
+
+@@keyframes floatEmoji {
+    0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0.3; }
+    50% { transform: translateY(-30px) rotate(180deg); opacity: 0.6; }
+}
+
+.badge-container {
+    margin-top: 1rem;
+}
+
+.badge-container .badge {
+    margin: 0.25rem;
+    font-size: 0.9rem;
+    border-radius: 20px;
+    animation: slideInUp 1s ease;
+}
+
+@@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.shadow-xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+}
+
+/* Responsive adjustments */
+@@media (max-width: 768px) {
+    .course-card {
+        margin-bottom: 2rem;
+    }
+    
+    .floating-elements .floating-element {
+        font-size: 1.5rem;
+    }
+    
+    .price-main {
+        font-size: 2rem !important;
+    }
+}
+
+/* Hero Content */
+.hero-content {
+    color: white;
+    padding: 2rem 0;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.highlight-text {
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    opacity: 0.95;
+}
+
+/* Achievement Stats */
+.achievement-stats {
+    margin-bottom: 3rem;
+}
+
+/* Features Highlight */
+.features-highlight {
+    margin-bottom: 3rem;
+}
+
+.feature-highlight {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+.feature-highlight:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #ffd700, #ffed4e);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #333;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+.feature-content h5 {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.feature-content p {
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Hero Actions */
+.hero-actions .btn {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+    border: none;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.4);
+}
+
+.btn-outline-light:hover {
+    transform: translateY(-3px);
+}
+
+/* Profile Showcase */
+.profile-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.profile-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Decoration */
+.card-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.decoration-circle {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    opacity: 0.1;
+}
+
+.decoration-circle-1 {
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    right: -20px;
+}
+
+.decoration-circle-2 {
+    width: 60px;
+    height: 60px;
+    bottom: 20px;
+    left: -10px;
+}
+
+.decoration-circle-3 {
+    width: 80px;
+    height: 80px;
+    top: 40%;
+    left: -30px;
+}
+
+/* Profile Image */
+.profile-image-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.profile-image-wrapper {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    padding: 5px;
+}
+
+.profile-image {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+.online-status {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #10b981;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: white;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+@@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Profile Info */
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin-bottom: 0.5rem;
+}
+
+.profile-title {
+    color: #667eea;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.education-badge {
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+    font-weight: 600;
+}
+
+/* Features List */
+.features-list {
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.feature-item {
+    padding: 0.5rem 0;
+    font-weight: 500;
+    color: #4a5568;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link.youtube {
+    background: linear-gradient(45deg, #ff0000, #ff4444);
+    color: white;
+}
+
+.social-link.gmail {
+    background: linear-gradient(45deg, #ea4335, #fbbc05);
+    color: white;
+}
+
+.social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive */
+@@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .profile-card {
+        padding: 2rem 1.5rem;
+    }
+    
+    .hero-actions .btn {
+        padding: 0.75rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+</style>
+
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+// Initialize AOS
+AOS.init({
+    duration: 1000,
+    once: true
+});
+
+// Smooth scroll for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
+</script>

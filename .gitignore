@@ -1,0 +1,83 @@
+# Visual Studio files
+.vs/
+.vscode/
+*.user
+*.suo
+*.userprefs
+*.pidb
+*.booproj
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+build/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# NuGet packages
+*.nupkg
+**/packages/*
+!**/packages/build/
+
+# Test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# ASP.NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Entity Framework
+Migrations/
+
+# User-specific files
+*.rsuser
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# JetBrains
+.idea/
+*.sln.iml
+
+# CodeRush
+.cr/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Node modules
+node_modules/
+
+# wwwroot/lib (if using LibMan)
+wwwroot/lib/
+
+# Temporary files
+*.tmp
+*.temp

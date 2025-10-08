@@ -4,7 +4,7 @@ namespace OzgurSeyhanWebSitesi.Models
 {
     public class Kurs
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string KursAdi { get; set; } = string.Empty;
         public string Aciklama { get; set; } = string.Empty;
         public string Konular { get; set; } = string.Empty; // İşlenecek konular
@@ -30,7 +30,7 @@ namespace OzgurSeyhanWebSitesi.Models
         public bool PopulerMi { get; set; } = false; // Popüler rozeti için
 
         // Foreign Keys
-        public int OgretmenId { get; set; }
+        public Guid OgretmenId { get; set; }
         public Ogretmen Ogretmen { get; set; } = null!;
 
         // Navigation Properties
