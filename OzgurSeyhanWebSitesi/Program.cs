@@ -29,6 +29,7 @@ namespace OzgurSeyhanWebSitesi
             builder.Services.AddScoped<IVideoService, VideoService>();
             builder.Services.AddScoped<IKursService, KursService>();
             builder.Services.AddScoped<IOnceSonraService, OnceSonraService>();
+            builder.Services.AddScoped<IIletisimBilgisiService, IletisimBilgisiService>();
 
             // JWT Authentication konfigürasyonu
             var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();

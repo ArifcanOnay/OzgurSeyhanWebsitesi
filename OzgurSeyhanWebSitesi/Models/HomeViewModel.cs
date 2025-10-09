@@ -6,5 +6,6 @@ namespace OzgurSeyhanWebSitesi.Models
     {
         public Ogretmen? Ogretmen { get; set; }
         public List<OrnekVideo> Videos { get; set; } = new List<OrnekVideo>();
+        public IletisimBilgisi? IletisimBilgisi { get; set; }
     }
 }

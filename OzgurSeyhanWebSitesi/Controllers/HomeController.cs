@@ -9,11 +9,13 @@ namespace OzgurSeyhanWebSitesi.Controllers
     {
         private readonly IOgretmenService _ogretmenService;
         private readonly IVideoService _videoService;
+        private readonly IIletisimBilgisiService _iletisimBilgisiService;
 
-        public HomeController(IOgretmenService ogretmenService, IVideoService videoService)
+        public HomeController(IOgretmenService ogretmenService, IVideoService videoService, IIletisimBilgisiService iletisimBilgisiService)
         {
             _ogretmenService = ogretmenService;
             _videoService = videoService;
+            _iletisimBilgisiService = iletisimBilgisiService;
         }
 
         // Ana sayfa action'ı - Öğretmen bilgilerini getirecek
@@ -88,11 +90,15 @@ namespace OzgurSeyhanWebSitesi.Controllers
             // 7. ADIM: Videoları çek
             var videos = await _videoService.GetAllVideosAsync();
 
-            // 8. ADIM: ViewModel oluştur ve view'a gönder
+            // 8. ADIM: İletişim bilgilerini çek
+            var iletisimBilgisi = await _iletisimBilgisiService.GetAktifIletisimBilgisiAsync();
+
+            // 9. ADIM: ViewModel oluştur ve view'a gönder
             var viewModel = new HomeViewModel
             {
                 Ogretmen = ogretmen,
-                Videos = videos
+                Videos = videos,
+                IletisimBilgisi = iletisimBilgisi
             };
 
             return View(viewModel);
