@@ -10,12 +10,14 @@ namespace OzgurSeyhanWebSitesi.Controllers
         private readonly IOgretmenService _ogretmenService;
         private readonly IVideoService _videoService;
         private readonly IIletisimBilgisiService _iletisimBilgisiService;
+        private readonly IKursService _kursService;
 
-        public HomeController(IOgretmenService ogretmenService, IVideoService videoService, IIletisimBilgisiService iletisimBilgisiService)
+        public HomeController(IOgretmenService ogretmenService, IVideoService videoService, IIletisimBilgisiService iletisimBilgisiService, IKursService kursService)
         {
             _ogretmenService = ogretmenService;
             _videoService = videoService;
             _iletisimBilgisiService = iletisimBilgisiService;
+            _kursService = kursService;
         }
 
         // Ana sayfa action'ı - Öğretmen bilgilerini getirecek
@@ -90,10 +92,36 @@ namespace OzgurSeyhanWebSitesi.Controllers
             // 7. ADIM: Videoları çek
             var videos = await _videoService.GetAllVideosAsync();
 
-            // 8. ADIM: İletişim bilgilerini çek
-            var iletisimBilgisi = await _iletisimBilgisiService.GetAktifIletisimBilgisiAsync();
+            // 8. ADIM: Kursları kontrol et ve gerekirse oluştur
+            var kursVarMi = await _kursService.KursVarMiAsync();
+            if (!kursVarMi && ogretmen != null)
+            {
+                await _kursService.CreateSampleKurslarAsync(ogretmen.Id);
+            }
 
-            // 9. ADIM: ViewModel oluştur ve view'a gönder
+            // 9. ADIM: İletişim bilgilerini çek veya oluştur
+            var iletisimBilgisi = await _iletisimBilgisiService.GetAktifIletisimBilgisiAsync();
+            
+            // Eğer iletişim bilgisi yoksa oluştur
+            if (iletisimBilgisi == null && ogretmen != null)
+            {
+                var yeniIletisimBilgisi = new IletisimBilgisi
+                {
+                    TelefonNumarasi = "05354893494",
+                    Email = "ozgurseyhan@gmail.com",
+                    YouTubeKanali = "https://www.youtube.com/@5dakikadaingilizce",
+                    WhatsAppNumarasi = "",
+                    Adres = "",
+                    WebSitesi = "",
+                    Aktif = true,
+                    OgretmenId = ogretmen.Id
+                };
+
+                await _iletisimBilgisiService.CreateIletisimBilgisiAsync(yeniIletisimBilgisi);
+                iletisimBilgisi = await _iletisimBilgisiService.GetAktifIletisimBilgisiAsync();
+            }
+
+            // 10. ADIM: ViewModel oluştur ve view'a gönder
             var viewModel = new HomeViewModel
             {
                 Ogretmen = ogretmen,
