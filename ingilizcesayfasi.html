@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title> Özgür Seyhan</title>
+</head>
+
+<body style="margin: 0; padding: 20px;">
+    <div id="ana-sayfa">
+    <h1 style="margin-bottom: 5px;">Ben kimim?</h1>
+<div style="display: flex;align-items: center;gap: 30px;max-width:1000px; margin-top: 5px;">
+    <p>
+Cumhuriyetimizin 100. yılında Türkiye'deki herkese İngilizce öğretme fikrini kafasına takmış bir deli. 
+7'den 77'ye, yerli ve yabancı her seviyeden öğrencilerle 10 bin saati aşkın online İngilizce ders tecrübesine sahip bir öğretmen.
+'Ben Türklere  İngilizceyi nasıl öğretirim?' sorusunun cevabı üzerinde yıllarca çalıştım ve bunun cevabını buldum. 
+Gelin Matrix'deki Neo gibi kurşunları yavaşlatalım, İngilizce gözümüzün önünde ete kemiğe kavuşsun. 
+Bu dersleri sırasıyla izleyip, İngilizce ile ilgili tüm soru işaretlerinizin birer birer kaybolduğuna kendi gözlerinizle şahit olduğunuzda, hem yüzünüz gülecek, hem de İngilizce öğreneceksiniz.
+İngilizce bu dünyadaki en kolay dil arkadaşlar. Söz veriyorum. Size İngilizce öğreteceğim...
+
+    </p>
+    <img src="Images/Özgür seyhan.jpg" alt="Özgür Seyhan" style="width: 200px;height: 200px;border-radius: 15px;">
+</div>
+<h2 style="margin-top:50px;margin-bottom: 20px;"> Canlı derslerimizden Bazı örnek videolar </h2>
+
+<div style="display: flex; gap: 20px; flex-wrap: wrap;">
+ <iframe
+        width="300"
+        height="200"
+        src="https://www.youtube.com/embed/sHZM2CpFRoo"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+    
+    <iframe
+        width="300"
+        height="200"
+        src="https://www.youtube.com/embed/iH4OHmxoxuE"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+</div>
+<h2 style="margin-top: 50px;margin-bottom: 20px;">Canli Derslerimizin İçerikleri</h2>
+<div style="display: flex;gap:20px;flex-wrap:wrap;justify-content: center;">
+   <div style="border:2px solid #ccc;padding: 20px;border-radius: 10px;width: 200px;text-align: center;">
+        <h3 style="margin-top: 0;">1.Kur(A1-A2)</h3>
+        <p>İngilizcede Temel attığımız bölüm</p>
+        <button onclick="kursDetayGoster(1)" style="padding: 10px 15px;background-color: #007bff;color: white;border: none;border-radius: 5px;cursor: pointer;">İncele</button>
+    </div>
+    
+    <div style="border:2px solid #ccc;padding: 20px;border-radius: 10px;width: 200px;text-align: center;">
+        <h3 style="margin-top: 0;">2.Kur(A2-B1)</h3>
+        <p>Orta seviye İngilizce</p>
+        <button onclick="kursDetayGoster(2)" style="padding: 10px 15px;background-color: #28a745;color: white;border: none;border-radius: 5px;cursor: pointer;">İncele</button>
+    </div>
+    
+    <div style="border:2px solid #ccc;padding: 20px;border-radius: 10px;width: 200px;text-align: center;">
+        <h3 style="margin-top: 0;">3.Kur(B1-B2)</h3>
+        <p>İleri seviye İngilizce</p>
+        <button onclick="kursDetayGoster(3)" style="padding: 10px 15px;background-color: #ffc107;color: white;border: none;border-radius: 5px;cursor: pointer;">İncele</button>
+    </div>
+    
+    <div style="border:2px solid #ccc;padding: 20px;border-radius: 10px;width: 200px;text-align: center;">
+        <h3 style="margin-top: 0;">4.Kur(B2-C1)</h3>
+        <p>Üst seviye İngilizce</p>
+        <button onclick="kursDetayGoster(4)" style="padding: 10px 15px;background-color: #dc3545;color: white;border: none;border-radius: 5px;cursor: pointer;">İncele</button>
+    </div>
+</div>
+</div>
+<div id="kurs1-detay" style="display: none;">
+     <button onclick="anaSayfayaDon()" style="margin-bottom: 20px; padding: 10px 15px; background-color: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer;">← Ana Sayfaya Dön</button>
+ <h2>1. Kurs (A1-A2) - Detayları</h2>
+    <h3>Kurs Süresi:</h3>
+    <p>12 hafta, haftada 3 ders (36 ders)</p>
+    <h3>Ders Saatleri:</h3>
+    <p>Pazartesi, Çarşamba, Cuma - 19:00-20:00</p>
+    <h3>Kurs İçeriği:</h3>
+    <ul>
+        <li>Temel gramer yapıları</li>
+        <li>Günlük konuşma kalıpları</li>
+        <li>Temel kelime bilgisi (500+ kelime)</li>
+        <li>Basit okuma metinleri</li>
+    </ul>
+    <h3>Kurs Sonunda:</h3>
+    <p>A2 seviyesine ulaşacak, temel günlük konuşmaları yapabileceksiniz.</p>
+</div>
+<div id="kurs2-detay" style="display: none;">
+    <button onclick="anaSayfayaDon()" style="margin-bottom: 20px; padding: 10px 15px; background-color: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer;">← Ana Sayfaya Dön</button>
+    <h2>2. Kurs (A2-B1) - Detayları</h2>
+    <h3>Kurs Süresi:</h3>
+    <p>14 hafta, haftada 3 ders (42 ders)</p>
+    <h3>Ders Saatleri:</h3>
+    <p>Salı, Perşembe, Cumartesi - 20:00-21:00</p>
+    <h3>Kurs İçeriği:</h3>
+    <ul>
+        <li>Orta seviye gramer</li>
+        <li>İş İngilizcesi temelleri</li>
+        <li>Kelime bilgisi (1000+ kelime)</li>
+        <li>Okuma ve yazma becerileri</li>
+    </ul>
+    <h3>Kurs Sonunda:</h3>
+    <p>B1 seviyesine ulaşacak, iş ortamında temel İngilizce kullanabileceksiniz.</p>
+</div>
+
+<div id="kurs3-detay" style="display: none;">
+    <button onclick="anaSayfayaDon()" style="margin-bottom: 20px; padding: 10px 15px; background-color: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer;">← Ana Sayfaya Dön</button>
+    <h2>3. Kurs (B1-B2) - Detayları</h2>
+    <h3>Kurs Süresi:</h3>
+    <p>16 hafta, haftada 3 ders (48 ders)</p>
+    <h3>Ders Saatleri:</h3>
+    <p>Pazartesi, Çarşamba, Cuma - 18:00-19:00</p>
+    <h3>Kurs İçeriği:</h3>
+    <ul>
+        <li>İleri seviye gramer</li>
+        <li>Akademik İngilizce</li>
+        <li>Kelime bilgisi (1500+ kelime)</li>
+        <li>Sunum ve tartışma becerileri</li>
+    </ul>
+    <h3>Kurs Sonunda:</h3>
+    <p>B2 seviyesine ulaşacak, akademik ve iş ortamında akıcı İngilizce kullanabileceksiniz.</p>
+</div>
+
+<div id="kurs4-detay" style="display: none;">
+    <button onclick="anaSayfayaDon()" style="margin-bottom: 20px; padding: 10px 15px; background-color: #6c757d; color: white; border: none; border-radius: 5px; cursor: pointer;">← Ana Sayfaya Dön</button>
+    <h2>4. Kurs (B2-C1) - Detayları</h2>
+    <h3>Kurs Süresi:</h3>
+    <p>18 hafta, haftada 3 ders (54 ders)</p>
+    <h3>Ders Saatleri:</h3>
+    <p>Salı, Perşembe, Cumartesi - 21:00-22:00</p>
+    <h3>Kurs İçeriği:</h3>
+    <ul>
+        <li>Üst seviye gramer ve idiomlar</li>
+        <li>Profesyonel İngilizce</li>
+        <li>Kelime bilgisi (2000+ kelime)</li>
+        <li>Analitik düşünme ve eleştiri</li>
+    </ul>
+    <h3>Kurs Sonunda:</h3>
+    <p>C1 seviyesine ulaşacak, native speaker seviyesine yakın İngilizce kullanabileceksiniz.</p>
+</div>
+// ...existing code...
+    </div>
+</div>
+
+<h2 style="margin-top: 50px; margin-bottom: 20px; text-align: center;">🚀 Öğrenci Başarı Hikayeleri (Before & After)</h2>
+<p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 30px;">
+    Öğrencilerimizin kurs öncesi ve sonrası gelişimlerini görün! 📈
+</p>
+
+<div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center;">
+    <!-- İlk öğrenci - Ahmet -->
+    <div style="border: 2px solid #ddd; border-radius: 15px; padding: 20px; width: 450px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h3 style="color: #007bff; margin-top: 0;">👨‍🎓 Ahmet - A1'den B1'e (6 Ay)</h3>
+        
+        <!-- Before ve After yan yana -->
+        <div style="display: flex; gap: 15px; align-items: center; justify-content: center;">
+            <div style="flex: 1;">
+                <h4 style="color: #dc3545; margin-bottom: 10px;">🔴 BEFORE</h4>
+                <iframe width="200" height="150" src="https://www.youtube.com/embed/VIDEO_ID_BURAYA" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                <p style="color: #666; font-size: 12px; margin-top: 8px;">Sadece "Hello" diyebiliyordu</p>
+            </div>
+            
+            <div style="font-size: 30px; color: #ffc107;">➡️</div>
+            
+            <div style="flex: 1;">
+                <h4 style="color: #28a745; margin-bottom: 10px;">🟢 AFTER</h4>
+                <iframe width="200" height="150" src="https://www.youtube.com/embed/VIDEO_ID_BURAYA" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                <p style="color: #666; font-size: 12px; margin-top: 8px;">İş mülakatı yapabiliyor!</p>
+            </div>
+        </div>
+        
+        <div style="background-color: #f8f9fa; padding: 10px; border-radius: 8px; margin-top: 15px;">
+            <strong>📚 Aldığı Kurslar:</strong> 1. Kurs + 2. Kurs
+        </div>
+    </div>
+    
+    <!-- İkinci öğrenci - Ayşe -->
+    <div style="border: 2px solid #ddd; border-radius: 15px; padding: 20px; width: 450px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+        <h3 style="color: #28a745; margin-top: 0;">👩‍🎓 Ayşe - A2'den B2'ye (8 Ay)</h3>
+        
+        <!-- Before ve After yan yana -->
+        <div style="display: flex; gap: 15px; align-items: center; justify-content: center;">
+            <div style="flex: 1;">
+                <h4 style="color: #dc3545; margin-bottom: 10px;">🔴 BEFORE</h4>
+                <iframe width="200" height="150" src="https://www.youtube.com/embed/VIDEO_ID_BURAYA" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                <p style="color: #666; font-size: 12px; margin-top: 8px;">Basit cümleler kuruyordu</p>
+            </div>
+            
+            <div style="font-size: 30px; color: #ffc107;">➡️</div>
+            
+            <div style="flex: 1;">
+                <h4 style="color: #28a745; margin-bottom: 10px;">🟢 AFTER</h4>
+                <iframe width="200" height="150" src="https://www.youtube.com/embed/VIDEO_ID_BURAYA" frameborder="0" allowfullscreen style="border-radius: 8px;"></iframe>
+                <p style="color: #666; font-size: 12px; margin-top: 8px;">Akıcı sunum yapabiliyor!</p>
+            </div>
+        </div>
+        
+        <div style="background-color: #f8f9fa; padding: 10px; border-radius: 8px; margin-top: 15px;">
+            <strong>📚 Aldığı Kurslar:</strong> 2. Kurs + 3. Kurs
+        </div>
+    </div>
+</div>
+</div>
+<h2 style="margin-top: 50px; margin-bottom: 20px; text-align: center;">💳 Kursları Satın Al</h2>
+<p style="text-align: center; font-size: 18px; color: #666; margin-bottom: 30px;">
+    Size uygun kursu seçin ve hemen başlayın! 🚀
+</p>
+
+<div style="display: flex; gap: 25px; flex-wrap: wrap; justify-content: center;">
+    <!-- 1. Kurs Satın Alma Kartı -->
+    <div style="border: 3px solid #007bff; border-radius: 15px; padding: 25px; width: 280px; text-align: center; box-shadow: 0 6px 12px rgba(0,123,255,0.2); background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);">
+        <div style="background-color: #007bff; color: white; padding: 8px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; font-weight: bold;">
+            📚 1. KURS
+        </div>
+        <h3 style="color: #007bff; margin: 10px 0;">A1-A2 Seviyesi</h3>
+        <h4 style="color: #333; margin: 15px 0;">İngilizceye Temel Atım</h4>
+        
+        <div style="background-color: white; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #007bff;">
+            <p style="margin: 5px 0; color: #666;">⏰ <strong>Süre:</strong> 12 Hafta</p>
+            <p style="margin: 5px 0; color: #666;">📅 <strong>Ders:</strong> Haftada 3 Gün</p>
+            <p style="margin: 5px 0; color: #666;">🎯 <strong>Seviye:</strong> Başlangıç</p>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <span style="font-size: 32px; color: #007bff; font-weight: bold;">₺1.500</span>
+            <span style="font-size: 16px; color: #666; text-decoration: line-through; margin-left: 10px;">₺2.000</span>
+        </div>
+        
+        <button onclick="kursunuSatinAl(1)" style="width: 100%; padding: 15px; background: linear-gradient(135deg, #007bff 0%, #0056b3 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.3s;">
+            🛒 Hemen Satın Al
+        </button>
+        
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">
+            ✅ 30 Gün Para İade Garantisi
+        </p>
+    </div>
+    
+    <!-- 2. Kurs Satın Alma Kartı -->
+    <div style="border: 3px solid #28a745; border-radius: 15px; padding: 25px; width: 280px; text-align: center; box-shadow: 0 6px 12px rgba(40,167,69,0.2); background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%); position: relative;">
+        <!-- Popüler Rozeti -->
+        <div style="position: absolute; top: -12px; right: 20px; background-color: #ff6b35; color: white; padding: 5px 15px; border-radius: 15px; font-size: 12px; font-weight: bold;">
+            🔥 POPÜLER
+        </div>
+        
+        <div style="background-color: #28a745; color: white; padding: 8px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; font-weight: bold;">
+            📚 2. KURS
+        </div>
+        <h3 style="color: #28a745; margin: 10px 0;">A2-B1 Seviyesi</h3>
+        <h4 style="color: #333; margin: 15px 0;">Orta Seviye İngilizce</h4>
+        
+        <div style="background-color: white; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #28a745;">
+            <p style="margin: 5px 0; color: #666;">⏰ <strong>Süre:</strong> 14 Hafta</p>
+            <p style="margin: 5px 0; color: #666;">📅 <strong>Ders:</strong> Haftada 3 Gün</p>
+            <p style="margin: 5px 0; color: #666;">🎯 <strong>Seviye:</strong> Orta</p>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <span style="font-size: 32px; color: #28a745; font-weight: bold;">₺1.800</span>
+            <span style="font-size: 16px; color: #666; text-decoration: line-through; margin-left: 10px;">₺2.500</span>
+        </div>
+        
+        <button onclick="kursunuSatinAl(2)" style="width: 100%; padding: 15px; background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.3s;">
+            🛒 Hemen Satın Al
+        </button>
+        
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">
+            ✅ 30 Gün Para İade Garantisi
+        </p>
+    </div>
+    
+    <!-- 3. Kurs Satın Alma Kartı -->
+    <div style="border: 3px solid #ffc107; border-radius: 15px; padding: 25px; width: 280px; text-align: center; box-shadow: 0 6px 12px rgba(255,193,7,0.2); background: linear-gradient(135deg, #fffdf7 0%, #fff8e1 100%);">
+        <div style="background-color: #ffc107; color: #333; padding: 8px 15px; border-radius: 20px; display: inline-block; margin-bottom: 15px; font-weight: bold;">
+            📚 3. KURS
+        </div>
+        <h3 style="color: #ffc107; margin: 10px 0;">B1-B2 Seviyesi</h3>
+        <h4 style="color: #333; margin: 15px 0;">İleri Seviye İngilizce</h4>
+        
+        <div style="background-color: white; padding: 15px; border-radius: 10px; margin: 15px 0; border-left: 4px solid #ffc107;">
+            <p style="margin: 5px 0; color: #666;">⏰ <strong>Süre:</strong> 16 Hafta</p>
+            <p style="margin: 5px 0; color: #666;">📅 <strong>Ders:</strong> Haftada 3 Gün</p>
+            <p style="margin: 5px 0; color: #666;">🎯 <strong>Seviye:</strong> İleri</p>
+        </div>
+        
+        <div style="margin: 20px 0;">
+            <span style="font-size: 32px; color: #ffc107; font-weight: bold;">₺2.200</span>
+            <span style="font-size: 16px; color: #666; text-decoration: line-through; margin-left: 10px;">₺3.000</span>
+        </div>
+        
+        <button onclick="kursunuSatinAl(3)" style="width: 100%; padding: 15px; background: linear-gradient(135deg, #ffc107 0%, #e0a800 100%); color: #333; border: none; border-radius: 8px; font-size: 16px; font-weight: bold; cursor: pointer; transition: all 0.3s;">
+            🛒 Hemen Satın Al
+        </button>
+        
+        <p style="font-size: 12px; color: #666; margin-top: 10px;">
+            ✅ 30 Gün Para İade Garantisi
+        </p>
+    </div>
+</div>
+
+<!-- İletişim Bölümü -->
+<div style="margin-top: 60px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 40px 20px; border-radius: 20px; color: white; text-align: center;">
+    <h2 style="margin-bottom: 10px; font-size: 32px;">📞 İletişim</h2>
+    <p style="font-size: 18px; margin-bottom: 30px; opacity: 0.9;">
+        Sorularınız için bize ulaşın! Her zaman yardıma hazırız. 😊
+    </p>
+    
+    <div style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; max-width: 800px; margin: 0 auto;">
+        <!-- Telefon Kartı -->
+        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 15px; padding: 25px; min-width: 220px; text-align: center; transition: transform 0.3s;">
+            <div style="background: rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+                <span style="font-size: 28px;">📱</span>
+            </div>
+            <h3 style="margin-bottom: 10px; font-size: 20px;">Telefon</h3>
+            <a href="tel:+905353560682" style="color: white; text-decoration: none; font-size: 18px; font-weight: bold; display: block; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 8px; transition: all 0.3s;">
+                05353560682
+            </a>
+            <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">
+                Hemen ara ve bilgi al!
+            </p>
+        </div>
+        
+        <!-- E-mail Kartı -->
+        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 15px; padding: 25px; min-width: 220px; text-align: center; transition: transform 0.3s;">
+            <div style="background: rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+                <span style="font-size: 28px;">📧</span>
+            </div>
+            <h3 style="margin-bottom: 10px; font-size: 20px;">E-Mail</h3>
+            <a href="mailto:ozgurseyhan46@gmail.com" style="color: white; text-decoration: none; font-size: 16px; font-weight: bold; display: block; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 8px; transition: all 0.3s; word-break: break-all;">
+                ozgurseyhan46@gmail.com
+            </a>
+            <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">
+                Mail ile detaylı bilgi al!
+            </p>
+        </div>
+        
+        <!-- YouTube Kartı -->
+        <div style="background: rgba(255,255,255,0.15); backdrop-filter: blur(10px); border-radius: 15px; padding: 25px; min-width: 220px; text-align: center; transition: transform 0.3s;">
+            <div style="background: rgba(255,255,255,0.2); width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px auto;">
+                <span style="font-size: 28px;">🎥</span>
+            </div>
+            <h3 style="margin-bottom: 10px; font-size: 20px;">YouTube</h3>
+            <a href="https://www.youtube.com/@5dakikadaingilizce" target="_blank" style="color: white; text-decoration: none; font-size: 14px; font-weight: bold; display: block; padding: 8px; background: rgba(255,255,255,0.1); border-radius: 8px; transition: all 0.3s;">
+                @5dakikadaingilizce
+            </a>
+            <p style="font-size: 14px; margin-top: 10px; opacity: 0.8;">
+                Ücretsiz videolar izle!
+            </p>
+        </div>
+    </div>
+    
+    <!-- Alt Bilgi -->
+    <div style="margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(255,255,255,0.2);">
+        <p style="font-size: 16px; margin-bottom: 8px;">
+            <strong>🎯 Özel Danışmanlık için bizimle iletişime geçin!</strong>
+        </p>
+        <p style="font-size: 14px; opacity: 0.8;">
+            Size en uygun kurs programını birlikte belirleyelim. 💪
+        </p>
+    </div>
+</div>
+
+</div>
+
+
+<script>
+function kursDetayGoster(kursNo) {
+    // Ana sayfayı gizle
+    document.getElementById('ana-sayfa').style.display = 'none';
+    // İlgili kurs detayını göster
+    document.getElementById('kurs' + kursNo + '-detay').style.display = 'block';
+}
+
+function anaSayfayaDon() {
+    // Tüm detay sayfalarını gizle
+    document.getElementById('kurs1-detay').style.display = 'none';
+    document.getElementById('kurs2-detay').style.display = 'none';
+    document.getElementById('kurs3-detay').style.display = 'none';
+    document.getElementById('kurs4-detay').style.display = 'none';
+    // Ana sayfayı göster
+    document.getElementById('ana-sayfa').style.display = 'block';
+}
+</script>
+<script>
+function kursDetayGoster(kursNo) {
+    // Ana sayfayı gizle
+    document.getElementById('ana-sayfa').style.display = 'none';
+    // İlgili kurs detayını göster
+    document.getElementById('kurs' + kursNo + '-detay').style.display = 'block';
+}
+
+function anaSayfayaDon() {
+    // Tüm detay sayfalarını gizle
+    document.getElementById('kurs1-detay').style.display = 'none';
+    document.getElementById('kurs2-detay').style.display = 'none';
+    document.getElementById('kurs3-detay').style.display = 'none';
+    document.getElementById('kurs4-detay').style.display = 'none';
+    // Ana sayfayı göster
+    document.getElementById('ana-sayfa').style.display = 'block';
+}
+
+function kursunuSatinAl(kursNo) {
+    let kursAdi = '';
+    let fiyat = '';
+    
+    if(kursNo == 1) {
+        kursAdi = '1. Kurs (A1-A2) - İngilizceye Temel Atım';
+        fiyat = '₺1.500';
+    } else if(kursNo == 2) {
+        kursAdi = '2. Kurs (A2-B1) - Orta Seviye İngilizce';
+        fiyat = '₺1.800';
+    } else if(kursNo == 3) {
+        kursAdi = '3. Kurs (B1-B2) - İleri Seviye İngilizce';
+        fiyat = '₺2.200';
+    }
+    
+    // Onay mesajı göster
+    let onay = confirm(`${kursAdi} (${fiyat}) için WhatsApp grubuna katılmak istiyor musunuz?\n\nGruba katıldıktan sonra ödeme detaylarını alabilirsiniz.`);
+    
+    if(onay) {
+        // WhatsApp grup linkine yönlendir
+        let grupLinki = 'https://chat.whatsapp.com/IgOFYQMdbItGn6LEXbrbYC';
+        window.open(grupLinki, '_blank');
+    }
+}
+</script>
+
+</body>
+</html>

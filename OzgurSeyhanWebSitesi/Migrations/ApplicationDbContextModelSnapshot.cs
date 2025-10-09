@@ -24,11 +24,9 @@ namespace OzgurSeyhanWebSitesi.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.IletisimBilgisi", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Adres")
                         .IsRequired()
@@ -48,8 +46,8 @@ namespace OzgurSeyhanWebSitesi.Migrations
                         .HasColumnType("datetime2")
                         .HasDefaultValueSql("GETDATE()");
 
-                    b.Property<int>("OgretmenId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("OgretmenId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("TelefonNumarasi")
                         .IsRequired()
@@ -80,11 +78,9 @@ namespace OzgurSeyhanWebSitesi.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Kurs", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Aciklama")
                         .IsRequired()
@@ -134,8 +130,8 @@ namespace OzgurSeyhanWebSitesi.Migrations
                     b.Property<int>("KursSuresiHafta")
                         .HasColumnType("int");
 
-                    b.Property<int>("OgretmenId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("OgretmenId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("OlusturmaTarihi")
                         .ValueGeneratedOnAdd()
@@ -165,11 +161,9 @@ namespace OzgurSeyhanWebSitesi.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.KursIcerik", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Aciklama")
                         .IsRequired()
@@ -184,8 +178,8 @@ namespace OzgurSeyhanWebSitesi.Migrations
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("KursId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("KursId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("OlusturmaTarihi")
                         .ValueGeneratedOnAdd()
@@ -204,11 +198,9 @@ namespace OzgurSeyhanWebSitesi.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Ogretmen", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("AdSoyad")
                         .IsRequired()
@@ -250,19 +242,17 @@ namespace OzgurSeyhanWebSitesi.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.OnceSonra", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("AlinanKurslar")
                         .IsRequired()
                         .HasMaxLength(200)
                         .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("KursId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("KursId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("OgrenciAdi")
                         .IsRequired()
@@ -303,11 +293,9 @@ namespace OzgurSeyhanWebSitesi.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.OrnekVideo", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Aciklama")
                         .IsRequired()
@@ -324,8 +312,8 @@ namespace OzgurSeyhanWebSitesi.Migrations
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<int>("OgretmenId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("OgretmenId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("OlusturmaTarihi")
                         .ValueGeneratedOnAdd()
@@ -349,11 +337,9 @@ namespace OzgurSeyhanWebSitesi.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Paket", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("Aktif")
                         .HasColumnType("bit");
@@ -361,8 +347,8 @@ namespace OzgurSeyhanWebSitesi.Migrations
                     b.Property<decimal>("Fiyat")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("KursId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("KursId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("OlusturmaTarihi")
                         .ValueGeneratedOnAdd()
@@ -391,11 +377,9 @@ namespace OzgurSeyhanWebSitesi.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.SatinAlma", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("MusteriAdi")
                         .IsRequired()
@@ -423,8 +407,8 @@ namespace OzgurSeyhanWebSitesi.Migrations
                     b.Property<decimal>("OdenenTutar")
                         .HasColumnType("decimal(18,2)");
 
-                    b.Property<int>("PaketId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("PaketId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("SatinAlmaTarihi")
                         .ValueGeneratedOnAdd()
@@ -440,11 +424,9 @@ namespace OzgurSeyhanWebSitesi.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.User", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");

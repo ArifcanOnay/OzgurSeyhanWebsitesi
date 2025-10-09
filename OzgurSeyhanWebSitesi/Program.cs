@@ -24,6 +24,13 @@ namespace OzgurSeyhanWebSitesi
             // JWT Service'i DI container'a ekle
             builder.Services.AddScoped<IJwtService, JwtService>();
 
+            // Öğretmen Service'i DI container'a ekle
+            builder.Services.AddScoped<IOgretmenService, OgretmenService>();
+            builder.Services.AddScoped<IVideoService, VideoService>();
+            builder.Services.AddScoped<IKursService, KursService>();
+            builder.Services.AddScoped<IOnceSonraService, OnceSonraService>();
+            builder.Services.AddScoped<IIletisimBilgisiService, IletisimBilgisiService>();
+
             // JWT Authentication konfigürasyonu
             var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();
             
@@ -56,8 +63,8 @@ namespace OzgurSeyhanWebSitesi
                 };
             });
 
-            // Add controllers
-            builder.Services.AddControllers();
+            // Add controllers and views (MVC support)
+            builder.Services.AddControllersWithViews();
 
             // Swagger/OpenAPI desteği
             builder.Services.AddEndpointsApiExplorer();
@@ -97,13 +104,28 @@ namespace OzgurSeyhanWebSitesi
                 app.UseSwagger();
                 app.UseSwaggerUI();
             }
+            else
+            {
+                app.UseExceptionHandler("/Home/Error");
+                app.UseHsts();
+            }
+            
+            app.UseStaticFiles();
 
             app.UseHttpsRedirection();
+
+            app.UseRouting();
 
             // ÖNEMLİ: Authentication middleware'i Authorization'dan ÖNCE olmalı
             app.UseAuthentication();
             app.UseAuthorization();
 
+            // MVC route mapping
+            app.MapControllerRoute(
+                name: "default",
+                pattern: "{controller=Home}/{action=Index}/{id?}");
+
+            // API controllers
             app.MapControllers();
 
             app.Run();

@@ -2,7 +2,7 @@
 {
     public class Ogretmen
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string AdSoyad { get; set; } = string.Empty;
         public string Ozgecmis { get; set; } = string.Empty;
         public string Egitim { get; set; } = string.Empty;

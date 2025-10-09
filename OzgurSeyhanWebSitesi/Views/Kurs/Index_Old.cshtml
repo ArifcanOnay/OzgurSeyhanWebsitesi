@@ -1,0 +1,325 @@
+﻿@model IEnumerable<Kurs>
+
+@{
+    ViewData["Title"] = "Kurslarımız";
+}
+
+<!-- Modern Hero Section -->
+<div class="hero-section" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 100px 0; position: relative; overflow: hidden;">
+    <!-- Animated Background Circles -->
+    <div class="hero-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+    
+    <div class="container position-relative">
+        <div class="row text-center text-white">
+            <div class="col-12" data-aos="fade-up">
+                <div class="hero-content">
+                    <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
+                        🎓 Kurslarımız
+                    </h1>
+                    <p class="lead fs-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                        Profesyonel İngilizce eğitimi için tasarlanmış kapsamlı kurslarımız
+                    </p>
+                    <div class="hero-stats animate__animated animate__fadeInUp animate__delay-2s">
+                        <div class="row justify-content-center">
+                            <div class="col-auto">
+                                <div class="stat-item">
+                                    <div class="stat-number">500+</div>
+                                    <div class="stat-label">Mezun Öğrenci</div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="stat-item">
+                                    <div class="stat-number">98%</div>
+                                    <div class="stat-label">Başarı Oranı</div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="stat-item">
+                                    <div class="stat-number">15+</div>
+                                    <div class="stat-label">Yıl Deneyim</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modern Course Cards Section -->
+<div class="courses-section py-5" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+    <div class="container">
+        <div class="row g-4">
+            <!-- İlk Kurs - Başlangıç -->
+            <div class="col-lg-6">
+                <div class="course-card shadow-xl border-0 h-100 position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    
+                    <!-- Course Header with Background Image -->
+                    <div class="course-header-with-bg position-relative" style="height: 250px; background: linear-gradient(135deg, rgba(40, 167, 69, 0.8), rgba(25, 135, 84, 0.8)), url('/images/Begginer-English-Course.png'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                        <div class="course-header-content text-white text-center h-100 d-flex flex-column justify-content-center position-relative z-index-2">
+                            <div class="course-icon mb-3">
+                                <i class="fas fa-graduation-cap fa-3x animate__animated animate__bounce animate__infinite"></i>
+                            </div>
+                            <h4 class="mb-2 fw-bold fs-3">BEGINNER ENGLISH COURSE</h4>
+                            <h5 class="mb-0 fw-bold">Başlangıç İngilizce Kursu</h5>
+                            <small class="opacity-75 mt-2">A1-A2 Seviye • TEFL Sertifikalı</small>
+                        </div>
+                        
+                        <!-- Overlay for better text readability -->
+                        <div class="course-overlay-green"></div>
+                        
+                        <!-- Decorative elements -->
+                        <div class="decorative-circles">
+                            <div class="circle circle-1"></div>
+                            <div class="circle circle-2"></div>
+                            <div class="circle circle-3"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body p-4" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+                        <div class="course-description-green mb-4">
+                            <p class="card-text text-muted mb-3">🌟 İngilizce öğrenmeye sıfırdan başlayanlar için tasarlanmış kapsamlı temel kurs programı.</p>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span>Temel gramer yapıları</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span>Günlük konuşma pratiği</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-success me-2"></i>
+                                    <span>Kelime dağarcığı geliştirme</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Course Stats -->
+                        <div class="course-stats mb-4">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-calendar-alt text-success"></i>
+                                        <div class="fw-bold">12 Hafta</div>
+                                        <small class="text-muted">Süre</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock text-success"></i>
+                                        <div class="fw-bold">3 Gün</div>
+                                        <small class="text-muted">Haftalık</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <div class="fw-bold">A1-A2</div>
+                                        <small class="text-muted">Seviye</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <small class="text-muted d-flex align-items-center">
+                                <i class="fas fa-calendar-check me-2 text-success"></i>
+                                Ders Günleri:
+                            </small>
+                            <div class="fw-bold">Pazartesi, Cuma, Cumartesi</div>
+                        </div>
+                        
+                        <!-- Price Section -->
+                        <div class="price-section mb-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted text-decoration-line-through fs-6">1000 ₺</span>
+                                    <div class="price-main text-success fw-bold fs-2">800 ₺</div>
+                                    <small class="text-muted">Aylık • %20 İndirim</small>
+                                </div>
+                                <div class="discount-badge">
+                                    <span class="badge bg-danger">-200₺</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="/Kurs/Details/00000000-0000-0000-0000-000000000001" class="btn btn-success btn-lg px-4 py-2 shadow-sm">
+                                <i class="fas fa-info-circle me-2"></i>
+                                📖 Kurs Hakkında Bilgi Al
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover Glow Effect -->
+                    <div class="hover-glow"></div>
+                </div>
+            </div>
+
+            <!-- İkinci Kurs - Orta Seviye -->
+            <div class="col-lg-6">
+                <div class="course-card shadow-xl border-0 h-100 position-relative overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    
+                    <!-- Course Header with Background Image -->
+                    <div class="course-header-with-bg position-relative" style="height: 250px; background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(102, 16, 242, 0.8)), url('/images/A2-B1 KURSU.png'); background-size: cover; background-position: center; background-blend-mode: overlay;">
+                        <div class="course-header-content text-white text-center h-100 d-flex flex-column justify-content-center position-relative z-index-2">
+                            <div class="course-icon mb-3">
+                                <i class="fas fa-rocket fa-3x animate__animated animate__bounce animate__infinite"></i>
+                            </div>
+                            <h4 class="mb-2 fw-bold fs-3">INTERMEDIATE ENGLISH COURSE</h4>
+                            <h5 class="mb-0 fw-bold">Orta Seviye İngilizce Kursu</h5>
+                            <small class="opacity-75 mt-2">A2-B1 Seviye • İleri Düzey Program</small>
+                        </div>
+                        
+                        <!-- Overlay for better text readability -->
+                        <div class="course-overlay-blue"></div>
+                        
+                        <!-- Decorative elements -->
+                        <div class="decorative-circles">
+                            <div class="circle circle-1"></div>
+                            <div class="circle circle-2"></div>
+                            <div class="circle circle-3"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="card-body p-4" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+                        <div class="course-description-blue mb-4">
+                            <p class="card-text text-muted mb-3">🚀 Temel İngilizce bilgisi olan öğrenciler için orta seviye konuşma ve yazma becerileri geliştirme kursu.</p>
+                            <div class="feature-list">
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-primary me-2"></i>
+                                    <span>İleri düzey konuşma teknikleri</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-primary me-2"></i>
+                                    <span>Akademik yazma becerileri</span>
+                                </div>
+                                <div class="feature-item">
+                                    <i class="fas fa-check-circle text-primary me-2"></i>
+                                    <span>İş İngilizcesi temelleri</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Course Stats -->
+                        <div class="course-stats mb-4">
+                            <div class="row text-center">
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-calendar-alt text-primary"></i>
+                                        <div class="fw-bold">14 Hafta</div>
+                                        <small class="text-muted">Süre</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-clock text-primary"></i>
+                                        <div class="fw-bold">3 Gün</div>
+                                        <small class="text-muted">Haftalık</small>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="stat-item">
+                                        <i class="fas fa-star text-warning"></i>
+                                        <div class="fw-bold">A2-B1</div>
+                                        <small class="text-muted">Seviye</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <small class="text-muted d-flex align-items-center">
+                                <i class="fas fa-calendar-check me-2 text-primary"></i>
+                                Ders Günleri:
+                            </small>
+                            <div class="fw-bold">Pazartesi, Cuma, Cumartesi</div>
+                        </div>
+                        
+                        <!-- Price Section -->
+                        <div class="price-section mb-4">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div>
+                                    <span class="text-muted text-decoration-line-through fs-6">1200 ₺</span>
+                                    <div class="price-main text-primary fw-bold fs-2">1000 ₺</div>
+                                    <small class="text-muted">Aylık • %17 İndirim</small>
+                                </div>
+                                <div class="discount-badge">
+                                    <span class="badge bg-danger">-200₺</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <a href="/Kurs/Details/00000000-0000-0000-0000-000000000002" class="btn btn-primary btn-lg px-4 py-2 shadow-sm">
+                                <i class="fas fa-info-circle me-2"></i>
+                                📖 Kurs Hakkında Bilgi Al
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Hover Glow Effect -->
+                    <div class="hover-glow"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                    📖 Detaylar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- İkinci kurs kartı ekleyebiliriz -->
+            <div class="col-lg-6 col-xl-4">
+                <div class="card h-100 shadow-lg border-0">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h4 class="mb-0">📚 Orta Seviye Kursu</h4>
+                        <small>B1-B2 Seviye</small>
+                    </div>
+                    <div class="card-body p-4">
+                        <p class="card-text mb-3">Temel İngilizce bilgisi olanlar için orta seviye konuşma ve yazma becerileri.</p>
+
+                        <div class="row mb-3">
+                            <div class="col-6">
+                                <small class="text-muted">Süre:</small>
+                                <div class="fw-bold">16 Hafta</div>
+                            </div>
+                            <div class="col-6">
+                                <small class="text-muted">Haftalık:</small>
+                                <div class="fw-bold">3 Gün</div>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <small class="text-muted">Ders Günleri:</small>
+                            <div class="fw-bold">Salı, Perşembe, Cumartesi</div>
+                        </div>
+
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <div class="h4 text-primary mb-0">1200 ₺</div>
+                                <small class="text-muted">Aylık</small>
+                            </div>
+                            <div class="col-6 text-end">
+                                <a href="@Url.Action("Details", "Kurs", new { id = Guid.NewGuid() })"
+                                   class="btn btn-primary">
+                                    📖 Detaylar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

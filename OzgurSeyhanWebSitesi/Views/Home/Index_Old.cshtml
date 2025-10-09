@@ -1,0 +1,370 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Ana Sayfa";
+}
+
+<!--                                 <div class="profile-ring">
+                                <img src="/images/ozgur-seyhan.jpg" 
+                                     alt="@Model?.Ogretmen?.AdSoyad" 
+                                     class="profile-image"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">"                   <div class="profile-ring">
+                                <img src="/images/ozgur-seyhan.jpg" 
+                                     alt="@Model?.Ogretmen?.AdSoyad" 
+                                     class="profile-image"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">"men CV Bölümü -->
+<section class="hero-section">
+    <div class="container-fluid bg-gradient py-5">
+        <div class="container">
+            <div class="row align-items-center min-vh-75">
+                
+                <!-- SOL TARAF - Özgeçmiş Bilgileri -->
+                <div class="col-lg-7 col-md-6 order-2 order-md-1">
+                    <div class="content-wrapper pe-lg-5">
+                        <!-- Ana Başlık -->
+                        <div class="mb-5">
+                            <h1 class="display-4 fw-bold text-primary mb-3 animate-fadeIn">
+                                <i class="fas fa-hand-wave text-warning me-3"></i>Ben Kimim?
+                            </h1>
+                            <div class="title-underline"></div>
+                        </div>
+                        
+                        <!-- Özgeçmiş Metni -->
+                        <div class="mb-5">
+                            <p class="lead text-dark fs-5 lh-lg animate-slideIn" style="text-align: justify;">
+                                @Model?.Ogretmen?.Ozgecmis
+                            </p>
+                        </div>
+                        
+                        <!-- Bilgi Kartları -->
+                        <div class="row g-4 mb-5">
+                            <!-- Eğitim Kartı -->
+                            <div class="col-md-6">
+                                <div class="info-card card border-0 shadow-lg h-100 hover-card">
+                                    <div class="card-body text-center p-4">
+                                        <div class="icon-wrapper mb-3">
+                                            <div class="icon-circle bg-success">
+                                                <i class="fas fa-graduation-cap fa-2x text-white"></i>
+                                            </div>
+                                        </div>
+                                        <h6 class="card-title fw-bold mb-3 text-success">Eğitim</h6>
+                                        <p class="card-text text-muted">
+                                            @Model?.Ogretmen?.Egitim
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Deneyim Kartı -->
+                            <div class="col-md-6">
+                                <div class="info-card card border-0 shadow-lg h-100 hover-card">
+                                    <div class="card-body text-center p-4">
+                                        <div class="icon-wrapper mb-3">
+                                            <div class="icon-circle bg-warning">
+                                                <i class="fas fa-medal fa-2x text-white"></i>
+                                            </div>
+                                        </div>
+                                        <h6 class="card-title fw-bold mb-3 text-warning">Deneyim</h6>
+                                        <p class="card-text text-muted">
+                                            <span class="fs-4 fw-bold text-warning">@Model?.Ogretmen?.DeneyimYili</span> Yıl Tecrübe
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SAĞ TARAF - Profil Bölümü -->
+                <div class="col-lg-5 col-md-6 order-1 order-md-2">
+                    <div class="profile-section text-center">
+                        <!-- Profil Kartı -->
+                        <div class="profile-card">
+                            <!-- Profil Fotoğrafı -->
+                            <div class="profile-image-wrapper mb-4">
+                            <div class="profile-ring">
+                                <img src="/images/ozgur-seyhan.jpg" 
+                                     alt="@Model?.Ogretmen?.AdSoyad" 
+                                     class="profile-image"
+                                     onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                                
+                                <!-- Fallback Avatar -->
+                                <div class="fallback-avatar" style="display: none;">
+                                    <i class="fas fa-user fa-5x"></i>
+                                    <div class="mt-2 fw-bold">@Model?.Ogretmen?.AdSoyad</div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <!-- İsim ve Unvan -->
+                            <div class="profile-info mb-4">
+                                <h2 class="profile-name fw-bold mb-2">@Model?.Ogretmen?.AdSoyad</h2>
+                                <p class="profile-title text-muted fs-5 mb-0">İngilizce Öğretmeni</p>
+                                <div class="profile-subtitle">
+                                    <i class="fas fa-star text-warning me-1"></i>
+                                    Uzman Eğitmen
+                                </div>
+                            </div>
+                            
+                            <!-- İstatistik Kartları -->
+                            <div class="stats-container">
+                                <div class="row g-2">
+                                    <div class="col-4">
+                                        <div class="stat-card bg-primary">
+                                            <div class="stat-number">10K+</div>
+                                            <div class="stat-label">Ders Saati</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="stat-card bg-success">
+                                            <div class="stat-number">500+</div>
+                                            <div class="stat-label">Öğrenci</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="stat-card bg-warning">
+                                            <div class="stat-number">@Model?.Ogretmen?.DeneyimYili</div>
+                                            <div class="stat-label">Yıl</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Advanced CSS Styles -->
+<style>
+    /* Ana Gradient Arka Plan */
+    .bg-gradient {
+        background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        min-height: 100vh;
+    }
+    
+    .min-vh-75 {
+        min-height: 75vh;
+    }
+    
+    /* Animasyonlar */
+    .animate-fadeIn {
+        animation: fadeIn 1s ease-in-out;
+    }
+    
+    .animate-slideIn {
+        animation: slideInLeft 1.2s ease-out;
+    }
+    
+    @@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(-20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    @@keyframes slideInLeft {
+        from { opacity: 0; transform: translateX(-50px); }
+        to { opacity: 1; transform: translateX(0); }
+    }
+    
+    /* Başlık Alt Çizgisi */
+    .title-underline {
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, #007bff, #28a745);
+        border-radius: 2px;
+        margin-bottom: 1rem;
+    }
+    
+    /* Info Kartları */
+    .info-card {
+        transition: all 0.4s ease;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
+    .hover-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.15) !important;
+    }
+    
+    .icon-circle {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    
+    /* Profil Bölümü */
+    .profile-card {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        border-radius: 30px;
+        padding: 2rem;
+        box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+        border: 1px solid rgba(255,255,255,0.2);
+    }
+    
+    .profile-image-wrapper {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .profile-ring {
+        position: relative;
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c);
+        padding: 8px;
+        margin: 0 auto;
+    }
+    
+    .profile-image {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 6px solid white;
+        transition: all 0.4s ease;
+    }
+    
+    .profile-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    }
+    
+    .fallback-avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        border: 6px solid white;
+    }
+    
+    .status-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: linear-gradient(45deg, #28a745, #20c997);
+        color: white;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        box-shadow: 0 4px 12px rgba(40, 167, 69, 0.4);
+        animation: pulse 2s infinite;
+    }
+    
+    @@keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    
+    /* Profil Bilgileri */
+    .profile-name {
+        font-size: 2.5rem;
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .profile-subtitle {
+        color: #6c757d;
+        font-size: 1rem;
+        margin-top: 0.5rem;
+    }
+    
+    /* İstatistik Kartları */
+    .stats-container {
+        margin-top: 2rem;
+    }
+    
+    .stat-card {
+        color: white;
+        padding: 1.5rem 1rem;
+        border-radius: 15px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 0.25rem;
+    }
+    
+    .stat-label {
+        font-size: 0.85rem;
+        opacity: 0.9;
+        font-weight: 500;
+    }
+    
+    /* Button Stili */
+    .hover-btn {
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .hover-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+    
+    .hover-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+    }
+    
+    .hover-btn:hover::before {
+        left: 100%;
+    }
+    
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .profile-ring {
+            width: 250px;
+            height: 250px;
+        }
+        
+        .profile-name {
+            font-size: 2rem;
+        }
+        
+        .display-4 {
+            font-size: 2.5rem;
+        }
+        
+        .content-wrapper {
+            padding-right: 0 !important;
+            margin-bottom: 3rem;
+        }
+    }
+</style>
+
+<!-- Video Bölümü -->
+@await Html.PartialAsync("_VideoCardPartial", Model?.Videos)

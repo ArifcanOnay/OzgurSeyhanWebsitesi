@@ -2,7 +2,7 @@
 {
     public class Paket
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string PaketAdi { get; set; } = string.Empty;
         public int SinifMevcudu { get; set; } // 3 kişilik, 7 kişilik vs.
         public decimal Fiyat { get; set; }
@@ -11,7 +11,7 @@
         public DateTime OlusturmaTarihi { get; set; } = DateTime.Now;
 
         // Foreign Keys
-        public int KursId { get; set; }
+        public Guid KursId { get; set; }
         public Kurs Kurs { get; set; } = null!;
         
         // Navigation Properties

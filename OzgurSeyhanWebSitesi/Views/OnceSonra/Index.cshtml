@@ -1,0 +1,437 @@
+@model IEnumerable<OnceSonra>
+
+@{
+    ViewData["Title"] = "Öğrenci Başarı Hikayeleri";
+}
+
+<!-- Modern Hero Section -->
+<div class="hero-section" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%); padding: 100px 0; position: relative; overflow: hidden;">
+    <!-- Animated Background Circles -->
+    <div class="hero-circles">
+        <div class="circle circle-1"></div>
+        <div class="circle circle-2"></div>
+        <div class="circle circle-3"></div>
+    </div>
+    
+    <div class="container position-relative">
+        <div class="row text-center text-white">
+            <div class="col-12" data-aos="fade-up">
+                <div class="hero-content">
+                    <h1 class="display-3 fw-bold mb-4 animate__animated animate__fadeInDown">
+                        🌟 Öğrenci Başarı Hikayeleri
+                    </h1>
+                    <p class="lead fs-4 mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                        Kurslarımıza katılan öğrencilerimizin inanılmaz gelişim hikayeleri
+                    </p>
+                    <p class="fs-5 mb-4 animate__animated animate__fadeInUp animate__delay-2s">
+                        Siz de bu başarı hikayelerinin bir parçası olabilirsiniz!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modern Success Stories Section -->
+<div class="success-stories-section py-5" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);">
+    <div class="container">
+        <div class="row g-4">
+            
+            @foreach(var onceSonra in Model)
+            {
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="@(Model.ToList().IndexOf(onceSonra) * 100 + 100)">
+                    <div class="success-story-card shadow-xl border-0 h-100 position-relative overflow-hidden">
+                        
+                        <!-- Student Header -->
+                        <div class="student-header text-white text-center position-relative" style="background: linear-gradient(135deg, @(onceSonra.AlinanKurslar.Contains("Başlangıç") ? "#28a745, #20c997" : "#007bff, #6610f2")); padding: 30px 20px;">
+                            <div class="student-avatar mb-3">
+                                <div class="avatar-circle">
+                                    <i class="fas fa-user-graduate fa-2x"></i>
+                                </div>
+                            </div>
+                            <h4 class="mb-2 fw-bold">@onceSonra.OgrenciAdi</h4>
+                            <span class="badge bg-light text-dark fs-6">@onceSonra.AlinanKurslar Mezunu</span>
+                            <div class="achievement-date mt-2">
+                                <small class="opacity-75">Mezuniyet: @onceSonra.MezuniyetTarihi.ToString("MMMM yyyy")</small>
+                            </div>
+                            
+                            <!-- Decorative elements -->
+                            <div class="header-decorations">
+                                <div class="deco-circle deco-1"></div>
+                                <div class="deco-circle deco-2"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="card-body p-4" style="background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);">
+                            <div class="row">
+                                <!-- ÖNCE Section -->
+                                <div class="col-md-6 pe-md-3">
+                                    <div class="video-section mb-4">
+                                        <div class="section-header text-center mb-3">
+                                            <h5 class="text-danger fw-bold">
+                                                <i class="fas fa-times-circle me-2"></i>
+                                                ÖNCE
+                                            </h5>
+                                        </div>
+                                        @if(!string.IsNullOrEmpty(onceSonra.OnceVideoUrl))
+                                        {
+                                            <div class="video-container">
+                                                <video class="w-100 rounded shadow-sm" controls style="max-height: 200px;">
+                                                    <source src="@onceSonra.OnceVideoUrl" type="video/mp4">
+                                                    Tarayıcınız video desteklemiyor.
+                                                </video>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="placeholder-video bg-light p-4 rounded text-center">
+                                                <i class="fas fa-video fa-2x text-muted mb-2"></i>
+                                                <p class="mb-0 text-muted small">Video yakında eklenecek</p>
+                                            </div>
+                                        }
+                                        <div class="description-box mt-3">
+                                            <p class="small text-muted mb-0">
+                                                <i class="fas fa-quote-left me-1"></i>
+                                                @onceSonra.OnceAciklama
+                                                <i class="fas fa-quote-right ms-1"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Separation Line -->
+                                <div class="col-md-1 d-none d-md-block">
+                                    <div class="separator-line"></div>
+                                </div>
+
+                                <!-- SONRA Section -->
+                                <div class="col-md-5 ps-md-2">
+                                    <div class="video-section mb-4">
+                                        <div class="section-header text-center mb-3">
+                                            <h5 class="text-success fw-bold">
+                                                <i class="fas fa-check-circle me-2"></i>
+                                                SONRA
+                                            </h5>
+                                        </div>
+                                        @if(!string.IsNullOrEmpty(onceSonra.SonraVideoUrl))
+                                        {
+                                            <div class="video-container">
+                                                <video class="w-100 rounded shadow-sm" controls style="max-height: 200px;">
+                                                    <source src="@onceSonra.SonraVideoUrl" type="video/mp4">
+                                                    Tarayıcınız video desteklemiyor.
+                                                </video>
+                                            </div>
+                                        }
+                                        else
+                                        {
+                                            <div class="placeholder-video bg-light p-4 rounded text-center">
+                                                <i class="fas fa-video fa-2x text-muted mb-2"></i>
+                                                <p class="mb-0 text-muted small">Video yakında eklenecek</p>
+                                            </div>
+                                        }
+                                        <div class="description-box mt-3">
+                                            <p class="small text-muted mb-0">
+                                                <i class="fas fa-quote-left me-1"></i>
+                                                @onceSonra.SonraAciklama
+                                                <i class="fas fa-quote-right ms-1"></i>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Progress Indicator -->
+                            <div class="progress-section mt-4">
+                                <div class="row text-center">
+                                    <div class="col-4">
+                                        <div class="progress-item">
+                                            <div class="progress-icon text-primary">
+                                                <i class="fas fa-calendar-alt"></i>
+                                            </div>
+                                            <div class="progress-label">Kurs Süresi</div>
+                                            <div class="progress-value">12 Hafta</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="progress-item">
+                                            <div class="progress-icon text-success">
+                                                <i class="fas fa-trophy"></i>
+                                            </div>
+                                            <div class="progress-label">Başarı Oranı</div>
+                                            <div class="progress-value">98%</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="progress-item">
+                                            <div class="progress-icon text-warning">
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                            <div class="progress-label">Memnuniyet</div>
+                                            <div class="progress-value">5/5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Hover Glow Effect -->
+                        <div class="card-hover-glow"></div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- Call to Action -->
+        <div class="row mt-5">
+            <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="600">
+                <div class="cta-section p-5 rounded-4 shadow-lg" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <h3 class="text-white fw-bold mb-3">🚀 Siz de Bu Başarı Hikayelerinin Bir Parçası Olun!</h3>
+                    <p class="text-white mb-4 lead">Kurslarımıza katılın ve kendi gelişim hikayenizi yazın.</p>
+                    <a href="/Kurs" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+                        <i class="fas fa-graduation-cap me-2"></i>
+                        Kursları İncele
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Styles -->
+<style>
+    /* Hero Section Styles */
+    .hero-circles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        pointer-events: none;
+    }
+
+    .hero-circles .circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        animation: float 6s ease-in-out infinite;
+    }
+
+    .hero-circles .circle-1 {
+        width: 120px;
+        height: 120px;
+        top: 10%;
+        left: 10%;
+        animation-delay: 0s;
+    }
+
+    .hero-circles .circle-2 {
+        width: 80px;
+        height: 80px;
+        top: 60%;
+        right: 15%;
+        animation-delay: 2s;
+    }
+
+    .hero-circles .circle-3 {
+        width: 60px;
+        height: 60px;
+        bottom: 20%;
+        left: 60%;
+        animation-delay: 4s;
+    }
+
+    /* Success Story Cards */
+    .success-story-card {
+        border-radius: 20px;
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        transform: translateY(0);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .success-story-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .student-header {
+        border-radius: 20px 20px 0 0;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .student-avatar .avatar-circle {
+        width: 80px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        backdrop-filter: blur(10px);
+    }
+
+    .header-decorations {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        pointer-events: none;
+    }
+
+    .deco-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.1);
+        animation: float 8s ease-in-out infinite;
+    }
+
+    .deco-1 {
+        width: 60px;
+        height: 60px;
+        top: 10%;
+        right: 10%;
+        animation-delay: 0s;
+    }
+
+    .deco-2 {
+        width: 40px;
+        height: 40px;
+        bottom: 15%;
+        left: 15%;
+        animation-delay: 4s;
+    }
+
+    .video-section {
+        position: relative;
+    }
+
+    .video-container {
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+    }
+
+    .video-container::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1));
+        pointer-events: none;
+    }
+
+    .separator-line {
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(to bottom, #dee2e6, #6c757d, #dee2e6);
+        margin: 0 auto;
+        border-radius: 1px;
+    }
+
+    .description-box {
+        background: rgba(248, 249, 250, 0.8);
+        border-radius: 10px;
+        padding: 15px;
+        border-left: 4px solid #007bff;
+    }
+
+    .progress-section {
+        background: rgba(255, 255, 255, 0.7);
+        border-radius: 15px;
+        padding: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .progress-item {
+        padding: 10px;
+    }
+
+    .progress-icon {
+        font-size: 1.5rem;
+        margin-bottom: 8px;
+    }
+
+    .progress-label {
+        font-size: 0.8rem;
+        color: #6c757d;
+        margin-bottom: 5px;
+    }
+
+    .progress-value {
+        font-weight: bold;
+        color: #495057;
+    }
+
+    .card-hover-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(255, 154, 158, 0.05), rgba(254, 207, 239, 0.05));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+        border-radius: 20px;
+    }
+
+    .success-story-card:hover .card-hover-glow {
+        opacity: 1;
+    }
+
+    .cta-section {
+        background-attachment: fixed;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grain)"/></svg>');
+        opacity: 0.3;
+    }
+
+    @@keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    /* Responsive improvements */
+    @@media (max-width: 768px) {
+        .success-story-card {
+            margin-bottom: 30px;
+        }
+        
+        .separator-line {
+            width: 100%;
+            height: 2px;
+            margin: 20px 0;
+        }
+    }
+</style>
+
+<!-- Scripts -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+    });
+</script>
