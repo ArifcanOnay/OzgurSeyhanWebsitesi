@@ -4,8 +4,46 @@
     ViewData["Title"] = "Özgür Seyhan - İngilizce Öğretmeni";
 }
 
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(102, 126, 234, 0.95); backdrop-filter: blur(10px);">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="/">
+            <i class="fas fa-graduation-cap me-2"></i>Özgür Seyhan
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#videos">Ders Örnekleri</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Playlist">
+                        <i class="fab fa-youtube me-1"></i>YouTube Videolarım
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Kurs">Kurslar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/OnceSonra">Başarı Hikayeleri</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#iletisim">İletişim</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
 <!-- Hero Section -->
-<section class="hero-section">
+<section class="hero-section" id="home" style="padding-top: 80px;">
     <div class="hero-background">
         <div class="floating-elements">
             <div class="floating-element floating-element-1"></div>
@@ -170,6 +208,93 @@
 
 <!-- Video Bölümü -->
 @await Html.PartialAsync("_VideoCardPartial", Model?.Videos)
+
+<!-- YouTube Playlist Bölümü -->
+@if (Model?.Playlists != null && Model.Playlists.Any())
+{
+    <section class="playlist-section py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">
+        <!-- Floating Background Elements -->
+        <div class="floating-bg-elements">
+            <div class="float-element" style="top: 10%; left: 5%;">🎬</div>
+            <div class="float-element" style="top: 20%; right: 10%;">📺</div>
+            <div class="float-element" style="bottom: 15%; left: 15%;">▶️</div>
+            <div class="float-element" style="bottom: 25%; right: 20%;">🎥</div>
+        </div>
+
+        <div class="container position-relative" style="z-index: 2;">
+            <!-- Başlık -->
+            <div class="row text-center text-white mb-5" data-aos="fade-down">
+                <div class="col-12">
+                    <h2 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">
+                        🎬 YouTube Ders Videolarım
+                    </h2>
+                    <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
+                        Ücretsiz İngilizce ders serilerim ile kendinizi geliştirin!
+                    </p>
+                    <div class="title-underline-white mx-auto" style="width: 80px; height: 4px; background: #fff; margin-top: 20px;"></div>
+                </div>
+            </div>
+
+            <!-- Playlist Kartları -->
+            <div class="row g-4 justify-content-center">
+                @foreach (var playlist in Model.Playlists.Take(3))
+                {
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="@((Model.Playlists.ToList().IndexOf(playlist) + 1) * 100)">
+                        <div class="playlist-card shadow-xl border-0 h-100" style="background: rgba(255,255,255,0.95); border-radius: 20px; overflow: hidden; transition: transform 0.3s ease;">
+
+                            <!-- Playlist Thumbnail -->
+                            <div class="playlist-thumbnail position-relative" style="height: 200px; overflow: hidden;">
+                                @if (!string.IsNullOrEmpty(playlist.ThumbnailUrl))
+                                {
+                                    <img src="@playlist.ThumbnailUrl"
+                                         alt="@playlist.PlaylistAdi"
+                                         class="w-100 h-100"
+                                         style="object-fit: cover;"
+                                         onerror="this.src='https://via.placeholder.com/400x225/667eea/ffffff?text=Video+Playlist'">
+                                }
+                                else
+                                {
+                                    <div class="d-flex align-items-center justify-content-center h-100" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+                                        <i class="fas fa-play-circle text-white" style="font-size: 4rem;"></i>
+                                    </div>
+                                }
+                                
+                                <!-- Video Count Badge -->
+                                <div class="position-absolute top-0 end-0 m-2">
+                                    <span class="badge bg-dark bg-opacity-75 px-3 py-2">
+                                        <i class="fas fa-play me-1"></i>@playlist.Videolar.Count() Video
+                                    </span>
+                                </div>
+                            </div>
+
+                            <!-- Card Body -->
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold text-primary mb-3">@playlist.PlaylistAdi</h5>
+                                <p class="card-text text-muted mb-4">@playlist.Aciklama</p>
+                                
+                                <!-- Action Button -->
+                                <div class="d-grid">
+                                    <a href="/Playlist/Details/@playlist.Id" class="btn btn-primary btn-lg rounded-pill">
+                                        <i class="fas fa-play me-2"></i>İncele
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <!-- Tümünü Görüntüle Butonu -->
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <a href="/Playlist" class="btn btn-outline-light btn-lg rounded-pill px-5">
+                        <i class="fas fa-th-large me-2"></i>Tüm Video Serileri
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+}
 
 <!-- Kurs Tanıtım Bölümü -->
 <section class="py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">

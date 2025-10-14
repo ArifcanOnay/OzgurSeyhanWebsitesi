@@ -1,0 +1,3 @@
+wwwroot\images\A2-B1 KURSU.png
+wwwroot\images\Begginer-English-Course.png
+wwwroot\images\ozgur-seyhan.jpg

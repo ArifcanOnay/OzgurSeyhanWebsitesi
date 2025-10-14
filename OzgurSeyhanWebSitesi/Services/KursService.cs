@@ -15,7 +15,19 @@ namespace OzgurSeyhanWebSitesi.Services
 
         public async Task<IEnumerable<Kurs>> GetAktifKurslarAsync()
         {
-            // Static sample data for demo
+            // Önce veritabanından kursları çek
+            var veritabaniKurslari = await _context.Kurslar
+                .Include(k => k.Ogretmen)
+                .Where(k => k.Aktif)
+                .ToListAsync();
+
+            // Eğer veritabanında kurs varsa, onları döndür
+            if (veritabaniKurslari.Any())
+            {
+                return veritabaniKurslari;
+            }
+
+            // Eğer veritabanında kurs yoksa, static sample data döndür
             var kurslar = new List<Kurs>
             {
                 new Kurs
@@ -50,7 +62,7 @@ namespace OzgurSeyhanWebSitesi.Services
                 }
             };
 
-            return await Task.FromResult(kurslar);
+            return kurslar;
         }
 
         public async Task<Kurs?> GetKursByIdAsync(Guid id)
@@ -169,6 +181,75 @@ namespace OzgurSeyhanWebSitesi.Services
                 OrnekVideoPath = "/videos/kurs1-ornek-video.mp4",
                 VideoVarMi = false
             };
+        }
+
+        public async Task<Kurs> CreateKursAsync(Kurs kurs)
+        {
+            kurs.Id = Guid.NewGuid();
+            kurs.OlusturmaTarihi = DateTime.Now;
+
+            _context.Kurslar.Add(kurs);
+            await _context.SaveChangesAsync();
+            return kurs;
+        }
+
+        public async Task<bool> KursVarMiAsync()
+        {
+            return await _context.Kurslar.AnyAsync();
+        }
+
+        public async Task CreateSampleKurslarAsync(Guid ogretmenId)
+        {
+            // Beginner Course
+            var beginnerKurs = new Kurs
+            {
+                Id = new Guid("00000000-0000-0000-0000-000000000001"),
+                KursAdi = "Beginner English Course",
+                Aciklama = "İngilizce öğrenmeye sıfırdan başlayanlar için tasarlanmış kapsamlı temel kurs programı.",
+                Konular = "Temel Gramer, Kelime Dağarcığı, Basit Konuşma",
+                BeklenenSeviye = "A1-A2",
+                KursSeviyesi = 1,
+                KursSuresiHafta = 12,
+                HaftalikDersSayisi = 3,
+                ToplamDersSayisi = 36,
+                DersGunleri = "Pazartesi, Çarşamba, Cuma",
+                DersSaatleri = "19:00-20:00",
+                YeniFiyat = 800,
+                EskiFiyat = 1000,
+                IndirimdeMi = true,
+                RenkKodu = "#28a745",
+                PopulerMi = true,
+                Aktif = true,
+                OgretmenId = ogretmenId,
+                OlusturmaTarihi = DateTime.Now
+            };
+
+            // Intermediate Course
+            var intermediateKurs = new Kurs
+            {
+                Id = new Guid("00000000-0000-0000-0000-000000000002"),
+                KursAdi = "Intermediate English Course",
+                Aciklama = "Temel İngilizce bilgisi olan öğrenciler için orta seviye konuşma ve yazma becerileri geliştirme kursu.",
+                Konular = "İleri Gramer, Konuşma Teknikleri, Akademik Yazma",
+                BeklenenSeviye = "A2-B1",
+                KursSeviyesi = 2,
+                KursSuresiHafta = 14,
+                HaftalikDersSayisi = 3,
+                ToplamDersSayisi = 42,
+                DersGunleri = "Pazartesi, Cuma, Cumartesi",
+                DersSaatleri = "20:00-21:00",
+                YeniFiyat = 1000,
+                EskiFiyat = 1200,
+                IndirimdeMi = true,
+                RenkKodu = "#007bff",
+                PopulerMi = false,
+                Aktif = true,
+                OgretmenId = ogretmenId,
+                OlusturmaTarihi = DateTime.Now
+            };
+
+            _context.Kurslar.AddRange(beginnerKurs, intermediateKurs);
+            await _context.SaveChangesAsync();
         }
     }
 }

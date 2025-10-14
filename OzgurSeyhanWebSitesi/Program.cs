@@ -24,12 +24,15 @@ namespace OzgurSeyhanWebSitesi
             // JWT Service'i DI container'a ekle
             builder.Services.AddScoped<IJwtService, JwtService>();
 
-            // Öğretmen Service'i DI container'a ekle
+            // Diğer Service'leri DI container'a ekle
             builder.Services.AddScoped<IOgretmenService, OgretmenService>();
             builder.Services.AddScoped<IVideoService, VideoService>();
             builder.Services.AddScoped<IKursService, KursService>();
             builder.Services.AddScoped<IOnceSonraService, OnceSonraService>();
             builder.Services.AddScoped<IIletisimBilgisiService, IletisimBilgisiService>();
+            builder.Services.AddScoped<IPlaylistService, PlaylistService>();
+            builder.Services.AddHttpClient<IYouTubeService, YouTubeService>();
+            builder.Services.AddScoped<IYouTubeService, YouTubeService>();
 
             // JWT Authentication konfigürasyonu
             var jwtSettings = builder.Configuration.GetSection("JwtSettings").Get<JwtSettings>();

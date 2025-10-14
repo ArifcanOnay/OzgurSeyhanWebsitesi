@@ -1,0 +1,308 @@
+﻿@model List<Playlist>
+
+@{
+    ViewData["Title"] = "YouTube Ders Videolarım";
+}
+
+<!-- YouTube Playlist Bölümü -->
+<section class="playlist-section py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); position: relative; overflow: hidden;">
+
+    <!-- Floating Background Elements -->
+    <div class="floating-bg-elements">
+        <div class="float-element" style="top: 10%; left: 5%;">🎬</div>
+        <div class="float-element" style="top: 20%; right: 10%;">📺</div>
+        <div class="float-element" style="bottom: 15%; left: 15%;">▶️</div>
+        <div class="float-element" style="bottom: 25%; right: 20%;">🎥</div>
+    </div>
+
+    <div class="container position-relative" style="z-index: 2;">
+
+        <!-- Başlık -->
+        <div class="row text-center text-white mb-5" data-aos="fade-down">
+            <div class="col-12">
+                <h2 class="display-4 fw-bold mb-3 animate__animated animate__fadeInDown">
+                    🎬 YouTube Ders Videolarım
+                </h2>
+                <p class="lead animate__animated animate__fadeInUp animate__delay-1s">
+                    Ücretsiz İngilizce ders serilerim ile kendinizi geliştirin!
+                </p>
+                <div class="title-underline-white mx-auto"></div>
+                
+                <!-- Admin Senkronizasyon Butonu -->
+                <div class="mt-4">
+                    <form method="post" action="/Playlist/SyncAllPlaylists" style="display: inline;">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-outline-light btn-sm" onclick="return confirm('Tüm playlist\'ler YouTube\'dan senkronize edilecek. Devam edilsin mi?')">
+                            <i class="fas fa-sync-alt me-2"></i>YouTube\'dan Senkronize Et
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Playlist Kartları -->
+        <div class="row g-4 justify-content-center">
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var playlist in Model)
+                {
+                    <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="@((Model.IndexOf(playlist) + 1) * 100)">
+                        <div class="playlist-card shadow-xl border-0 h-100">
+
+                            <!-- Playlist Thumbnail -->
+                            <div class="playlist-thumbnail position-relative">
+                                @if (!string.IsNullOrEmpty(playlist.ThumbnailUrl))
+                                {
+                                    <img src="@playlist.ThumbnailUrl"
+                                         alt="@playlist.PlaylistAdi"
+                                         class="w-100"
+                                         onerror="this.src='https://via.placeholder.com/400x225?text=Video+Playlist'">
+                                }
+                                else
+                                {
+                                    <div class="placeholder-thumbnail">
+                                        <i class="fas fa-play-circle fa-5x text-white"></i>
+                                    </div>
+                                }
+
+                                <!-- Video Count Badge -->
+                                <div class="video-count-badge">
+                                    <i class="fas fa-video me-1"></i>
+                                    @playlist.Videolar.Count Video
+                                </div>
+                            </div>
+
+                            <!-- Playlist Info -->
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold text-dark mb-3">
+                                    @playlist.PlaylistAdi
+                                </h5>
+
+                                <p class="card-text text-muted mb-4">
+                                    @playlist.Aciklama
+                                </p>
+
+                                <!-- İncele Butonu -->
+                                <div class="text-center">
+                                    <a href="@Url.Action("Details", "Playlist", new { id = playlist.Id })"
+                                       class="btn btn-gradient btn-lg w-100">
+                                        <i class="fas fa-play-circle me-2"></i>
+                                        İncele
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Hover Effect -->
+                            <div class="card-hover-effect"></div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <div class="col-12 text-center text-white">
+                    <div class="empty-state py-5">
+                        <i class="fas fa-video-slash fa-5x mb-3 opacity-50"></i>
+                        <h4>Henüz playlist eklenmemiş</h4>
+                        <p class="lead">Çok yakında yeni videolar yayınlanacak!</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <!-- YouTube Kanalına Git Butonu -->
+        <div class="row mt-5">
+            <div class="col-12 text-center" data-aos="fade-up" data-aos-delay="400">
+                <a href="https://www.youtube.com/@@5dakikadaingilizce"
+                   target="_blank"
+                   class="btn btn-light btn-lg px-5 py-3 shadow-lg">
+                    <i class="fab fa-youtube me-2 text-danger"></i>
+                    YouTube Kanalıma Abone Ol
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Özel CSS -->
+<style>
+    /* Playlist Section */
+    .playlist-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Floating Background Elements */
+    .floating-bg-elements {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .float-element {
+        position: absolute;
+        font-size: 3rem;
+        opacity: 0.2;
+        animation: floatAround 8s ease-in-out infinite;
+    }
+
+    @@keyframes floatAround {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-30px) rotate(180deg); }
+    }
+
+    /* Title Underline */
+    .title-underline-white {
+        width: 120px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.8);
+        margin-top: 1rem;
+        border-radius: 2px;
+    }
+
+    /* Playlist Card */
+    .playlist-card {
+        border-radius: 20px;
+        background: white;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .playlist-card:hover {
+        transform: translateY(-15px) scale(1.03);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3) !important;
+    }
+
+    /* Playlist Thumbnail */
+    .playlist-thumbnail {
+        height: 220px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .playlist-thumbnail img {
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+    }
+
+    .playlist-card:hover .playlist-thumbnail img {
+        transform: scale(1.1);
+    }
+
+    .placeholder-thumbnail {
+        height: 100%;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Video Count Badge */
+    .video-count-badge {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: rgba(0, 0, 0, 0.8);
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        font-weight: 600;
+        font-size: 0.9rem;
+        backdrop-filter: blur(10px);
+    }
+
+    /* Gradient Button */
+    .btn-gradient {
+        background: linear-gradient(45deg, #667eea, #764ba2);
+        color: white;
+        border: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-gradient:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+        color: white;
+    }
+
+    .btn-gradient::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s;
+    }
+
+    .btn-gradient:hover::before {
+        left: 100%;
+    }
+
+    /* Card Hover Effect */
+    .card-hover-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .playlist-card:hover .card-hover-effect {
+        opacity: 1;
+    }
+
+    /* Shadow XL */
+    .shadow-xl {
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25) !important;
+    }
+
+    /* Empty State */
+    .empty-state {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+    }
+
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .display-4 {
+            font-size: 2.5rem;
+        }
+
+        .playlist-thumbnail {
+            height: 180px;
+        }
+
+        .float-element {
+            font-size: 2rem;
+        }
+    }
+</style>
+
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    // Initialize AOS
+    AOS.init({
+        duration: 1000,
+        once: true
+    });
+</script>

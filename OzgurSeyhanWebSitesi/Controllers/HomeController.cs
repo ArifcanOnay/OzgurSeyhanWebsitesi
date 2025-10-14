@@ -10,12 +10,18 @@ namespace OzgurSeyhanWebSitesi.Controllers
         private readonly IOgretmenService _ogretmenService;
         private readonly IVideoService _videoService;
         private readonly IIletisimBilgisiService _iletisimBilgisiService;
+        private readonly IKursService _kursService;
+        private readonly IPlaylistService _playlistService;
+        private readonly IYouTubeService _youTubeService;
 
-        public HomeController(IOgretmenService ogretmenService, IVideoService videoService, IIletisimBilgisiService iletisimBilgisiService)
+        public HomeController(IOgretmenService ogretmenService, IVideoService videoService, IIletisimBilgisiService iletisimBilgisiService, IKursService kursService, IPlaylistService playlistService, IYouTubeService youTubeService)
         {
             _ogretmenService = ogretmenService;
             _videoService = videoService;
             _iletisimBilgisiService = iletisimBilgisiService;
+            _kursService = kursService;
+            _playlistService = playlistService;
+            _youTubeService = youTubeService;
         }
 
         // Ana sayfa action'ı - Öğretmen bilgilerini getirecek
@@ -69,6 +75,7 @@ namespace OzgurSeyhanWebSitesi.Controllers
                     OgretmenId = ogretmen.Id,
                     OlusturmaTarihi = DateTime.Now
                 };
+               
 
                 // İkinci video
                 var video2 = new OrnekVideo
@@ -90,18 +97,107 @@ namespace OzgurSeyhanWebSitesi.Controllers
             // 7. ADIM: Videoları çek
             var videos = await _videoService.GetAllVideosAsync();
 
-            // 8. ADIM: İletişim bilgilerini çek
-            var iletisimBilgisi = await _iletisimBilgisiService.GetAktifIletisimBilgisiAsync();
+            // 8. ADIM: Kursları kontrol et ve gerekirse oluştur
+            var kursVarMi = await _kursService.KursVarMiAsync();
+            if (!kursVarMi && ogretmen != null)
+            {
+                await _kursService.CreateSampleKurslarAsync(ogretmen.Id);
+            }
 
-            // 9. ADIM: ViewModel oluştur ve view'a gönder
+            // 9. ADIM: İletişim bilgilerini çek veya oluştur
+            var iletisimBilgisi = await _iletisimBilgisiService.GetAktifIletisimBilgisiAsync();
+            
+            // Eğer iletişim bilgisi yoksa oluştur
+            if (iletisimBilgisi == null && ogretmen != null)
+            {
+                var yeniIletisimBilgisi = new IletisimBilgisi
+                {
+                    TelefonNumarasi = "05354893494",
+                    Email = "ozgurseyhan@gmail.com",
+                    YouTubeKanali = "https://www.youtube.com/@5dakikadaingilizce",
+                    WhatsAppNumarasi = "",
+                    Adres = "",
+                    WebSitesi = "",
+                    Aktif = true,
+                    OgretmenId = ogretmen.Id
+                };
+
+                await _iletisimBilgisiService.CreateIletisimBilgisiAsync(yeniIletisimBilgisi);
+                iletisimBilgisi = await _iletisimBilgisiService.GetAktifIletisimBilgisiAsync();
+            }
+
+            // 9. ADIM: Playlist'leri çek
+            var playlists = await _playlistService.GetActivePlaylistsAsync();
+
+            // 9.1. ADIM: Otomatik senkronizasyon - Eğer playlist'lerde video yoksa YouTube'dan çek
+            await AutoSyncPlaylistsIfNeeded(playlists);
+
+            // 10. ADIM: ViewModel oluştur ve view'a gönder
             var viewModel = new HomeViewModel
             {
                 Ogretmen = ogretmen,
                 Videos = videos,
-                IletisimBilgisi = iletisimBilgisi
+                IletisimBilgisi = iletisimBilgisi,
+                Playlists = playlists
             };
 
             return View(viewModel);
+        }
+
+        // Otomatik senkronizasyon method'u - İlk açılışta videoları çeker
+        private async Task AutoSyncPlaylistsIfNeeded(IEnumerable<Playlist> playlists)
+        {
+            try
+            {
+                var syncTasks = new List<Task>();
+
+                foreach (var playlist in playlists)
+                {
+                    if (!string.IsNullOrEmpty(playlist.YouTubePlaylistId))
+                    {
+                        // Video sayısını kontrol et
+                        var videoCount = await _playlistService.GetVideoCountByPlaylistIdAsync(playlist.Id);
+                        
+                        if (videoCount == 0)
+                        {
+                            // Arkaplanda senkronize et (UI'yi bloklamadan)
+                            var syncTask = Task.Run(async () =>
+                            {
+                                try
+                                {
+                                    // Önce playlist bilgilerini güncelle (başlık, thumbnail)
+                                    var (title, thumbnailUrl) = await _youTubeService.GetPlaylistInfoAsync(playlist.YouTubePlaylistId);
+                                    if (!string.IsNullOrEmpty(title))
+                                    {
+                                        playlist.PlaylistAdi = title;
+                                        playlist.ThumbnailUrl = thumbnailUrl;
+                                        await _playlistService.UpdatePlaylistAsync(playlist);
+                                    }
+
+                                    // Sonra videoları senkronize et
+                                    await _youTubeService.SyncPlaylistToDatabase(playlist.Id, playlist.YouTubePlaylistId);
+                                }
+                                catch
+                                {
+                                    // Hata durumunda sessizce devam et
+                                }
+                            });
+                            
+                            syncTasks.Add(syncTask);
+                        }
+                    }
+                }
+
+                // Tüm senkronizasyon işlemlerini başlat (UI'yi bekletmeden)
+                if (syncTasks.Any())
+                {
+                    _ = Task.WhenAll(syncTasks); // Fire and forget
+                }
+            }
+            catch
+            {
+                // Hata durumunda sessizce devam et
+            }
         }
     }
 }

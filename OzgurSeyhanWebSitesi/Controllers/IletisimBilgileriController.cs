@@ -36,12 +36,11 @@ namespace OzgurSeyhanWebSitesi.Controllers
         private async Task CreateOzgurSeyhanIletisimBilgisi()
         {
             // Önce Özgür Seyhan öğretmenini bul
-
-            var ozgurSeyhan = _ogretmenService.GetOgretmenAsync();
+            var ozgurSeyhan = await _ogretmenService.GetOgretmenAsync();
             
             if (ozgurSeyhan != null)
             {
-                var iletisimBilgisi = new  IletisimBilgisi
+                var iletisimBilgisi = new IletisimBilgisi
                 {
                     TelefonNumarasi = "05354893494",
                     Email = "ozgurseyhan@gmail.com",
@@ -49,13 +48,13 @@ namespace OzgurSeyhanWebSitesi.Controllers
                     WhatsAppNumarasi = "",
                     Adres = "",
                     WebSitesi = "",
-                    
+                    Aktif = true,
+                    OgretmenId = ozgurSeyhan.Id
                 };
 
                 await _iletisimBilgisiService.CreateIletisimBilgisiAsync(iletisimBilgisi);
             }
         }
     }
-
-    }
+}
 

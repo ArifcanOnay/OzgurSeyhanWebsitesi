@@ -15,5 +15,6 @@
         public ICollection<Kurs> Kurslar { get; set; } = new List<Kurs>();
         public ICollection<OrnekVideo> OrnekVideolar { get; set; } = new List<OrnekVideo>();
         public ICollection<IletisimBilgisi> IletisimBilgileri { get; set; } = new List<IletisimBilgisi>();
+        public ICollection<Playlist> Playlistler { get; set; } = new List<Playlist>();
     }
 }
