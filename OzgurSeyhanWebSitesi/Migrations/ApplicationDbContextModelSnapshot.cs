@@ -254,6 +254,9 @@ namespace OzgurSeyhanWebSitesi.Migrations
                     b.Property<Guid>("KursId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<DateTime>("MezuniyetTarihi")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("OgrenciAdi")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -375,6 +378,47 @@ namespace OzgurSeyhanWebSitesi.Migrations
                     b.ToTable("Paketler");
                 });
 
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Playlist", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Aciklama")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Aktif")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("OgretmenId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("OlusturmaTarihi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PlaylistAdi")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SiraNo")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ThumbnailUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YouTubePlaylistId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OgretmenId");
+
+                    b.ToTable("Playlists");
+                });
+
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.SatinAlma", b =>
                 {
                     b.Property<Guid>("Id")
@@ -448,6 +492,50 @@ namespace OzgurSeyhanWebSitesi.Migrations
                     b.ToTable("Users");
                 });
 
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Video", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Aciklama")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("Aktif")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("OlusturmaTarihi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("PlaylistId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("SiraNo")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Sure")
+                        .HasColumnType("int");
+
+                    b.Property<string>("ThumbnailUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("VideoBaslik")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YouTubeVideoId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlaylistId");
+
+                    b.ToTable("Videos");
+                });
+
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.IletisimBilgisi", b =>
                 {
                     b.HasOne("OzgurSeyhanWebSitesi.Models.Ogretmen", "Ogretmen")
@@ -514,6 +602,17 @@ namespace OzgurSeyhanWebSitesi.Migrations
                     b.Navigation("Kurs");
                 });
 
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Playlist", b =>
+                {
+                    b.HasOne("OzgurSeyhanWebSitesi.Models.Ogretmen", "Ogretmen")
+                        .WithMany("Playlistler")
+                        .HasForeignKey("OgretmenId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Ogretmen");
+                });
+
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.SatinAlma", b =>
                 {
                     b.HasOne("OzgurSeyhanWebSitesi.Models.Paket", "Paket")
@@ -523,6 +622,17 @@ namespace OzgurSeyhanWebSitesi.Migrations
                         .IsRequired();
 
                     b.Navigation("Paket");
+                });
+
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Video", b =>
+                {
+                    b.HasOne("OzgurSeyhanWebSitesi.Models.Playlist", "Playlist")
+                        .WithMany("Videolar")
+                        .HasForeignKey("PlaylistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Playlist");
                 });
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Kurs", b =>
@@ -541,11 +651,18 @@ namespace OzgurSeyhanWebSitesi.Migrations
                     b.Navigation("Kurslar");
 
                     b.Navigation("OrnekVideolar");
+
+                    b.Navigation("Playlistler");
                 });
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Paket", b =>
                 {
                     b.Navigation("SatinAlmalar");
+                });
+
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Models.Playlist", b =>
+                {
+                    b.Navigation("Videolar");
                 });
 #pragma warning restore 612, 618
         }

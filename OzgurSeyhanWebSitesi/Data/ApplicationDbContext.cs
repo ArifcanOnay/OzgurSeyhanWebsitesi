@@ -19,6 +19,11 @@ namespace OzgurSeyhanWebSitesi.Data
         public DbSet<SatinAlma> SatinAlmalar { get; set; }
         public DbSet<KursIcerik> KursIcerikleri { get; set; }
         public DbSet<IletisimBilgisi> IletisimBilgileri { get; set; }
+        public DbSet<Playlist> Playlists { get; set; }
+        public DbSet<Video> Videos { get; set; }
+
+        // YouTube Related DbSets
+       
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -73,6 +78,8 @@ namespace OzgurSeyhanWebSitesi.Data
                 .HasForeignKey(ib => ib.OgretmenId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+           
+
             // Entity Configurations
             ConfigureOgretmen(modelBuilder);
             ConfigureKurs(modelBuilder);
@@ -82,6 +89,7 @@ namespace OzgurSeyhanWebSitesi.Data
             ConfigureSatinAlma(modelBuilder);
             ConfigureKursIcerik(modelBuilder);
             ConfigureIletisimBilgisi(modelBuilder);
+            
         }
 
         private void ConfigureOgretmen(ModelBuilder modelBuilder)
@@ -252,5 +260,9 @@ namespace OzgurSeyhanWebSitesi.Data
                     .HasDefaultValueSql("GETDATE()");
             });
         }
+
+       
+       
+        }
     }
-}
+
