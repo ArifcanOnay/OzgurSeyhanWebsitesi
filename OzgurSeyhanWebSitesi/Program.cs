@@ -1,4 +1,6 @@
 using Microsoft.EntityFrameworkCore;
+using OzgurSeyhanWebSitesi.Repository;
+using System.Reflection;
 
 namespace OzgurSeyhanWebSitesi
 {
@@ -12,18 +14,22 @@ namespace OzgurSeyhanWebSitesi
 
             // Add controllers and views (MVC support)
             builder.Services.AddControllersWithViews();
+            var constr= builder.Configuration.GetConnectionString("DefaultConnection");
 
-            // Swagger/OpenAPI desteği
-            builder.Services.AddEndpointsApiExplorer();
-            builder.Services.AddSwaggerGen();
+            builder.Services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(constr, sqlOptions =>
+                {
+                    sqlOptions.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
+                });
+            }); 
 
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
             if (app.Environment.IsDevelopment())
             {
-                app.UseSwagger();
-                app.UseSwaggerUI();
+                
             }
             else
             {
