@@ -9,7 +9,6 @@ C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\Azure.Core.dll
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\Azure.Identity.dll
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\Humanizer.dll
-C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\Microsoft.Build.Locator.dll
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\Microsoft.CodeAnalysis.dll
@@ -157,7 +156,6 @@ C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\obj\Debug\net9.0
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\obj\Debug\net9.0\OzgurSeyhanWebSitesi.pdb
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\obj\Debug\net9.0\OzgurSeyhanWebSitesi.genruntimeconfig.cache
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\obj\Debug\net9.0\ref\OzgurSeyhanWebSitesi.dll
-C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\BCrypt.Net-Next.dll
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\OzgurSeyhanWebSitesi.staticwebassets.runtime.json
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\Microsoft.Build.dll
@@ -278,4 +276,6 @@ C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\obj\Debug\net9.0\OzgurSeyhanWebSitesi.RazorAssemblyInfo.cache
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\obj\Debug\net9.0\OzgurSeyhanWebSitesi.RazorAssemblyInfo.cs
+C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\AutoMapper.dll
+C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\bin\Debug\net9.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 C:\Users\Arif\Desktop\OzgurSeyhanWebSitesi\OzgurSeyhanWebSitesi\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
