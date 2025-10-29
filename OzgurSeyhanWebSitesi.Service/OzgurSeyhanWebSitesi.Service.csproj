@@ -12,13 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Exceptions\" />
-    <Folder Include="Extensions\" />
-    <Folder Include="Hashing\" />
-    <Folder Include="Mapping\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\OzgurSeyhanWebSitesi.Core\OzgurSeyhanWebSitesi.Core.csproj" />
   </ItemGroup>
 

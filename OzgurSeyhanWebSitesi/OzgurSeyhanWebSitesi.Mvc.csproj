@@ -32,6 +32,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OzgurSeyhanWebSitesi.Repository\OzgurSeyhanWebSitesi.Repository.csproj" />
+    <ProjectReference Include="..\OzgurSeyhanWebSitesi.Service\OzgurSeyhanWebSitesi.Service.csproj" />
   </ItemGroup>
 
 </Project>

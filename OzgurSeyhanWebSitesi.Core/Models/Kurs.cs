@@ -14,7 +14,7 @@ namespace OzgurSeyhanWebSitesi.Core.Models
         public string Seviye { get; set; } // Başlangıç, Orta, İleri
         public string IslencekKonular { get; set; } 
         public int HaftadaKacGun { get; set; }
-        public string HaftanınHangiGünleri { get; set; }
+        public string HaftaninHangiGünleri { get; set; }
         public string DersSaati { get; set; }
         public string KursunSonundaEldeEdilecekYetenekler { get; set; }
         public DateTime BaslangicTarihi { get; set; }

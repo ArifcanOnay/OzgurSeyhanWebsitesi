@@ -19,7 +19,7 @@ namespace OzgurSeyhanWebSitesi.Core.Dtos
         // Liste halinde sadece DTO ile video ve spotify bilgisi göstereceğiz
         public List<VideoDto> Videolar { get; set; } = new List<VideoDto>();
         public List<SpotifyDto> SpotifyLinkleri { get; set; } = new List<SpotifyDto>();
-        public List<CourseDto> Kurslar { get; set; } = new List<CourseDto>();
+        public List<KursDto> Kurslar { get; set; } = new List<KursDto>();
 
     }
 }

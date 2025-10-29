@@ -8,7 +8,7 @@ namespace OzgurSeyhanWebSitesi.Core.Models
 {
    public class Spotify:BaseEntitiy
     {
-        public string Başlık{ get; set; }
+        public string Baslık{ get; set; }
         public string SpotifyUrl { get; set; }
         public DateTime EklenmeTarihi { get; set; } = DateTime.Now;
 

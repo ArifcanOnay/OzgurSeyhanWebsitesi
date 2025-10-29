@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using OzgurSeyhanWebSitesi.Repository;
+using OzgurSeyhanWebSitesi.Service.Mapping;
 using System.Reflection;
 
 namespace OzgurSeyhanWebSitesi
@@ -22,7 +23,8 @@ namespace OzgurSeyhanWebSitesi
                 {
                     sqlOptions.MigrationsAssembly(Assembly.GetAssembly(typeof(AppDbContext)).GetName().Name);
                 });
-            }); 
+            });
+            builder.Services.AddAutoMapper(typeof(MapProfile));
 
             var app = builder.Build();
 

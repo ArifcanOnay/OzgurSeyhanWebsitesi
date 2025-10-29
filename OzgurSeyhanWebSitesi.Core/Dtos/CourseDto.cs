@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OzgurSeyhanWebSitesi.Core.Dtos
 {
-    public class CourseDto
+    public class KursDto:BaseDto
     {
         public string KursAdi { get; set; }
         public string Aciklama { get; set; }
