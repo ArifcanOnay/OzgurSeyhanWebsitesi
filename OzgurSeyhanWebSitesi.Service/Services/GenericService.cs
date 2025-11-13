@@ -12,8 +12,8 @@ namespace OzgurSeyhanWebSitesi.Bussinies.Services
 {
     public class GenericService<T> : IGenericService<T> where T : BaseEntitiy
     {
-        private readonly IGenericRepository<T> _repository;
-        private readonly IUnitOfWorks _unitOfWorks;
+        protected readonly IGenericRepository<T> _repository;
+        protected readonly IUnitOfWorks _unitOfWorks;
         public GenericService(IGenericRepository<T> repository, IUnitOfWorks unitOfWorks)
         {
             _repository = repository;

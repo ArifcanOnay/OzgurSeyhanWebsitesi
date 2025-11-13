@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using OzgurSeyhanWebSitesi.Repository;
 
@@ -11,9 +12,11 @@ using OzgurSeyhanWebSitesi.Repository;
 namespace OzgurSeyhanWebSitesi.Repository.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20251113110225_AddPlaylistTableFixed")]
+    partial class AddPlaylistTableFixed
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -125,6 +128,9 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime>("LastSyncDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("OgretmenId")
                         .HasColumnType("int");
 
@@ -140,7 +146,7 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
 
                     b.HasIndex("OgretmenId");
 
-                    b.ToTable("Playlists", (string)null);
+                    b.ToTable("Playlists");
                 });
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Podcast", b =>
@@ -196,6 +202,9 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.Property<int>("OgretmenId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("PlaylistId")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
@@ -212,6 +221,8 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("OgretmenId");
+
+                    b.HasIndex("PlaylistId");
 
                     b.ToTable("YoutubeVideos", (string)null);
                 });
@@ -257,7 +268,14 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
+                    b.HasOne("OzgurSeyhanWebSitesi.Core.Models.Playlist", "Playlist")
+                        .WithMany("Videos")
+                        .HasForeignKey("PlaylistId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
                     b.Navigation("Ogretmen");
+
+                    b.Navigation("Playlist");
                 });
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Ogretmen", b =>
@@ -269,6 +287,11 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.Navigation("Podcasts");
 
                     b.Navigation("YoutubeVideolari");
+                });
+
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Playlist", b =>
+                {
+                    b.Navigation("Videos");
                 });
 #pragma warning restore 612, 618
         }

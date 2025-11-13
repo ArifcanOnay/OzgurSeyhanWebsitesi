@@ -19,8 +19,9 @@
 
   <ItemGroup>
     <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="10.0.0" />
-    <PackageReference Include="AutoMapper" Version="15.1.0" />
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.70.0.3847" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.10" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="9.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
@@ -35,6 +36,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\OzgurSeyhanWebSitesi.Repository\OzgurSeyhanWebSitesi.Repository.csproj" />
+    <ProjectReference Include="..\OzgurSeyhanWebSitesi.Service\OzgurSeyhanWebSitesi.Bussinies.csproj" />
   </ItemGroup>
 
 </Project>

@@ -11,7 +11,7 @@ namespace OzgurSeyhanWebSitesi.Repository.Repositories
 {
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntitiy
     {
-        private readonly AppDbContext _context;
+        protected readonly AppDbContext _context; // protected yaptık
         private readonly DbSet<T> _dbSet;
         public GenericRepository(AppDbContext appDbContext)
         {
