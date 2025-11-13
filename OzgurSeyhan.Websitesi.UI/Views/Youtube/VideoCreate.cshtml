@@ -1,0 +1,63 @@
+@{
+    ViewData["Title"] = "Video Ekle";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Yeni Video Ekle</h4>
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">YouTube Video URL'si ile Ekle</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="@Url.Action("VideoCreate", "Youtube")">
+                            <div class="form-group">
+                                <label for="videoUrl">YouTube Video URL</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="videoUrl" 
+                                       name="videoUrl" 
+                                       placeholder="https://www.youtube.com/watch?v=xxxxxx" 
+                                       required>
+                                <small class="form-text text-muted">
+                                    YouTube video URL'sini buraya yapıştırın. Video bilgileri otomatik olarak çekilecektir.
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success">
+                                    <i class="la la-save"></i> Video Ekle
+                                </button>
+                                <a href="@Url.Action("VideoIndex", "Youtube")" class="btn btn-secondary">
+                                    <i class="la la-times"></i> İptal
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-info">
+                    <div class="card-body">
+                        <h5><i class="la la-info-circle"></i> Nasıl Kullanılır?</h5>
+                        <ol>
+                            <li>YouTube'da video sayfasına gidin</li>
+                            <li>Tarayıcı adres çubuğundan URL'yi kopyalayın</li>
+                            <li>URL'nin içinde "v=" parametresi olduğundan emin olun</li>
+                            <li>Buraya yapıştırıp "Video Ekle" butonuna tıklayın</li>
+                        </ol>
+                        <hr>
+                        <p><strong>Örnek URL:</strong></p>
+                        <code style="word-break: break-all;">
+                            https://www.youtube.com/watch?v=dQw4w9WgXcQ
+                        </code>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

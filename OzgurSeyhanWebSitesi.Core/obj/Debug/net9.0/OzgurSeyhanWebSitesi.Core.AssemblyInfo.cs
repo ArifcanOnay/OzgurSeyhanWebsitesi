@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OzgurSeyhanWebSitesi.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cb8d52cb741db6cf75c430d815a3e63c95b3a85")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f41c21627c44b9edb02094a37029a1f573f561ce")]
 [assembly: System.Reflection.AssemblyProductAttribute("OzgurSeyhanWebSitesi.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OzgurSeyhanWebSitesi.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
