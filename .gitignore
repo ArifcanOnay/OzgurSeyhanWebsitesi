@@ -1,6 +1,7 @@
 
 # Visual Studio dosyaları
 .vs/
+**/.vs/
 *.vsidx
 *.suo
 *.user
@@ -10,8 +11,31 @@
 # Build results
 bin/
 obj/
+**/bin/
+**/obj/
 *.nupkg
 *.publish.xml
+*.dll
+*.pdb
+
+# Visual Studio Code dosyaları
+.vscode/
+
+# Build artifacts
+**/Debug/
+**/Release/
+*.cache
+*.AssemblyInfo.cs
+*.AssemblyInfoInputs.cache
+
+# Copilot ve IntelliSense
+**/CopilotIndices/
+*.db
+*.db-shm
+*.db-wal
+
+# Entity Framework Migrations (opsiyonel - gerekirse kaldır)
+# Migrations/
 
 # Rider / ReSharper
 _ReSharper*/
