@@ -3,6 +3,58 @@
   "WorkspaceRootPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\wwwroot\\ready-bootstrap-dashboard-master\\assets\\img\\\u00F6zg\u00FCr hoca resim.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\wwwroot\\ready-bootstrap-dashboard-master\\assets\\img\\\u00F6zg\u00FCr hoca resim.jpg||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\controllers\\youtubecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\controllers\\youtubecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\views\\shared\\components\\_layoutheadercomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\views\\shared\\components\\_layoutheadercomponentpartial\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\views\\adminlayout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\views\\adminlayout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\viewcomponents\\layoutcomponents\\_layoutheadercomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\viewcomponents\\layoutcomponents\\_layoutheadercomponentpartial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\wwwroot\\ready-bootstrap-dashboard-master\\assets\\css\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\wwwroot\\ready-bootstrap-dashboard-master\\assets\\css\\bootstrap.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\views\\youtube\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\views\\youtube\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\wwwroot\\ready-bootstrap-dashboard-master\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\wwwroot\\ready-bootstrap-dashboard-master\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\wwwroot\\ready-bootstrap-dashboard-master\\tables.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\wwwroot\\ready-bootstrap-dashboard-master\\tables.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\controllers\\adminlayoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\controllers\\adminlayoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhan.websitesi.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2BE98693-86A0-49BD-9985-D7B191D9545A}|OzgurSeyhan.Websitesi.UI\\OzgurSeyhan.Websitesi.UI.csproj|solutionrelative:ozgurseyhan.websitesi.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\controllers\\playlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj|solutionrelative:ozgurseyhanwebsitesi\\controllers\\playlistcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\controllers\\ozelderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj|solutionrelative:ozgurseyhanwebsitesi\\controllers\\ozelderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{04AE67BA-1F8C-4A4F-9251-AE65A19E7D84}|OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Bussinies.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi.service\\services\\youtubeapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04AE67BA-1F8C-4A4F-9251-AE65A19E7D84}|OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Bussinies.csproj|solutionrelative:ozgurseyhanwebsitesi.service\\services\\youtubeapiservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -53,10 +105,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{04AE67BA-1F8C-4A4F-9251-AE65A19E7D84}|OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Bussinies.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi.service\\services\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{04AE67BA-1F8C-4A4F-9251-AE65A19E7D84}|OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Bussinies.csproj|solutionrelative:ozgurseyhanwebsitesi.service\\services\\genericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi\\controllers\\ozelderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BF6BE497-83D6-4C16-B0D4-27CF696BEF34}|OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj|solutionrelative:ozgurseyhanwebsitesi\\controllers\\ozelderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{04AE67BA-1F8C-4A4F-9251-AE65A19E7D84}|OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Bussinies.csproj|c:\\users\\arif\\desktop\\ozgurseyhanwebsitesi\\ozgurseyhanwebsitesi.service\\services\\ozeldersservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -197,8 +245,34 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 25,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Default.cshtml",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Views\\Shared\\Components\\_LayoutHeaderComponentPartial\\Default.cshtml",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\Views\\Shared\\Components\\_LayoutHeaderComponentPartial\\Default.cshtml",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Views\\Shared\\Components\\_LayoutHeaderComponentPartial\\Default.cshtml",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\Views\\Shared\\Components\\_LayoutHeaderComponentPartial\\Default.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T12:26:26.942Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u00D6zg\u00FCr Hoca resim.jpg - Bitmap [200x200, 24 bit, JPG]",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\assets\\img\\\u00D6zg\u00FCr Hoca resim.jpg",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\assets\\img\\\u00D6zg\u00FCr Hoca resim.jpg",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\assets\\img\\\u00D6zg\u00FCr Hoca resim.jpg - Bitmap [200x200, 24 bit, JPG]",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\assets\\img\\\u00D6zg\u00FCr Hoca resim.jpg - Bitmap [200x200, 24 bit, JPG]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-11-13T18:12:29.313Z",
+              "EditorCaption": " - Bitmap [200x200, 24 bit, JPG]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -277,7 +351,137 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "bootstrap.min.css",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\assets\\css\\bootstrap.min.css",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\assets\\css\\bootstrap.min.css",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\assets\\css\\bootstrap.min.css",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\assets\\css\\bootstrap.min.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-11-13T12:45:13.153Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "tables.html",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\tables.html",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\tables.html",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\tables.html",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\tables.html",
+              "ViewState": "AgIAAL0CAAAAAAAAAAAgwNcCAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-13T12:36:14.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "index.html",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\index.html",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\index.html",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\index.html",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\wwwroot\\Ready-Bootstrap-Dashboard-master\\index.html",
+              "ViewState": "AgIAAN4CAAAAAAAAAAAAAPgCAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-11-13T12:32:11.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_LayoutHeaderComponentPartial.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\ViewComponents\\LayoutComponents\\_LayoutHeaderComponentPartial.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\ViewComponents\\LayoutComponents\\_LayoutHeaderComponentPartial.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\ViewComponents\\LayoutComponents\\_LayoutHeaderComponentPartial.cs",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\ViewComponents\\LayoutComponents\\_LayoutHeaderComponentPartial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T12:24:46.667Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Views\\Youtube\\Index.cshtml",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\Views\\Youtube\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Views\\Youtube\\Index.cshtml",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\Views\\Youtube\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T12:20:24.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "YoutubeController.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Controllers\\YoutubeController.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\Controllers\\YoutubeController.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Controllers\\YoutubeController.cs",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\Controllers\\YoutubeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T12:19:55.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Views\\AdminLayout\\Index.cshtml",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\Views\\AdminLayout\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Views\\AdminLayout\\Index.cshtml",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\Views\\AdminLayout\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-11-13T12:17:26.004Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminLayoutController.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Controllers\\AdminLayoutController.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\Controllers\\AdminLayoutController.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Controllers\\AdminLayoutController.cs",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\Controllers\\AdminLayoutController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T12:16:40.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "OzgurSeyhan.Websitesi.UI\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T12:15:25.439Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PlaylistController.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\PlaylistController.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Controllers\\PlaylistController.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\PlaylistController.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Controllers\\PlaylistController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T12:04:56.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "YoutubeVideoController.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\YoutubeVideoController.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Controllers\\YoutubeVideoController.cs",
@@ -290,7 +494,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
               "Title": "PodcastRepository.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Repositories\\PodcastRepository.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Repositories\\PodcastRepository.cs",
@@ -303,7 +507,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 21,
               "Title": "OzelDersRepository.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Repositories\\OzelDersRepository.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Repositories\\OzelDersRepository.cs",
@@ -316,7 +520,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "GenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Repositories\\GenericRepository.cs",
@@ -329,7 +533,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 18,
               "Title": "IYoutubeApiService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Services\\IYoutubeApiService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Services\\IYoutubeApiService.cs",
@@ -342,7 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 17,
               "Title": "YoutubeVideoService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\Services\\YoutubeVideoService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Service\\Services\\YoutubeVideoService.cs",
@@ -355,7 +559,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 12,
+              "Title": "OzelDersController.cs",
+              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\OzelDersController.cs",
+              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Controllers\\OzelDersController.cs",
+              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\OzelDersController.cs",
+              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Controllers\\OzelDersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T11:42:26.314Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "YoutubeApiService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\Services\\YoutubeApiService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Service\\Services\\YoutubeApiService.cs",
@@ -368,7 +585,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 15,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Program.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Program.cs",
@@ -381,7 +598,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 22,
               "Title": "OgretmenRepository.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Repositories\\OgretmenRepository.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Repositories\\OgretmenRepository.cs",
@@ -394,7 +611,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 16,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\appsettings.json",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\appsettings.json",
@@ -407,7 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 23,
               "Title": "IPodcastRepository.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Repositories\\IPodcastRepository.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Repositories\\IPodcastRepository.cs",
@@ -420,7 +637,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 24,
               "Title": "YoutubeVideo.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Models\\YoutubeVideo.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Models\\YoutubeVideo.cs",
@@ -433,7 +650,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 25,
               "Title": "GenericService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\Services\\GenericService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Service\\Services\\GenericService.cs",
@@ -446,7 +663,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 27,
               "Title": "PodcastService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\Services\\PodcastService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Service\\Services\\PodcastService.cs",
@@ -458,7 +675,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 29,
               "Title": "UnitofWorks.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\UnitOfWorks\\UnitofWorks.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\UnitOfWorks\\UnitofWorks.cs",
@@ -470,19 +687,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "OzelDersController.cs",
-              "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\OzelDersController.cs",
-              "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\Controllers\\OzelDersController.cs",
-              "ToolTip": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\Controllers\\OzelDersController.cs",
-              "RelativeToolTip": "OzgurSeyhanWebSitesi\\Controllers\\OzelDersController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T11:42:26.314Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 26,
               "Title": "OzelDersService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\Services\\OzelDersService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Service\\Services\\OzelDersService.cs",
@@ -494,7 +699,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 31,
               "Title": "IYoutubeVideoRepository.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Repositories\\IYoutubeVideoRepository.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Repositories\\IYoutubeVideoRepository.cs",
@@ -506,7 +711,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 34,
               "Title": "IGenericRepository.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Repositories\\IGenericRepository.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Repositories\\IGenericRepository.cs",
@@ -518,7 +723,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 33,
               "Title": "IOgretmenRepository.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Repositories\\IOgretmenRepository.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Repositories\\IOgretmenRepository.cs",
@@ -530,7 +735,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 32,
               "Title": "IOzelDersRepository.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Repositories\\IOzelDersRepository.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Repositories\\IOzelDersRepository.cs",
@@ -542,7 +747,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 28,
               "Title": "IGenericService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Services\\IGenericService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Services\\IGenericService.cs",
@@ -554,7 +759,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 35,
               "Title": "BaseEntitiy.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Models\\BaseEntitiy.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Models\\BaseEntitiy.cs",
@@ -566,7 +771,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 30,
               "Title": "YoutubeVideoRepostiroy.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Repositories\\YoutubeVideoRepostiroy.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Repositories\\YoutubeVideoRepostiroy.cs",
@@ -578,7 +783,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 36,
               "Title": "Ogretmen.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Models\\Ogretmen.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Models\\Ogretmen.cs",
@@ -590,7 +795,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 37,
               "Title": "OzelDers.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Models\\OzelDers.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Models\\OzelDers.cs",
@@ -602,7 +807,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 38,
               "Title": "Podcast.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Models\\Podcast.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Models\\Podcast.cs",
@@ -614,7 +819,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 39,
               "Title": "OgretmenDto.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Dtos\\OgretmenDtos\\OgretmenDto.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Dtos\\OgretmenDtos\\OgretmenDto.cs",
@@ -626,7 +831,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 40,
               "Title": "CreateOgretmenDto.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Dtos\\OgretmenDtos\\CreateOgretmenDto.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Dtos\\OgretmenDtos\\CreateOgretmenDto.cs",
@@ -638,7 +843,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
+              "DocumentIndex": 42,
               "Title": "IUnitOfWorks.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\UnitOfWorks\\IUnitOfWorks.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\UnitOfWorks\\IUnitOfWorks.cs",
@@ -650,7 +855,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
+              "DocumentIndex": 43,
               "Title": "IOzelDersService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Services\\IOzelDersService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Services\\IOzelDersService.cs",
@@ -662,7 +867,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 44,
               "Title": "IPodcsatService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Services\\IPodcsatService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Services\\IPodcsatService.cs",
@@ -674,7 +879,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 45,
               "Title": "IOgretmenService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Services\\IOgretmenService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Services\\IOgretmenService.cs",
@@ -686,7 +891,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 46,
               "Title": "IYoutubeVideoService.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Services\\IYoutubeVideoService.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Services\\IYoutubeVideoService.cs",
@@ -698,7 +903,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 41,
               "Title": "OgretmenConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Configurations\\OgretmenConfiguration.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Configurations\\OgretmenConfiguration.cs",
@@ -710,7 +915,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 47,
               "Title": "20251112094105_v.0.0.1.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Migrations\\20251112094105_v.0.0.1.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Migrations\\20251112094105_v.0.0.1.cs",
@@ -722,7 +927,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 48,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhan.Websitesi.UI\\Program.cs",
               "RelativeDocumentMoniker": "OzgurSeyhan.Websitesi.UI\\Program.cs",
@@ -734,7 +939,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 51,
               "Title": "OzelDersConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Configurations\\OzelDersConfiguration.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Configurations\\OzelDersConfiguration.cs",
@@ -746,7 +951,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 50,
               "Title": "PodcastConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Configurations\\PodcastConfiguration.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Configurations\\PodcastConfiguration.cs",
@@ -758,7 +963,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 49,
               "Title": "YoutubeVideoConfiguration.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\Configurations\\YoutubeVideoConfiguration.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\Configurations\\YoutubeVideoConfiguration.cs",
@@ -770,7 +975,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 53,
               "Title": "PodcastDto.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Dtos\\PodcastDtos\\PodcastDto.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Dtos\\PodcastDtos\\PodcastDto.cs",
@@ -782,7 +987,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 52,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\AppDbContext.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Repository\\AppDbContext.cs",
@@ -794,7 +999,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 54,
               "Title": "CreatePodcastDto.cs",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\Dtos\\PodcastDtos\\CreatePodcastDto.cs",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\Dtos\\PodcastDtos\\CreatePodcastDto.cs",
@@ -806,7 +1011,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 55,
               "Title": "OzgurSeyhanWebSitesi.Bussinies.csproj",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Bussinies.csproj",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Bussinies.csproj",
@@ -818,7 +1023,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 57,
               "Title": "Microsoft.Common.CurrentVersion.targets",
               "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
               "RelativeDocumentMoniker": "..\\..\\..\\..\\Program Files\\Microsoft Visual Studio\\2022\\Community\\MSBuild\\Current\\Bin\\amd64\\Microsoft.Common.CurrentVersion.targets",
@@ -830,7 +1035,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 58,
               "Title": "OzgurSeyhanWebSitesi.Core.csproj",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Core\\OzgurSeyhanWebSitesi.Core.csproj",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi.Core\\OzgurSeyhanWebSitesi.Core.csproj",
@@ -842,7 +1047,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 56,
               "Title": "OzgurSeyhanWebSitesi.Api.csproj",
               "DocumentMoniker": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj",
               "RelativeDocumentMoniker": "OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj",
