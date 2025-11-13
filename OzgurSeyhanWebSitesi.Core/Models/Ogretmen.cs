@@ -15,6 +15,7 @@ namespace OzgurSeyhanWebSitesi.Core.Models
         public ICollection<Podcast> Podcasts { get; set; }
         public ICollection<YoutubeVideo> YoutubeVideolari { get; set; }
         public ICollection<OzelDers>OzelDersler { get; set; }
+        public ICollection<Playlist> Playlists { get; set; } = new List<Playlist>();
 
 
 

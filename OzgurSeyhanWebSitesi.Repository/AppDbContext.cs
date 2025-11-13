@@ -15,6 +15,7 @@ namespace OzgurSeyhanWebSitesi.Repository
         public DbSet<YoutubeVideo> YoutubeVideoları {  get; set; }
         public DbSet<Podcast> Podcastler {  get; set; }
         public DbSet<OzelDers>OzelDersler { get; set; }
+        public DbSet<Playlist> Playlists { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

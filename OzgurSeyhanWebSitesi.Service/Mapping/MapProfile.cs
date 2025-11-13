@@ -3,6 +3,7 @@ using OzgurSeyhanWebSitesi.Core.Dtos.OgretmenDtos;
 using OzgurSeyhanWebSitesi.Core.Dtos.OzelDersDtos;
 using OzgurSeyhanWebSitesi.Core.Dtos.PodcastDtos;
 using OzgurSeyhanWebSitesi.Core.Dtos.YoutubeVideoDtos;
+using OzgurSeyhanWebSitesi.Core.Dtos.PlaylistDtos;
 using OzgurSeyhanWebSitesi.Core.Models;
 
 namespace OzgurSeyhanWebSitesi.Bussinies.Mapping
@@ -44,6 +45,14 @@ namespace OzgurSeyhanWebSitesi.Bussinies.Mapping
             
             CreateMap<CreateYoutubeVideoDto, YoutubeVideo>();
             CreateMap<UpdateYoutubeVideoDto, YoutubeVideo>();
+
+            // ==================== PLAYLIST MAPPINGS ====================
+            CreateMap<Playlist, PlaylistDto>()
+                .ReverseMap()
+                .ForMember(dest => dest.Ogretmen, opt => opt.Ignore());
+
+            CreateMap<Playlist, PlaylistWithVideosDto>()
+                .ForMember(dest => dest.Videos, opt => opt.Ignore()); // Videoları YouTube'dan dolduracağız
         }
     }
 }
