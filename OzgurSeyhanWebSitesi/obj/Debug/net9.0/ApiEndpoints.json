@@ -1,0 +1,345 @@
+[
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OgretmenController",
+    "Method": "GetAll",
+    "RelativePath": "api/Ogretmen",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OgretmenController",
+    "Method": "Create",
+    "RelativePath": "api/Ogretmen",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "OzgurSeyhanWebSitesi.Core.Dtos.OgretmenDtos.CreateOgretmenDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OgretmenController",
+    "Method": "GetById",
+    "RelativePath": "api/Ogretmen/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OgretmenController",
+    "Method": "Update",
+    "RelativePath": "api/Ogretmen/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDto",
+        "Type": "OzgurSeyhanWebSitesi.Core.Dtos.OgretmenDtos.UpdateOgretmenDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OgretmenController",
+    "Method": "Delete",
+    "RelativePath": "api/Ogretmen/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OzelDersController",
+    "Method": "GetAll",
+    "RelativePath": "api/OzelDers",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OzelDersController",
+    "Method": "Create",
+    "RelativePath": "api/OzelDers",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "createDto",
+        "Type": "OzgurSeyhanWebSitesi.Core.Dtos.OzelDersDtos.CreateOzelDersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OzelDersController",
+    "Method": "GetById",
+    "RelativePath": "api/OzelDers/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OzelDersController",
+    "Method": "Update",
+    "RelativePath": "api/OzelDers/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDto",
+        "Type": "OzgurSeyhanWebSitesi.Core.Dtos.OzelDersDtos.UpdateOzelDersDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.OzelDersController",
+    "Method": "Delete",
+    "RelativePath": "api/OzelDers/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.PlaylistController",
+    "Method": "GetAll",
+    "RelativePath": "api/Playlist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.PlaylistController",
+    "Method": "GetById",
+    "RelativePath": "api/Playlist/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.PlaylistController",
+    "Method": "Delete",
+    "RelativePath": "api/Playlist/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.PlaylistController",
+    "Method": "GetWithVideos",
+    "RelativePath": "api/Playlist/{id}/with-videos",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.PlaylistController",
+    "Method": "GetByOgretmenId",
+    "RelativePath": "api/Playlist/by-ogretmen/{ogretmenId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ogretmenId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.PlaylistController",
+    "Method": "CreateFromPlaylistUrl",
+    "RelativePath": "api/Playlist/from-url",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OzgurSeyhanWebSitesi.Core.Dtos.PlaylistDtos.CreatePlaylistDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.YoutubeVideoController",
+    "Method": "GetAll",
+    "RelativePath": "api/YoutubeVideo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.YoutubeVideoController",
+    "Method": "GetById",
+    "RelativePath": "api/YoutubeVideo/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.YoutubeVideoController",
+    "Method": "Update",
+    "RelativePath": "api/YoutubeVideo/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateDto",
+        "Type": "OzgurSeyhanWebSitesi.Core.Dtos.YoutubeVideoDtos.UpdateYoutubeVideoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.YoutubeVideoController",
+    "Method": "Delete",
+    "RelativePath": "api/YoutubeVideo/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.YoutubeVideoController",
+    "Method": "CreateFromPlaylist",
+    "RelativePath": "api/YoutubeVideo/from-playlist",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OzgurSeyhanWebSitesi.Api.Controllers.CreateFromPlaylistRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "OzgurSeyhanWebSitesi.Api.Controllers.YoutubeVideoController",
+    "Method": "CreateFromYouTubeUrl",
+    "RelativePath": "api/YoutubeVideo/from-url",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "OzgurSeyhanWebSitesi.Api.Controllers.CreateFromYouTubeUrlRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
