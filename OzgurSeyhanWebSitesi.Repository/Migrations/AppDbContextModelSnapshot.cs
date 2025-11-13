@@ -22,329 +22,166 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Kurs", b =>
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Ogretmen", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Ad")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Soyad")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Yas")
+                        .HasMaxLength(3)
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Ogretmenler", (string)null);
+                });
+
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.OzelDers", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Aciklama")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
 
-                    b.Property<DateTime>("BaslangicTarihi")
+                    b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("BitisTarihi")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DersSaati")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("HaftadaKacGun")
-                        .HasColumnType("int");
-
-                    b.Property<string>("HaftanınHangiGünleri")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("IslencekKonular")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<string>("KursAdi")
+                    b.Property<string>("Gunler")
                         .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<string>("KursunSonundaEldeEdilecekYetenekler")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
-
-                    b.Property<int>("OgrenciSayisi")
+                    b.Property<int>("HaftalikSaat")
                         .HasColumnType("int");
 
-                    b.Property<Guid>("OgretmenId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Seviye")
+                    b.Property<string>("KurSeviyesi")
                         .IsRequired()
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("UpdatedBy")
+                    b.Property<int>("MaksimumOgrenciSayisi")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdatedDate")
+                    b.Property<int>("OgretmenId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SaatAraligi")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
                     b.HasIndex("OgretmenId");
 
-                    b.ToTable("Kurslar");
+                    b.ToTable("OzelDersler", (string)null);
                 });
 
-            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Ogrenci", b =>
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Podcast", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("CreatedBy")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("KullaniciAdi")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("PasswordHash")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<int>("Rol")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("UpdatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Ogrenciler");
-                });
-
-            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Ogretmen", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Bio")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("DeneyimYili")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Isim")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<int>("Rol")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SoyAd")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("UpdatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("Yas")
-                        .HasColumnType("int");
-
-                    b.Property<string>("YoutubeKanaliUrl")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Ogretmenler");
-                });
-
-            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Spotify", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Başlık")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime>("EklenmeTarihi")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("datetime2")
-                        .HasDefaultValueSql("GETDATE()");
-
-                    b.Property<Guid>("OgretmenId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("SpotifyUrl")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("UpdatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("OgretmenId");
-
-                    b.ToTable("SpotifyLinkleri");
-                });
-
-            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.User", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("KullaniciAdi")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
-                    b.Property<byte[]>("PasswordHash")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<byte[]>("PassworhSalt")
-                        .IsRequired()
-                        .HasColumnType("varbinary(max)");
-
-                    b.Property<int>("Role")
-                        .HasColumnType("int");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("UpdatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Users");
-                });
-
-            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Video", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Açıklama")
-                        .IsRequired()
-                        .HasMaxLength(500)
-                        .HasColumnType("nvarchar(500)");
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Baslik")
                         .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
-                    b.Property<int>("CreatedBy")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("CreatedDate")
+                    b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("OgretmenId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("Status")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("UpdatedBy")
+                    b.Property<int>("OgretmenId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("UpdatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("YoutubeUrl")
+                    b.Property<string>("PodcastUrl")
                         .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 
                     b.HasIndex("OgretmenId");
 
-                    b.ToTable("Videolar");
+                    b.ToTable("Podcasts", (string)null);
                 });
 
-            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Kurs", b =>
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.YoutubeVideo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Baslik")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("OgretmenId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Url")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<string>("VideoId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("OgretmenId");
+
+                    b.ToTable("YoutubeVideos", (string)null);
+                });
+
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.OzelDers", b =>
                 {
                     b.HasOne("OzgurSeyhanWebSitesi.Core.Models.Ogretmen", "Ogretmen")
-                        .WithMany("Kurslar")
+                        .WithMany("OzelDersler")
                         .HasForeignKey("OgretmenId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -352,10 +189,10 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.Navigation("Ogretmen");
                 });
 
-            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Spotify", b =>
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Podcast", b =>
                 {
                     b.HasOne("OzgurSeyhanWebSitesi.Core.Models.Ogretmen", "Ogretmen")
-                        .WithMany("SpotifyLinkleri")
+                        .WithMany("Podcasts")
                         .HasForeignKey("OgretmenId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -363,10 +200,10 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.Navigation("Ogretmen");
                 });
 
-            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Video", b =>
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.YoutubeVideo", b =>
                 {
                     b.HasOne("OzgurSeyhanWebSitesi.Core.Models.Ogretmen", "Ogretmen")
-                        .WithMany("Videolar")
+                        .WithMany("YoutubeVideolari")
                         .HasForeignKey("OgretmenId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -376,11 +213,11 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
 
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.Ogretmen", b =>
                 {
-                    b.Navigation("Kurslar");
+                    b.Navigation("OzelDersler");
 
-                    b.Navigation("SpotifyLinkleri");
+                    b.Navigation("Podcasts");
 
-                    b.Navigation("Videolar");
+                    b.Navigation("YoutubeVideolari");
                 });
 #pragma warning restore 612, 618
         }

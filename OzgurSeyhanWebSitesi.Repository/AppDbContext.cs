@@ -1,5 +1,4 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Internal;
 using OzgurSeyhanWebSitesi.Core.Models;
 using System;
 using System.Collections.Generic;
@@ -10,18 +9,17 @@ using System.Threading.Tasks;
 
 namespace OzgurSeyhanWebSitesi.Repository
 {
-   public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+    public class AppDbContext(DbContextOptions<AppDbContext> options):DbContext(options)
     {
-        public DbSet<Ogretmen> Ogretmenler { get; set; }
-        public DbSet<Kurs> Kurslar { get; set; }
-        public DbSet<Video> Videolar { get; set; }
-        public DbSet<Spotify> SpotifyLinkleri { get; set; }
-        public DbSet<Ogrenci> Ogrenciler { get;set; }
-        public DbSet<User>Users { get; set; }   
+        public DbSet<Ogretmen> Ogretmenler {  get; set; }
+        public DbSet<YoutubeVideo> YoutubeVideoları {  get; set; }
+        public DbSet<Podcast> Podcastler {  get; set; }
+        public DbSet<OzelDers>OzelDersler { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
         }
+
     }
 }

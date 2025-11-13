@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "d8IsPOEALv0=",
+  "dgSpecHash": "IVvbQ0Z2JbY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Mvc.csproj",
+  "projectFilePath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Arif\\.nuget\\packages\\autofac\\8.1.0\\autofac.8.1.0.nupkg.sha512",
     "C:\\Users\\Arif\\.nuget\\packages\\autofac.extensions.dependencyinjection\\10.0.0\\autofac.extensions.dependencyinjection.10.0.0.nupkg.sha512",
@@ -10,7 +10,6 @@
     "C:\\Users\\Arif\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\Arif\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\Arif\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
-    "C:\\Users\\Arif\\.nuget\\packages\\fluentvalidation\\12.0.0\\fluentvalidation.12.0.0.nupkg.sha512",
     "C:\\Users\\Arif\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Arif\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Arif\\.nuget\\packages\\humanizer.core.af\\2.14.1\\humanizer.core.af.2.14.1.nupkg.sha512",
@@ -170,9 +169,9 @@
       "code": "NU1608",
       "level": "Warning",
       "message": "Detected package version outside of dependency constraint: AutoMapper.Extensions.Microsoft.DependencyInjection 12.0.1 requires AutoMapper (= 12.0.1) but version AutoMapper 15.1.0 was resolved.",
-      "projectPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Mvc.csproj",
+      "projectPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Mvc.csproj",
+      "filePath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj",
       "libraryId": "AutoMapper",
       "targetGraphs": [
         "net9.0"

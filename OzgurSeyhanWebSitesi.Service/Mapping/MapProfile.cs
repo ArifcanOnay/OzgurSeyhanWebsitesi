@@ -1,24 +1,49 @@
 ﻿using AutoMapper;
-using OzgurSeyhanWebSitesi.Core.Dtos;
+using OzgurSeyhanWebSitesi.Core.Dtos.OgretmenDtos;
+using OzgurSeyhanWebSitesi.Core.Dtos.OzelDersDtos;
+using OzgurSeyhanWebSitesi.Core.Dtos.PodcastDtos;
+using OzgurSeyhanWebSitesi.Core.Dtos.YoutubeVideoDtos;
 using OzgurSeyhanWebSitesi.Core.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace OzgurSeyhanWebSitesi.Service.Mapping
+namespace OzgurSeyhanWebSitesi.Bussinies.Mapping
 {
     public class MapProfile : Profile
     {
-        public MapProfile() // Changed from 'protected' to 'public'
+        public MapProfile()
         {
-            CreateMap<User, UserDto>().ReverseMap();
-            CreateMap<Ogretmen, OgretmenDto>().ReverseMap();
-            CreateMap<Spotify, SpotifyDto>().ReverseMap();
-            CreateMap<Video, VideoDto>().ReverseMap();
-            CreateMap<Kurs, KursDto>().ReverseMap(); 
-            // Fixed method call syntax
+            // ==================== OGRETMEN MAPPINGS ====================
+            CreateMap<Ogretmen, OgretmenDto>()
+                .ReverseMap()
+                .ForMember(dest => dest.Podcasts, opt => opt.Ignore())
+                .ForMember(dest => dest.YoutubeVideolari, opt => opt.Ignore())
+                .ForMember(dest => dest.OzelDersler, opt => opt.Ignore());
+            
+            CreateMap<CreateOgretmenDto, Ogretmen>();
+            CreateMap<UpdateOgretmenDto, Ogretmen>();
+
+            // ==================== OZEL DERS MAPPINGS ====================
+            CreateMap<OzelDers, OzelDersDto>()
+                .ReverseMap()
+                .ForMember(dest => dest.Ogretmen, opt => opt.Ignore());
+            
+            CreateMap<CreateOzelDersDto, OzelDers>();
+            CreateMap<UpdateOzelDersDto, OzelDers>();
+
+            // ==================== PODCAST MAPPINGS ====================
+            CreateMap<Podcast, PodcastDto>()
+                .ReverseMap()
+                .ForMember(dest => dest.Ogretmen, opt => opt.Ignore());
+            
+            CreateMap<CreatePodcastDto, Podcast>();
+            CreateMap<UpdatePodcastDto, Podcast>();
+
+            // ==================== YOUTUBE VIDEO MAPPINGS ====================
+            CreateMap<YoutubeVideo, YoutubeVideoDto>()
+                .ReverseMap()
+                .ForMember(dest => dest.Ogretmen, opt => opt.Ignore());
+            
+            CreateMap<CreateYoutubeVideoDto, YoutubeVideo>();
+            CreateMap<UpdateYoutubeVideoDto, YoutubeVideo>();
         }
     }
 }

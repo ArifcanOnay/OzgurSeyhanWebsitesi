@@ -111,19 +111,6 @@
           }
         }
       },
-      "FluentValidation/12.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net8.0/FluentValidation.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net8.0/FluentValidation.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Humanizer/2.14.1": {
         "type": "package",
         "dependencies": {
@@ -2880,21 +2867,6 @@
         "runtime": {
           "bin/placeholder/OzgurSeyhanWebSitesi.Repository.dll": {}
         }
-      },
-      "OzgurSeyhanWebSitesi.Service/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "dependencies": {
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
-          "FluentValidation": "12.0.0",
-          "OzgurSeyhanWebSitesi.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/OzgurSeyhanWebSitesi.Service.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/OzgurSeyhanWebSitesi.Service.dll": {}
-        }
       }
     }
   },
@@ -3015,21 +2987,6 @@
         "azureicon.png",
         "lib/netstandard2.0/Azure.Identity.dll",
         "lib/netstandard2.0/Azure.Identity.xml"
-      ]
-    },
-    "FluentValidation/12.0.0": {
-      "sha512": "8NVLxtMUXynRHJIX3Hn1ACovaqZIJASufXIIFkD0EUbcd5PmMsL1xUD5h548gCezJ5BzlITaR9CAMrGe29aWpA==",
-      "type": "package",
-      "path": "fluentvalidation/12.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "README.md",
-        "fluent-validation-icon.png",
-        "fluentvalidation.12.0.0.nupkg.sha512",
-        "fluentvalidation.nuspec",
-        "lib/net8.0/FluentValidation.dll",
-        "lib/net8.0/FluentValidation.xml"
       ]
     },
     "Humanizer/2.14.1": {
@@ -7825,11 +7782,6 @@
       "type": "project",
       "path": "../OzgurSeyhanWebSitesi.Repository/OzgurSeyhanWebSitesi.Repository.csproj",
       "msbuildProject": "../OzgurSeyhanWebSitesi.Repository/OzgurSeyhanWebSitesi.Repository.csproj"
-    },
-    "OzgurSeyhanWebSitesi.Service/1.0.0": {
-      "type": "project",
-      "path": "../OzgurSeyhanWebSitesi.Service/OzgurSeyhanWebSitesi.Service.csproj",
-      "msbuildProject": "../OzgurSeyhanWebSitesi.Service/OzgurSeyhanWebSitesi.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7840,7 +7792,6 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 9.0.10",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 9.0.0",
       "OzgurSeyhanWebSitesi.Repository >= 1.0.0",
-      "OzgurSeyhanWebSitesi.Service >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
   },
@@ -7851,9 +7802,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Mvc.csproj",
-      "projectName": "OzgurSeyhanWebSitesi.Mvc",
-      "projectPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Mvc.csproj",
+      "projectUniqueName": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj",
+      "projectName": "OzgurSeyhanWebSitesi.Api",
+      "projectPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Api.csproj",
       "packagesPath": "C:\\Users\\Arif\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi\\obj\\",
       "projectStyle": "PackageReference",
@@ -7879,9 +7830,6 @@
           "projectReferences": {
             "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\OzgurSeyhanWebSitesi.Repository.csproj": {
               "projectPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Repository\\OzgurSeyhanWebSitesi.Repository.csproj"
-            },
-            "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Service.csproj": {
-              "projectPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Service.csproj"
             }
           }
         }

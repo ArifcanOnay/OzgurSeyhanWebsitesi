@@ -7,12 +7,13 @@ using System.Threading.Tasks;
 
 namespace OzgurSeyhanWebSitesi.Repository.UnitOfWorks
 {
-    public class UnitOfWorks(AppDbContext context) : IUnitOfWorks
+    public class UnitofWorks(AppDbContext context) : IUnitOfWorks
     {
-        private readonly AppDbContext _context = context;
+        private readonly AppDbContext _context=context;
+
         public void Commit()
         {
-            _context.SaveChanges();
+           _context.SaveChanges();
         }
 
         public async Task CommitAsync()

@@ -6,14 +6,11 @@ using System.Threading.Tasks;
 
 namespace OzgurSeyhanWebSitesi.Core.Models
 {
-   public abstract class BaseEntitiy
+    public abstract class BaseEntitiy
     {
-        public Guid Id { get; set; }
-        public DateTime CreatedDate { get; set; }
-        public DateTime UpdatedDate { get; set; }
-        public  int CreatedBy { get; set; } 
-        public  int UpdatedBy { get; set; }
-        public bool  Status { get; set; }
+        public int Id{ get; set; }
+        public DateTime CreateDate{ get; set; }
+        public DateTime UpdateDate{ get; set; }
 
     }
 }

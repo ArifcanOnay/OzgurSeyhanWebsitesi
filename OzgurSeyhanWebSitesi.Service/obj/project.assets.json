@@ -666,9 +666,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Service.csproj",
-      "projectName": "OzgurSeyhanWebSitesi.Service",
-      "projectPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Service.csproj",
+      "projectUniqueName": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Bussinies.csproj",
+      "projectName": "OzgurSeyhanWebSitesi.Bussinies",
+      "projectPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\OzgurSeyhanWebSitesi.Bussinies.csproj",
       "packagesPath": "C:\\Users\\Arif\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Arif\\Desktop\\OzgurSeyhanWebSitesi\\OzgurSeyhanWebSitesi.Service\\obj\\",
       "projectStyle": "PackageReference",
@@ -742,5 +742,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1900",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Error occurred while getting package vulnerability data: Unable to load the service index for source https://api.nuget.org/v3/index.json."
+    }
+  ]
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace OzgurSeyhanWebSitesi.Core.Services
 {
-   public interface IOgretmenService:IService<Ogretmen>
+    public interface IOgretmenService:IGenericService<Ogretmen>
     {
     }
 }

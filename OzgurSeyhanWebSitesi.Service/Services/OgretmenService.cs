@@ -1,17 +1,19 @@
 ﻿using OzgurSeyhanWebSitesi.Core.Models;
+using OzgurSeyhanWebSitesi.Core.Repositories;
 using OzgurSeyhanWebSitesi.Core.Services;
 using OzgurSeyhanWebSitesi.Core.UnitOfWorks;
-using OzgurSeyhanWebSitesi.Repository.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OzgurSeyhanWebSitesi.Service.Services
+namespace OzgurSeyhanWebSitesi.Bussinies.Services
 {
-    public class OgretmenService(IUnitOfWorks unitOfWorks, IGenericRepository<Ogretmen> repository) : Service<Ogretmen>(unitOfWorks, repository), IOgretmenService
+    public class OgretmenService : GenericService<Ogretmen>,IOgretmenService
     {
-
+        public OgretmenService(IGenericRepository<Ogretmen> repository, IUnitOfWorks unitOfWorks) : base(repository, unitOfWorks)
+        {
+        }
     }
 }

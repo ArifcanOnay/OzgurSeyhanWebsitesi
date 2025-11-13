@@ -13,34 +13,43 @@ namespace OzgurSeyhanWebSitesi.Repository.Configurations
     {
         public void Configure(EntityTypeBuilder<Ogretmen> builder)
         {
-            builder.HasKey(o => o.Id);
+            // Primary Key
+            builder.HasKey(x => x.Id);
 
-            builder.Property(o => o.Isim)
-                   .IsRequired()
-                   .HasMaxLength(50);
+            // Properties
+            builder.Property(x => x.Id)
+                .UseIdentityColumn();
 
-            builder.Property(o => o.SoyAd)
-                   .IsRequired()
-                   .HasMaxLength(50);
+            builder.Property(x => x.Ad)
+                .IsRequired()
+                .HasMaxLength(50);
 
-            builder.Property(o => o.Email)
-                   .IsRequired()
-                   .HasMaxLength(100);
+            builder.Property(x => x.Soyad)
+                .IsRequired()
+                .HasMaxLength(50);
 
-            builder.HasMany(o => o.Videolar)
-                   .WithOne(v => v.Ogretmen)
-                   .HasForeignKey(v => v.OgretmenId)
-                   .OnDelete(DeleteBehavior.Cascade);
+            builder.Property(x => x.Yas)
+                .IsRequired()
+                .HasMaxLength(3);
 
-            builder.HasMany(o => o.SpotifyLinkleri)
-                   .WithOne(s => s.Ogretmen)
-                   .HasForeignKey(s => s.OgretmenId)
-                   .OnDelete(DeleteBehavior.Cascade);
+            // Relationships
+            builder.HasMany(x => x.Podcasts)
+                .WithOne(x => x.Ogretmen)
+                .HasForeignKey(x => x.OgretmenId)
+                .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasMany(o => o.Kurslar)
-                   .WithOne(k => k.Ogretmen)
-                   .HasForeignKey(k => k.OgretmenId)
-                   .OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(x => x.YoutubeVideolari)
+                .WithOne(x => x.Ogretmen)
+                .HasForeignKey(x => x.OgretmenId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.HasMany(x => x.OzelDersler)
+                .WithOne(x => x.Ogretmen)
+                .HasForeignKey(x => x.OgretmenId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            // Table Name
+            builder.ToTable("Ogretmenler");
         }
     }
 }

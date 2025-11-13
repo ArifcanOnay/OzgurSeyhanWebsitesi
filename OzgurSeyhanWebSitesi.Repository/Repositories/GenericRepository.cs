@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using OzgurSeyhanWebSitesi.Core.Models;
+using OzgurSeyhanWebSitesi.Core.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,52 +12,45 @@ namespace OzgurSeyhanWebSitesi.Repository.Repositories
     public class GenericRepository<T> : IGenericRepository<T> where T : BaseEntitiy
     {
         private readonly AppDbContext _context;
-        private readonly DbSet<T> _dbset;
-
-        public GenericRepository(AppDbContext context)
+        private readonly DbSet<T> _dbSet;
+        public GenericRepository(AppDbContext appDbContext)
         {
-            _context = context;
-            _dbset= _context.Set<T>();
+            _context = appDbContext;
+            _dbSet=_context.Set<T>();
         }
 
         public async Task AddAsync(T entity)
         {
-            await _dbset.AddAsync(entity);
+           await _dbSet.AddAsync(entity);  
         }
 
-        public async Task<int> CountAsync()
+        public void Delete(int id)
         {
-           return await _dbset.CountAsync();
-        }
-
-        public async Task<bool> DeleteAsync(Guid id)
-        {
-
-           var result= await _dbset.FindAsync(id);
-            if(result != null)
-            {
-                _dbset.Remove(result);
-            }
-            return true;
-
-        }
-
-        public async Task<IEnumerable<T>> GetAllAsync()
-        {
-           return  await _dbset.ToListAsync();
-
+            var silinecekDeger =GetById(id);
+            _dbSet.Remove(silinecekDeger);
+          
             
-
+          
         }
 
-        public async Task<T> GetByIdAsync(Guid id)
+        public List<T> GetAll()
         {
-            return await _dbset.FirstOrDefaultAsync(x => x.Id == id);
+            return _dbSet.ToList();
+            
+        }
+
+        public T GetById(int id)
+        {
+           var value=_dbSet.ToList().FirstOrDefault(x=>x.Id==id);
+            return value;
         }
 
         public void Update(T entity)
         {
-            _dbset.Update(entity);
+            _dbSet.Update(entity);
+
         }
+
+       
     }
 }
