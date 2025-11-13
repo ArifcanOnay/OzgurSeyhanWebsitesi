@@ -9,6 +9,9 @@ namespace OzgurSeyhan.Websitesi.UI
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            // HttpClient for API calls
+            builder.Services.AddHttpClient();
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -20,6 +23,7 @@ namespace OzgurSeyhan.Websitesi.UI
             }
 
             app.UseHttpsRedirection();
+            app.UseStaticFiles();
             app.UseRouting();
 
             app.UseAuthorization();
