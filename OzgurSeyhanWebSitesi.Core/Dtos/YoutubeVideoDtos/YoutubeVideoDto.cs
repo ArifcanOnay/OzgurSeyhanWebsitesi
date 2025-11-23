@@ -1,4 +1,5 @@
 using OzgurSeyhanWebSitesi.Core.Dtos;
+using OzgurSeyhanWebSitesi.Core.Models;
 
 namespace OzgurSeyhanWebSitesi.Core.Dtos.YoutubeVideoDtos
 {
@@ -7,6 +8,8 @@ namespace OzgurSeyhanWebSitesi.Core.Dtos.YoutubeVideoDtos
         public string Baslik { get; set; }
         public string Url { get; set; }
         public string VideoId { get; set; }
+        public string? KategoriBaslik { get; set; }
+        public VideoKategorisi Kategori { get; set; }
         public int OgretmenId { get; set; }
         
     }

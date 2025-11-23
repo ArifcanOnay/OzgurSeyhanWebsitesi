@@ -1,3 +1,5 @@
+@model OzgurSeyhan.Websitesi.UI.Models.CreatePlaylistViewModel
+
 @{
     ViewData["Title"] = "Playlist Ekle";
 }
@@ -13,17 +15,30 @@
                         <h4 class="card-title">YouTube Playlist URL'si ile Ekle</h4>
                     </div>
                     <div class="card-body">
-                        <form method="post" action="@Url.Action("PlaylistCreate", "Youtube")">
+                        <form method="post" action="@Url.Action("PlaylistCreate", "Youtube")" asp-antiforgery="true">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            
                             <div class="form-group">
-                                <label for="playlistUrl">YouTube Playlist URL</label>
-                                <input type="text" 
+                                <label asp-for="PlaylistUrl">YouTube Playlist URL</label>
+                                <input asp-for="PlaylistUrl" 
                                        class="form-control" 
-                                       id="playlistUrl" 
-                                       name="playlistUrl" 
                                        placeholder="https://www.youtube.com/playlist?list=PLxxxxxx" 
                                        required>
+                                <span asp-validation-for="PlaylistUrl" class="text-danger"></span>
                                 <small class="form-text text-muted">
                                     YouTube playlist URL'sini buraya yapıştırın. Tüm videolar otomatik olarak çekilecektir.
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label asp-for="KategoriBaslik">Kategori Başlığı <span class="text-muted">(Opsiyonel)</span></label>
+                                <input asp-for="KategoriBaslik" 
+                                       class="form-control" 
+                                       placeholder="Örn: Beş dakikada İngilizce geliştirmek ister misin?" 
+                                       maxlength="200">
+                                <span asp-validation-for="KategoriBaslik" class="text-danger"></span>
+                                <small class="form-text text-muted">
+                                    Ana sayfada playlist kartının üstünde görünecek özel başlık. Boş bırakılabilir.
                                 </small>
                             </div>
 

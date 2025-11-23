@@ -11,6 +11,7 @@ namespace OzgurSeyhanWebSitesi.Core.Models
         public string PlaylistId { get; set; } = string.Empty; // YouTube Playlist ID
         public string Baslik { get; set; } = string.Empty;
         public string? Aciklama { get; set; }
+        public string? KategoriBaslik { get; set; } // Playlist üstünde gösterilecek kategori başlığı
         public int OgretmenId { get; set; }
 
         // Navigation Properties

@@ -46,6 +46,7 @@
                                     <tr>
                                         <th>#</th>
                                         <th>Başlık</th>
+                                        <th>Kategori Başlığı</th>
                                         <th>Playlist ID</th>
                                         <th>Öğretmen ID</th>
                                         <th class="text-center">İşlemler</th>
@@ -59,6 +60,16 @@
                                             <tr>
                                                 <td>@playlist.Id</td>
                                                 <td>@playlist.Baslik</td>
+                                                <td>
+                                                    @if (!string.IsNullOrEmpty(playlist.KategoriBaslik))
+                                                    {
+                                                        <span class="badge badge-info">@playlist.KategoriBaslik</span>
+                                                    }
+                                                    else
+                                                    {
+                                                        <span class="text-muted">-</span>
+                                                    }
+                                                </td>
                                                 <td><code>@playlist.PlaylistId</code></td>
                                                 <td>@playlist.OgretmenId</td>
                                                 <td class="text-center">
@@ -82,7 +93,7 @@
                                     else
                                     {
                                         <tr>
-                                            <td colspan="5" class="text-center">Henüz playlist eklenmemiş.</td>
+                                            <td colspan="6" class="text-center">Henüz playlist eklenmemiş.</td>
                                         </tr>
                                     }
                                 </tbody>

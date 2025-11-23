@@ -18,6 +18,7 @@
                         <form method="post" action="@Url.Action("VideoEdit", "Youtube")">
                             <input type="hidden" name="Id" value="@Model.Id" />
                             <input type="hidden" name="VideoId" value="@Model.VideoId" />
+                            <input type="hidden" name="OgretmenId" value="1" />
 
                             <div class="form-group">
                                 <label for="Baslik">Video Başlığı</label>
@@ -36,16 +37,6 @@
                                        id="Url" 
                                        name="Url" 
                                        value="@Model.Url" 
-                                       required>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="OgretmenId">Öğretmen ID</label>
-                                <input type="number" 
-                                       class="form-control" 
-                                       id="OgretmenId" 
-                                       name="OgretmenId" 
-                                       value="@Model.OgretmenId" 
                                        required>
                             </div>
 

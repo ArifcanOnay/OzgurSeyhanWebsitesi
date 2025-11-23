@@ -12,12 +12,14 @@ namespace OzgurSeyhanWebSitesi.Core.Dtos.PlaylistDtos
         public string PlaylistId { get; set; } = string.Empty;
         public string Baslik { get; set; } = string.Empty;
         public string? Aciklama { get; set; }
+        public string? KategoriBaslik { get; set; }
         public int OgretmenId { get; set; }
     }
 
     public class CreatePlaylistDto
     {
         public string PlaylistUrl { get; set; } = string.Empty;
+        public string? KategoriBaslik { get; set; }
         public int OgretmenId { get; set; }
     }
 

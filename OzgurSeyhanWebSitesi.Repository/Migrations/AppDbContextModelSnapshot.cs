@@ -90,6 +90,9 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.Property<int>("OgretmenId")
                         .HasColumnType("int");
 
+                    b.Property<string>("ResimUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SaatAraligi")
                         .IsRequired()
                         .HasMaxLength(50)
@@ -97,6 +100,9 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
 
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("YoutubeVideoUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
@@ -124,6 +130,10 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("KategoriBaslik")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<int>("OgretmenId")
                         .HasColumnType("int");
@@ -159,6 +169,9 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("KapakResmi")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("OgretmenId")
                         .HasColumnType("int");
 
@@ -177,6 +190,119 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.ToTable("Podcasts", (string)null);
                 });
 
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.User", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Ad")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool>("AktifMi")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("KayitTarihi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<DateTime?>("SonGirisTarihi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Soyad")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.ToTable("Users", (string)null);
+                });
+
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.VideoProgress", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("IlkIzlemeTarihi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("IzlenenSaniye")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.Property<decimal>("IzlenmeYuzdesi")
+                        .HasPrecision(5, 2)
+                        .HasColumnType("decimal(5,2)");
+
+                    b.Property<int>("PlaylistId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SonIzlemeTarihi")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("TamamlandiMi")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<int>("ToplamSure")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasDefaultValue(0);
+
+                    b.Property<DateTime>("UpdateDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("VideoId")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PlaylistId");
+
+                    b.HasIndex("UserId", "VideoId")
+                        .IsUnique();
+
+                    b.ToTable("VideoProgresses", (string)null);
+                });
+
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.YoutubeVideo", b =>
                 {
                     b.Property<int>("Id")
@@ -192,6 +318,12 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
 
                     b.Property<DateTime>("CreateDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("Kategori")
+                        .HasColumnType("int");
+
+                    b.Property<string>("KategoriBaslik")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("OgretmenId")
                         .HasColumnType("int");
@@ -249,6 +381,25 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.Navigation("Ogretmen");
                 });
 
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.VideoProgress", b =>
+                {
+                    b.HasOne("OzgurSeyhanWebSitesi.Core.Models.Playlist", "Playlist")
+                        .WithMany()
+                        .HasForeignKey("PlaylistId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("OzgurSeyhanWebSitesi.Core.Models.User", "User")
+                        .WithMany("VideoProgresses")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Playlist");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.YoutubeVideo", b =>
                 {
                     b.HasOne("OzgurSeyhanWebSitesi.Core.Models.Ogretmen", "Ogretmen")
@@ -269,6 +420,11 @@ namespace OzgurSeyhanWebSitesi.Repository.Migrations
                     b.Navigation("Podcasts");
 
                     b.Navigation("YoutubeVideolari");
+                });
+
+            modelBuilder.Entity("OzgurSeyhanWebSitesi.Core.Models.User", b =>
+                {
+                    b.Navigation("VideoProgresses");
                 });
 #pragma warning restore 612, 618
         }

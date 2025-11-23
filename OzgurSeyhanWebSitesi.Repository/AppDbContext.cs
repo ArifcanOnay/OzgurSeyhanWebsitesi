@@ -16,6 +16,9 @@ namespace OzgurSeyhanWebSitesi.Repository
         public DbSet<Podcast> Podcastler {  get; set; }
         public DbSet<OzelDers>OzelDersler { get; set; }
         public DbSet<Playlist> Playlists { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<VideoProgress> VideoProgresses { get; set; }
+        
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

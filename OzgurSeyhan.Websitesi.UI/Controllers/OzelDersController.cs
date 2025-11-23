@@ -8,7 +8,7 @@ namespace OzgurSeyhan.Websitesi.UI.Controllers
     public class OzelDersController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly string _apiBaseUrl = "https://localhost:7101/api";
+        private readonly string _apiBaseUrl = "http://localhost:5246/api";
 
         public OzelDersController(IHttpClientFactory httpClientFactory)
         {

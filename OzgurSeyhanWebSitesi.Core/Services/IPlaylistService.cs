@@ -13,7 +13,7 @@ namespace OzgurSeyhanWebSitesi.Core.Services
         /// <summary>
         /// YouTube Playlist URL'inden playlist oluşturur (sadece playlist kaydı, videolar YouTube'dan çekilir)
         /// </summary>
-        Task<PlaylistDto> CreateFromYouTubePlaylistAsync(string playlistUrl, int ogretmenId);
+        Task<PlaylistDto> CreateFromYouTubePlaylistAsync(string playlistUrl, int ogretmenId, string? kategoriBaslik = null);
 
         /// <summary>
         /// Playlist'i videoları ile birlikte getirir (videolar YouTube'dan çekilir)
