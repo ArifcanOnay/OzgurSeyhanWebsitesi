@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OzgurSeyhanWebSitesi.Core.Dtos.PlaylistDtos;
 using OzgurSeyhanWebSitesi.Core.Dtos.YoutubeVideoDtos;
+using OzgurSeyhanWebSitesi.Core.Dtos.PodcastDtos;
+using OzgurSeyhan.Websitesi.UI.Models;
 using System.Text;
 using System.Text.Json;
 
@@ -9,7 +11,7 @@ namespace OzgurSeyhan.Websitesi.UI.Controllers
     public class YoutubeController : Controller
     {
         private readonly IHttpClientFactory _httpClientFactory;
-        private readonly string _apiBaseUrl = "https://localhost:7101/api";
+        private readonly string _apiBaseUrl = "http://localhost:5246/api";
 
         public YoutubeController(IHttpClientFactory httpClientFactory)
         {
@@ -42,14 +44,22 @@ namespace OzgurSeyhan.Websitesi.UI.Controllers
 
         // Playlist Ekleme İşlemi
         [HttpPost]
-        public async Task<IActionResult> PlaylistCreate(string playlistUrl)
+        public async Task<IActionResult> PlaylistCreate(CreatePlaylistViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
             var client = _httpClientFactory.CreateClient();
+            
+          
             
             var requestBody = new
             {
-                playlistUrl = playlistUrl,
-                ogretmenId = 1  // Sabit öğretmen ID
+                playlistUrl = model.PlaylistUrl,
+                kategoriBaslik = model.KategoriBaslik,
+                ogretmenId = model.OgretmenId
             };
 
             var json = JsonSerializer.Serialize(requestBody);
@@ -65,7 +75,7 @@ namespace OzgurSeyhan.Websitesi.UI.Controllers
 
             var error = await response.Content.ReadAsStringAsync();
             TempData["ErrorMessage"] = $"Hata: {error}";
-            return View();
+            return View(model);
         }
 
         // Playlist Silme
@@ -130,14 +140,16 @@ namespace OzgurSeyhan.Websitesi.UI.Controllers
 
         // Video Ekleme İşlemi
         [HttpPost]
-        public async Task<IActionResult> VideoCreate(string videoUrl)
+        public async Task<IActionResult> VideoCreate(string videoUrl, string? kategoriBaslik, int kategori = 1)
         {
             var client = _httpClientFactory.CreateClient();
 
             var requestBody = new
             {
                 youtubeUrl = videoUrl,
-                ogretmenId = 1  // Sabit öğretmen ID
+                ogretmenId = 1,  // Sabit öğretmen ID
+                kategori = kategori,  // Kategori: 1=YoutubeVideolarim, 2=IngilizceKonusmaTuyolari
+                kategoriBaslik = kategoriBaslik  // Opsiyonel kategori başlığı
             };
 
             var json = JsonSerializer.Serialize(requestBody);
@@ -147,7 +159,8 @@ namespace OzgurSeyhan.Websitesi.UI.Controllers
 
             if (response.IsSuccessStatusCode)
             {
-                TempData["SuccessMessage"] = "Video başarıyla eklendi!";
+                var kategoriAdi = kategori == 1 ? "YouTube Videolarım" : "İngilizce Konuşma Tüyoları";
+                TempData["SuccessMessage"] = $"Video '{kategoriAdi}' bölümüne başarıyla eklendi!";
                 return RedirectToAction("VideoIndex");
             }
 
@@ -219,6 +232,165 @@ namespace OzgurSeyhan.Websitesi.UI.Controllers
             }
 
             return RedirectToAction("VideoIndex");
+        }
+
+        #endregion
+
+        #region Podcast İşlemleri
+
+        // Podcast Listesi
+        public async Task<IActionResult> PodcastIndex()
+        {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync($"{_apiBaseUrl}/Podcast");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var podcasts = await response.Content.ReadFromJsonAsync<List<PodcastDto>>();
+                return View(podcasts);
+            }
+
+            return View(new List<PodcastDto>());
+        }
+
+        // Podcast Ekleme Sayfası
+        [HttpGet]
+        public IActionResult PodcastCreate()
+        {
+            return View();
+        }
+
+        // Podcast Ekleme İşlemi
+        [HttpPost]
+        public async Task<IActionResult> PodcastCreate(string baslik, string podcastUrl, IFormFile? kapakResmi)
+        {
+            if (string.IsNullOrWhiteSpace(baslik) || string.IsNullOrWhiteSpace(podcastUrl))
+            {
+                TempData["ErrorMessage"] = "Başlık ve Podcast URL boş olamaz!";
+                return View();
+            }
+
+            var client = _httpClientFactory.CreateClient();
+            string? kapakResmiYolu = null;
+
+            // Resim yükleme işlemi
+            if (kapakResmi != null && kapakResmi.Length > 0)
+            {
+                try
+                {
+                    // Resim dosya adı oluştur
+                    var fileName = $"podcast_{Guid.NewGuid()}{Path.GetExtension(kapakResmi.FileName)}";
+                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "podcasts");
+                    
+                    // Klasör yoksa oluştur
+                    if (!Directory.Exists(uploadsFolder))
+                    {
+                        Directory.CreateDirectory(uploadsFolder);
+                    }
+
+                    var filePath = Path.Combine(uploadsFolder, fileName);
+
+                    // Dosyayı kaydet
+                    using (var fileStream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await kapakResmi.CopyToAsync(fileStream);
+                    }
+
+                    kapakResmiYolu = $"/images/podcasts/{fileName}";
+                }
+                catch (Exception ex)
+                {
+                    TempData["ErrorMessage"] = $"Resim yüklenirken hata oluştu: {ex.Message}";
+                    return View();
+                }
+            }
+
+            var requestBody = new
+            {
+                baslik = baslik,
+                podcastUrl = podcastUrl,
+                kapakResmi = kapakResmiYolu,
+                ogretmenId = 1  // Sabit öğretmen ID
+            };
+
+            var json = JsonSerializer.Serialize(requestBody);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await client.PostAsync($"{_apiBaseUrl}/Podcast", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["SuccessMessage"] = "Podcast başarıyla eklendi!";
+                return RedirectToAction("PodcastIndex");
+            }
+
+            var error = await response.Content.ReadAsStringAsync();
+            TempData["ErrorMessage"] = $"Hata: {error}";
+            return View();
+        }
+
+        // Podcast Güncelleme Sayfası
+        [HttpGet]
+        public async Task<IActionResult> PodcastEdit(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.GetAsync($"{_apiBaseUrl}/Podcast/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                var podcast = await response.Content.ReadFromJsonAsync<PodcastDto>();
+                return View(podcast);
+            }
+
+            return RedirectToAction("PodcastIndex");
+        }
+
+        // Podcast Güncelleme İşlemi
+        [HttpPost]
+        public async Task<IActionResult> PodcastEdit(int id, string baslik, string podcastUrl)
+        {
+            var client = _httpClientFactory.CreateClient();
+
+            var updateDto = new
+            {
+                id = id,
+                baslik = baslik,
+                podcastUrl = podcastUrl,
+                ogretmenId = 1
+            };
+
+            var json = JsonSerializer.Serialize(updateDto);
+            var content = new StringContent(json, Encoding.UTF8, "application/json");
+
+            var response = await client.PutAsync($"{_apiBaseUrl}/Podcast/{id}", content);
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["SuccessMessage"] = "Podcast başarıyla güncellendi!";
+                return RedirectToAction("PodcastIndex");
+            }
+
+            TempData["ErrorMessage"] = "Podcast güncellenirken hata oluştu!";
+            return RedirectToAction("PodcastEdit", new { id });
+        }
+
+        // Podcast Silme
+        [HttpPost]
+        public async Task<IActionResult> PodcastDelete(int id)
+        {
+            var client = _httpClientFactory.CreateClient();
+            var response = await client.DeleteAsync($"{_apiBaseUrl}/Podcast/{id}");
+
+            if (response.IsSuccessStatusCode)
+            {
+                TempData["SuccessMessage"] = "Podcast başarıyla silindi!";
+            }
+            else
+            {
+                TempData["ErrorMessage"] = "Podcast silinirken hata oluştu!";
+            }
+
+            return RedirectToAction("PodcastIndex");
         }
 
         #endregion

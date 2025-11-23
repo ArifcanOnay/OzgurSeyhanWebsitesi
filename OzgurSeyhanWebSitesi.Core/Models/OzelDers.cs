@@ -15,6 +15,8 @@ namespace OzgurSeyhanWebSitesi.Core.Models
         public int MaksimumOgrenciSayisi { get; set; }
         public string Gunler { get; set; }
         public string SaatAraligi { get; set; }
+        public string? ResimUrl { get; set; }
+        public string? YoutubeVideoUrl { get; set; }
         public int OgretmenId { get; set; }
         public Ogretmen Ogretmen { get; set; }
     }

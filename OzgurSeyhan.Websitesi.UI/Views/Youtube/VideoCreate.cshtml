@@ -28,6 +28,31 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="kategori">Videoyu Nereye Eklemek İstiyorsunuz?</label>
+                                <select class="form-control" id="kategori" name="kategori" required>
+                                    <option value="1" selected>YouTube Videolarım</option>
+                                    <option value="2">İngilizce Konuşmanı Artıracak Tüyolar</option>
+                                    <option value="3">🇺🇸 Gerçek Hayattan İngilizce (Native Speaker)</option>
+                                </select>
+                                <small class="form-text text-muted">
+                                    Video hangi bölümde görünecek?
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="kategoriBaslik">Kategori Başlığı (Opsiyonel)</label>
+                                <input type="text" 
+                                       class="form-control" 
+                                       id="kategoriBaslik" 
+                                       name="kategoriBaslik" 
+                                       placeholder="Örn: Günlük Konuşma, Gramer Tüyoları, vb." 
+                                       maxlength="200">
+                                <small class="form-text text-muted">
+                                    Videonun hangi kategoride olduğunu belirten özel bir başlık ekleyebilirsiniz.
+                                </small>
+                            </div>
+
+                            <div class="form-group">
                                 <button type="submit" class="btn btn-success">
                                     <i class="la la-save"></i> Video Ekle
                                 </button>
@@ -48,6 +73,7 @@
                             <li>YouTube'da video sayfasına gidin</li>
                             <li>Tarayıcı adres çubuğundan URL'yi kopyalayın</li>
                             <li>URL'nin içinde "v=" parametresi olduğundan emin olun</li>
+                            <li>Videoyu nereye ekleyeceğinizi seçin</li>
                             <li>Buraya yapıştırıp "Video Ekle" butonuna tıklayın</li>
                         </ol>
                         <hr>
@@ -55,6 +81,15 @@
                         <code style="word-break: break-all;">
                             https://www.youtube.com/watch?v=dQw4w9WgXcQ
                         </code>
+                        <hr>
+                        <div class="alert alert-info">
+                            <strong>Kategoriler:</strong>
+                            <ul class="mb-0">
+                                <li><strong>YouTube Videolarım:</strong> Ana video bölümünde görünür</li>
+                                <li><strong>İngilizce Konuşma Tüyoları:</strong> Özel tüyolar bölümünde görünür</li>
+                                <li><strong>🇺🇸 Gerçek Hayattan İngilizce:</strong> Native American speaker ile günlük konuşmalar</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>

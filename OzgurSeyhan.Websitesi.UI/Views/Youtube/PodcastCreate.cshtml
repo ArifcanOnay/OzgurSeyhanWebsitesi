@@ -1,0 +1,160 @@
+@{
+    ViewData["Title"] = "Podcast Ekle";
+}
+
+<div class="content">
+    <div class="container-fluid">
+        <h4 class="page-title">Yeni Podcast Ekle</h4>
+
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <strong>Hata!</strong> @TempData["ErrorMessage"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">
+                            <i class="la la-spotify"></i> Spotify Podcast Ekle
+                        </h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="@Url.Action("PodcastCreate", "Youtube")" enctype="multipart/form-data">
+                            @Html.AntiForgeryToken()
+                            
+                            <div class="form-group">
+                                <label for="baslik">Podcast Başlığı</label>
+                                <input type="text" 
+                                       name="baslik" 
+                                       id="baslik"
+                                       class="form-control" 
+                                       placeholder="Örn: Rıdvan Podcast" 
+                                       required>
+                                <small class="form-text text-muted">
+                                    Podcast'in adını girin.
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="kapakResmi">Kapak Fotoğrafı</label>
+                                <input type="file" 
+                                       name="kapakResmi" 
+                                       id="kapakResmi"
+                                       class="form-control-file" 
+                                       accept="image/*"
+                                       onchange="previewImage(event)">
+                                <small class="form-text text-muted">
+                                    Ana sayfada görünecek podcast kapak fotoğrafını seçin (JPG, PNG)
+                                </small>
+                                <div id="imagePreview" class="mt-3" style="display:none;">
+                                    <img id="preview" src="#" alt="Önizleme" style="max-width: 300px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="podcastUrl">Spotify Embed URL</label>
+                                <input type="url" 
+                                       name="podcastUrl" 
+                                       id="podcastUrl"
+                                       class="form-control" 
+                                       placeholder="https://open.spotify.com/embed/show/XXXXX" 
+                                       required>
+                                <small class="form-text text-muted">
+                                    Spotify embed URL'sini buraya yapıştırın. Normal Spotify linkinizi embed formatına çevirin.
+                                </small>
+                            </div>
+
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-success">
+                                    <i class="la la-save"></i> Podcast Ekle
+                                </button>
+                                <a href="@Url.Action("PodcastIndex", "Youtube")" class="btn btn-secondary">
+                                    <i class="la la-times"></i> İptal
+                                </a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card card-info" style="background: linear-gradient(135deg, #1DB954 0%, #191414 100%); color: white;">
+                    <div class="card-body">
+                        <h5 class="text-white">
+                            <i class="la la-info-circle"></i> Spotify Embed Link Nasıl Alınır?
+                        </h5>
+                        <hr style="border-color: rgba(255,255,255,0.3);">
+                        
+                        <h6 class="text-white">Adım 1: Spotify'dan Link Kopyala</h6>
+                        <ol class="mb-3">
+                            <li>Spotify'da podcast sayfasını aç</li>
+                            <li>3 nokta (⋮) menüsüne tıkla</li>
+                            <li>"Paylaş" → "Bağlantı Kopyala" seç</li>
+                        </ol>
+
+                        <h6 class="text-white">Adım 2: Embed Formatına Çevir</h6>
+                        <p class="mb-2"><strong>Normal Link:</strong></p>
+                        <code style="background: rgba(0,0,0,0.3); color: #1DB954; padding: 5px; display: block; word-break: break-all; margin-bottom: 10px;">
+                            https://open.spotify.com/show/1VXcH8Q...
+                        </code>
+
+                        <p class="mb-2"><strong>Embed Link:</strong></p>
+                        <code style="background: rgba(0,0,0,0.3); color: #1DB954; padding: 5px; display: block; word-break: break-all;">
+                            https://open.spotify.com/<span style="background: yellow; color: black; padding: 0 3px;">embed/</span>show/1VXcH8Q...
+                        </code>
+
+                        <div class="alert alert-light mt-3" style="background: rgba(255,255,255,0.9);">
+                            <small class="text-dark">
+                                <i class="la la-exclamation-triangle text-warning"></i>
+                                <strong>Önemli:</strong> URL'ye "/embed/" ekleyerek embed formatına çevirin!
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card card-warning">
+                    <div class="card-body">
+                        <h6><i class="la la-lightbulb-o"></i> İpuçları</h6>
+                        <ul class="mb-0">
+                            <li>Podcast hem show hem de episode olabilir</li>
+                            <li>Show ID genellikle <code>show/</code> ile başlar</li>
+                            <li>Episode ID genellikle <code>episode/</code> ile başlar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function previewImage(event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById('preview');
+        const previewContainer = document.getElementById('imagePreview');
+        
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                previewContainer.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        } else {
+            previewContainer.style.display = 'none';
+        }
+    }
+</script>
+
+<style>
+    .card-info code {
+        font-size: 11px;
+        border-radius: 4px;
+    }
+</style>

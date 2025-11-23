@@ -12,6 +12,15 @@ namespace OzgurSeyhan.Websitesi.UI
             // HttpClient for API calls
             builder.Services.AddHttpClient();
 
+            // Session Support
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromHours(2);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -25,6 +34,7 @@ namespace OzgurSeyhan.Websitesi.UI
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseRouting();
+            app.UseSession(); // Session middleware ekle
 
             app.UseAuthorization();
 

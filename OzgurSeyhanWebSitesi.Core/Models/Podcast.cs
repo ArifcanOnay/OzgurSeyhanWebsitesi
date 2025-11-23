@@ -11,6 +11,7 @@ namespace OzgurSeyhanWebSitesi.Core.Models
       
         public string Baslik {  get; set; }
         public string PodcastUrl {  get; set; }
+        public string? KapakResmi { get; set; }  // Podcast kapak fotoğrafı yolu
         public int OgretmenId { get; set; }
         public Ogretmen Ogretmen { get; set; }
 

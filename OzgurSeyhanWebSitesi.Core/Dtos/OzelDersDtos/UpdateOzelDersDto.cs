@@ -9,6 +9,8 @@ namespace OzgurSeyhanWebSitesi.Core.Dtos.OzelDersDtos
         public int MaksimumOgrenciSayisi { get; set; }
         public string Gunler { get; set; } = string.Empty;
         public string SaatAraligi { get; set; } = string.Empty;
+        public string? ResimUrl { get; set; }
+        public string? YoutubeVideoUrl { get; set; }
         public int OgretmenId { get; set; }
     }
 }

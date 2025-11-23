@@ -34,10 +34,15 @@ namespace OzgurSeyhanWebSitesi.Bussinies.Services
             _cacheService = cacheService;
         }
 
-        public async Task<PlaylistDto> CreateFromYouTubePlaylistAsync(string playlistUrl, int ogretmenId)
+        public async Task<PlaylistDto> CreateFromYouTubePlaylistAsync(string playlistUrl, int ogretmenId, string? kategoriBaslik = null)
         {
             try
             {
+                // Debug logging
+                Console.WriteLine($"Service - PlaylistUrl: {playlistUrl}");
+                Console.WriteLine($"Service - KategoriBaslik: {kategoriBaslik ?? "NULL"}");
+                Console.WriteLine($"Service - OgretmenId: {ogretmenId}");
+
                 // 1. Playlist ID'sini çıkar
                 var playlistId = _youtubeApiService.ExtractPlaylistId(playlistUrl);
 
@@ -57,13 +62,18 @@ namespace OzgurSeyhanWebSitesi.Bussinies.Services
                 {
                     PlaylistId = playlistId,
                     Baslik = firstVideo?.Baslik ?? "YouTube Playlist",
+                    KategoriBaslik = kategoriBaslik, // Kategori başlığını ekle
                     OgretmenId = ogretmenId,
                     CreateDate = DateTime.Now,
                     UpdateDate = DateTime.Now
                 };
 
+                Console.WriteLine($"Service - Playlist.KategoriBaslik before save: {playlist.KategoriBaslik ?? "NULL"}");
+
                 await _repository.AddAsync(playlist);
                 await _unitOfWorks.CommitAsync();
+
+                Console.WriteLine($"Service - Playlist.KategoriBaslik after save: {playlist.KategoriBaslik ?? "NULL"}");
 
                 return _mapper.Map<PlaylistDto>(playlist);
             }

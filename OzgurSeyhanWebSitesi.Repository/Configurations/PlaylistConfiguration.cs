@@ -27,6 +27,9 @@ namespace OzgurSeyhanWebSitesi.Repository.Configurations
             builder.Property(x => x.Aciklama)
                 .HasMaxLength(2000);
 
+            builder.Property(x => x.KategoriBaslik)
+                .HasMaxLength(200);
+
             // Ogretmen ile ilişki
             builder.HasOne(x => x.Ogretmen)
                 .WithMany(x => x.Playlists)

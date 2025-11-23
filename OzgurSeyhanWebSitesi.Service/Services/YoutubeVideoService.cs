@@ -27,7 +27,7 @@ namespace OzgurSeyhanWebSitesi.Bussinies.Services
             _mapper = mapper;
         }
 
-        public async Task<YoutubeVideoDto> CreateFromYouTubeUrlAsync(string youtubeUrl, int ogretmenId)
+        public async Task<YoutubeVideoDto> CreateFromYouTubeUrlAsync(string youtubeUrl, int ogretmenId, VideoKategorisi kategori = VideoKategorisi.YoutubeVideolarim, string? kategoriBaslik = null)
         {
             try
             {
@@ -40,6 +40,8 @@ namespace OzgurSeyhanWebSitesi.Bussinies.Services
                     Baslik = videoInfo.Baslik,
                     Url = videoInfo.Url,
                     VideoId = videoInfo.VideoId,
+                    KategoriBaslik = kategoriBaslik,
+                    Kategori = kategori,
                     OgretmenId = ogretmenId,
                     CreateDate = DateTime.Now,
                     UpdateDate = DateTime.Now
@@ -58,7 +60,7 @@ namespace OzgurSeyhanWebSitesi.Bussinies.Services
             }
         }
 
-        public async Task<List<YoutubeVideoDto>> CreateFromPlaylistAsync(string playlistUrl, int ogretmenId)
+        public async Task<List<YoutubeVideoDto>> CreateFromPlaylistAsync(string playlistUrl, int ogretmenId, VideoKategorisi kategori = VideoKategorisi.YoutubeVideolarim, string? kategoriBaslik = null)
         {
             try
             {
@@ -75,6 +77,8 @@ namespace OzgurSeyhanWebSitesi.Bussinies.Services
                         Baslik = videoInfo.Baslik,
                         Url = videoInfo.Url,
                         VideoId = videoInfo.VideoId,
+                        KategoriBaslik = kategoriBaslik,
+                        Kategori = kategori,
                         OgretmenId = ogretmenId,
                         CreateDate = DateTime.Now,
                         UpdateDate = DateTime.Now
@@ -93,6 +97,13 @@ namespace OzgurSeyhanWebSitesi.Bussinies.Services
             {
                 throw new Exception($"YouTube Playlist'ten videolar kaydedilemedi: {ex.Message}", ex);
             }
+        }
+        
+        public async Task<List<YoutubeVideoDto>> GetByKategoriAsync(VideoKategorisi kategori)
+        {
+            var allVideos = GetAll();
+            var videos = allVideos.Where(x => x.Kategori == kategori).ToList();
+            return _mapper.Map<List<YoutubeVideoDto>>(videos);
         }
     }
 }

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using OzgurSeyhanWebSitesi.Core.Services;
 using OzgurSeyhanWebSitesi.Core.Dtos.YoutubeVideoDtos;
+using OzgurSeyhanWebSitesi.Core.Models;
 
 namespace OzgurSeyhanWebSitesi.Api.Controllers
 {
@@ -40,6 +41,23 @@ namespace OzgurSeyhanWebSitesi.Api.Controllers
         }
 
         /// <summary>
+        /// Kategoriye göre YouTube videolarını getirir
+        /// </summary>
+        [HttpGet("by-kategori/{kategori}")]
+        public async Task<IActionResult> GetByKategori(VideoKategorisi kategori)
+        {
+            try
+            {
+                var videos = await _youtubeVideoService.GetByKategoriAsync(kategori);
+                return Ok(videos);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { error = ex.Message });
+            }
+        }
+
+        /// <summary>
         /// YouTube URL'inden video bilgilerini çekip veritabanına kaydeder
         /// </summary>
         [HttpPost("from-url")]
@@ -53,7 +71,11 @@ namespace OzgurSeyhanWebSitesi.Api.Controllers
                 if (request.OgretmenId <= 0)
                     return BadRequest("Geçerli bir Öğretmen ID'si giriniz");
 
-                var result = await _youtubeVideoService.CreateFromYouTubeUrlAsync(request.YoutubeUrl, request.OgretmenId);
+                var result = await _youtubeVideoService.CreateFromYouTubeUrlAsync(
+                    youtubeUrl: request.YoutubeUrl, 
+                    ogretmenId: request.OgretmenId,
+                    kategori: request.Kategori,
+                    kategoriBaslik: request.KategoriBaslik);
                 
                 return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
             }
@@ -77,7 +99,10 @@ namespace OzgurSeyhanWebSitesi.Api.Controllers
                 if (request.OgretmenId <= 0)
                     return BadRequest("Geçerli bir Öğretmen ID'si giriniz");
 
-                var results = await _youtubeVideoService.CreateFromPlaylistAsync(request.PlaylistUrl, request.OgretmenId);
+                var results = await _youtubeVideoService.CreateFromPlaylistAsync(
+                    playlistUrl: request.PlaylistUrl, 
+                    ogretmenId: request.OgretmenId,
+                    kategori: request.Kategori);
                 
                 return Ok(new 
                 { 
@@ -147,6 +172,8 @@ namespace OzgurSeyhanWebSitesi.Api.Controllers
     {
         public string YoutubeUrl { get; set; } = string.Empty;
         public int OgretmenId { get; set; }
+        public string? KategoriBaslik { get; set; }
+        public VideoKategorisi Kategori { get; set; } = VideoKategorisi.YoutubeVideolarim;
     }
 
     /// <summary>
@@ -156,5 +183,7 @@ namespace OzgurSeyhanWebSitesi.Api.Controllers
     {
         public string PlaylistUrl { get; set; } = string.Empty;
         public int OgretmenId { get; set; }
+        public string? KategoriBaslik { get; set; }
+        public VideoKategorisi Kategori { get; set; } = VideoKategorisi.YoutubeVideolarim;
     }
 }

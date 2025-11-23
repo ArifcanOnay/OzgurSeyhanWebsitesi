@@ -80,13 +80,20 @@ namespace OzgurSeyhanWebSitesi.Api.Controllers
         {
             try
             {
+                
+
                 if (string.IsNullOrWhiteSpace(request.PlaylistUrl))
                     return BadRequest("Playlist URL'i boş olamaz");
 
                 if (request.OgretmenId <= 0)
                     return BadRequest("Geçerli bir Öğretmen ID'si giriniz");
 
-                var result = await _playlistService.CreateFromYouTubePlaylistAsync(request.PlaylistUrl, request.OgretmenId);
+                var result = await _playlistService.CreateFromYouTubePlaylistAsync(
+                    playlistUrl: request.PlaylistUrl, 
+                    ogretmenId: request.OgretmenId,
+                    kategoriBaslik: request.KategoriBaslik);
+
+              
 
                 return CreatedAtAction(nameof(GetById), new { id = result.Id }, result);
             }

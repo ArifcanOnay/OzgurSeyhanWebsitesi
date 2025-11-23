@@ -13,11 +13,16 @@ namespace OzgurSeyhanWebSitesi.Core.Services
         /// <summary>
         /// YouTube URL'inden video bilgilerini çekip veritabanına kaydeder
         /// </summary>
-        Task<YoutubeVideoDto> CreateFromYouTubeUrlAsync(string youtubeUrl, int ogretmenId);
+        Task<YoutubeVideoDto> CreateFromYouTubeUrlAsync(string youtubeUrl, int ogretmenId, VideoKategorisi kategori = VideoKategorisi.YoutubeVideolarim, string? kategoriBaslik = null);
 
         /// <summary>
         /// YouTube Playlist URL'inden tüm videoları çekip veritabanına kaydeder
         /// </summary>
-        Task<List<YoutubeVideoDto>> CreateFromPlaylistAsync(string playlistUrl, int ogretmenId);
+        Task<List<YoutubeVideoDto>> CreateFromPlaylistAsync(string playlistUrl, int ogretmenId, VideoKategorisi kategori = VideoKategorisi.YoutubeVideolarim, string? kategoriBaslik = null);
+        
+        /// <summary>
+        /// Kategoriye göre videoları getirir
+        /// </summary>
+        Task<List<YoutubeVideoDto>> GetByKategoriAsync(VideoKategorisi kategori);
     }
 }
